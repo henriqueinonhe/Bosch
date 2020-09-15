@@ -1,0 +1,21 @@
+FROM node:lts-alpine
+
+EXPOSE 3000
+
+ENV DB_URI=mongodb://telzir-backend-admin:supersecretbackendadminpassword@database:27017/?retryWrites=true&w=majority
+ENV PORT=3000
+
+WORKDIR /usr/src/app
+
+COPY package.json .
+COPY package-lock.json .
+
+RUN npm ci --production
+
+COPY public ./public
+COPY index.js .
+COPY index.js.map .
+
+USER node
+
+ENTRYPOINT [ "npm" , "run", "start" ]

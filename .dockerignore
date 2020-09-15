@@ -1,0 +1,7 @@
+coverage
+docs
+node_modules
+.env
+Dockerfile*
+.gitignore
+README.md
