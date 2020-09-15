@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { SyntheticEvent, useState } from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
 import MUISearchIcon from "@material-ui/icons/Search";
 import Theme from "./Theming/Theme";
+import YoutubeSearchController from "./Controllers/YoutubeSearchController";
+import { YoutubeSearchResource } from "./Models/YoutubeSearchResponseData";
+import ResultEntry from "./Components/ResultEntry";
 
 const Main = styled.main`
   font-family: Roboto, sans-serif;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -73,22 +76,45 @@ const ResultsDisplay = styled.ul`
 function App() : JSX.Element
 {
   const [searchActivated, setSearchActivated] = useState(false);
-  const [searchResults, setSearchResults] = useState<unknown>(undefined);
+  const [searchQuery, setSearchQuery] = useState<string>("");
+  const [nextPageToken, setNextPageToken] = useState<string>("");
+  const [searchResults, setSearchResults] = useState<Array<YoutubeSearchResource>>();
 
-  function handleSearchButtonClick() : void
+  async function handleSearchButtonClick() : Promise<void>
   {
     setSearchActivated(true);
+    
+    const resultData = await YoutubeSearchController.search(searchQuery);
+    setSearchResults(resultData.items);
+    setNextPageToken(resultData.nextPageToken);
+  }
+
+  function handleSearchInputChange(event : SyntheticEvent) : void
+  {
+    const currentSearchQuery = (event.target as HTMLInputElement).value;
+    setSearchQuery(currentSearchQuery);
   }
 
   return (
     <Main>
       <SearchBox searchActivated={searchActivated}>
-        <SearchInput />
+        <SearchInput value={searchQuery} onChange={handleSearchInputChange}/>
         <SearchButton onClick={handleSearchButtonClick}> 
           <SearchIcon />
         </SearchButton>
       </SearchBox>
       <ResultsDisplay>
+        {
+          searchResults &&
+          searchResults.map(item => 
+            <ResultEntry 
+              key={item.etag}
+              thumbnail={item.snippet.thumbnails["high"].url}
+              title={item.snippet.title}
+              channel={item.snippet.channelTitle}
+              description={item.snippet.description} 
+            />)
+        }
       </ResultsDisplay>
     </ Main>
   );
