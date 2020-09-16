@@ -2,19 +2,23 @@ import React, { SyntheticEvent, useState } from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
 import MUISearchIcon from "@material-ui/icons/Search";
-import Theme from "./Theming/Theme";
 import YoutubeSearchController from "./Controllers/YoutubeSearchController";
 import { YoutubeSearchResource } from "./Models/YoutubeSearchResponseData";
-import ResultEntry from "./Components/ResultEntry";
+import SearchResultsList from "./Components/SearchResultsList";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import Theme from "./Theming/Theme";
+import ResultEntryDetails from "./Components/ResultEntryDetails";
 
 const Main = styled.main`
   font-family: Roboto, sans-serif;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   padding: 0 20px;
+  overflow-y: scroll;
+  /* background-color: ${Theme.color.primary.main}; */
 `;
 
 interface SearchBoxProps
@@ -23,12 +27,18 @@ interface SearchBoxProps
 }
 
 const SearchBox = styled.div<SearchBoxProps>`
+  --height: 45px;
+
+  background-color: rgba(255, 255, 255, 1);
   border: 2px solid gray;
-  height: 45px;
+  height: var(--height);
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
+  top: calc(50% - var(--height) / 2);
+  z-index: 1;
+  margin-bottom: 20px;
 
   animation-name: moveUp;
   animation-duration: 500ms;
@@ -38,10 +48,12 @@ const SearchBox = styled.div<SearchBoxProps>`
 
   @keyframes moveUp {
     from {
-      bottom: 0;
+      margin-top: 0;
+      top: calc(50% - var(--height) / 2);
     }
     to {
-      bottom: 200px;
+      margin-top: 20px;
+      top: 0;
     }
   }
 `;
@@ -50,6 +62,7 @@ const SearchInput = styled.input.attrs(() => ({
   type: "search",
   placeholder: "Pesquisar"
 }))`
+  background-color: rgba(255, 255, 255, 0);
   color: ${Theme.color.font.default};
   text-indent: 10px;
   border: none;
@@ -69,7 +82,16 @@ const SearchButton = styled.button`
   outline: none;
 `;
 
-const ResultsDisplay = styled.ul`
+const ResultsDisplay = styled.div`
+`;
+
+const ResultsCircularProgress = styled(CircularProgress).attrs(() => ({
+  size: 100
+}))`
+
+  && {
+    margin-top: 25vh;
+  }
 
 `;
 
@@ -79,8 +101,9 @@ function App() : JSX.Element
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [nextPageToken, setNextPageToken] = useState<string>("");
   const [searchResults, setSearchResults] = useState<Array<YoutubeSearchResource>>();
+  const [showingVideoDetails, setShowingVideoDetails] = useState(false);
 
-  async function handleSearchButtonClick() : Promise<void>
+  async function runSearch() : Promise<void>
   {
     setSearchActivated(true);
     
@@ -89,33 +112,65 @@ function App() : JSX.Element
     setNextPageToken(resultData.nextPageToken);
   }
 
+  async function fetchMoreResults() : Promise<void>
+  {
+    //Mock fetch
+    const promise = new Promise(resolve => 
+    {
+      setTimeout(resolve, 1500);
+    }).then(() => setSearchResults(results => results?.concat(results.slice(0, 5))));
+
+    await promise;
+  }
+
+  async function handleSearchButtonClick() : Promise<void>
+  {
+    await runSearch();
+  }
+
   function handleSearchInputChange(event : SyntheticEvent) : void
   {
     const currentSearchQuery = (event.target as HTMLInputElement).value;
     setSearchQuery(currentSearchQuery);
   }
 
+  async function handleSearchInputKeyPress(event : React.KeyboardEvent) :  Promise<void>
+  {
+    if(event.key === "Enter")
+    {
+      await runSearch();
+    }
+  }
+
+  const fetchingSearchResults = searchActivated && searchResults === undefined;
+
   return (
-    <Main>
+    <Main id="Main">
       <SearchBox searchActivated={searchActivated}>
-        <SearchInput value={searchQuery} onChange={handleSearchInputChange}/>
+        <SearchInput 
+          onKeyPress={handleSearchInputKeyPress} 
+          value={searchQuery} 
+          onChange={handleSearchInputChange}
+        />
         <SearchButton onClick={handleSearchButtonClick}> 
           <SearchIcon />
         </SearchButton>
       </SearchBox>
-      <ResultsDisplay>
-        {
-          searchResults &&
-          searchResults.map(item => 
-            <ResultEntry 
-              key={item.etag}
-              thumbnail={item.snippet.thumbnails["high"].url}
-              title={item.snippet.title}
-              channel={item.snippet.channelTitle}
-              description={item.snippet.description} 
-            />)
-        }
-      </ResultsDisplay>
+      {
+        searchActivated &&
+        <ResultsDisplay>
+          {
+            fetchingSearchResults ?
+              <ResultsCircularProgress /> :
+              <SearchResultsList 
+                fetchMoreEntries={fetchMoreResults} 
+                entries={searchResults!}
+                setShowingDetails={setShowingVideoDetails}
+              />
+          }
+        </ResultsDisplay>
+      }
+      <ResultEntryDetails visible={showingVideoDetails} />
     </ Main>
   );
 }
