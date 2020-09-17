@@ -1,24 +1,23 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import ReactDOM from "react-dom";
-import YoutubeSearchController from "./Controllers/YoutubeSearchController";
+import YoutubeAPIController from "./Controllers/YoutubeAPIController";
 import { YoutubeSearchResource } from "./Models/YoutubeSearchResponseData";
-import VideoEntryList from "./Components/VideoEntryList";
-import VideoDetails from "./Components/VideoEntryDetails";
-import SearchBox from "./Components/SearchBox";
+import VideoEntryList from "./Components/VideoEntryList/VideoEntryList";
+import VideoEntryDetails from "./Components/VideoEntryDetails/VideoEntryDetails";
+import SearchBar from "./Components/SearchBox/SearchBar";
 import styled from "styled-components";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import Theme from "./Theming/Theme";
+import MUISkeleton from "@material-ui/lab/Skeleton";
 
 const Main = styled.main`
-  font-family: Roboto, sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   height: 100%;
   overflow-x: hidden;
-  /* letter-spacing: 0.75px; */
-  /* background-color: ${Theme.color.primary.main}; */
+
+  font-family: Roboto, sans-serif;
 `;
 
 const ResultsCircularProgress = styled(CircularProgress).attrs(() => ({
@@ -32,87 +31,64 @@ const ResultsCircularProgress = styled(CircularProgress).attrs(() => ({
 
 function App() : JSX.Element
 {
-  const [searchActivated, setSearchActivated] = useState(false);
-  const [nextPageToken, setNextPageToken] = useState<string>("");
+  const [searchTriggered, setSearchTriggered] = useState(false);
   const [currentSearchQuery, setCurrentSearchQuery] = useState<string>("");
   const [searchResults, setSearchResults] = useState<Array<YoutubeSearchResource>>();
-  const [showingVideoDetails, setShowingVideoDetails] = useState(false);
+  const [nextPageToken, setNextPageToken] = useState<string>("");
+  const [videoEntryDetailsVisible, setVideoEntryDetailsVisible] = useState(false);
   const [detailedVideoId, setDetailedVideoId] = useState<string>("");
   const [loadingSearchResults, setLoadingSearchResults] = useState<boolean>(false);
 
-  async function runSearch(searchQuery : string) : Promise<void>
+  async function handleSearchTriggered(searchQuery : string) : Promise<void>
   {
-    setSearchActivated(true);
+    setSearchTriggered(true);
     setLoadingSearchResults(true);
     setCurrentSearchQuery(searchQuery);
     
-    const resultData = await YoutubeSearchController.search(searchQuery);
-    setNextPageToken(resultData.nextPageToken);
-    setSearchResults(resultData.items);
+    const resultsData = await YoutubeAPIController.search(searchQuery);
+    setNextPageToken(resultsData.nextPageToken);
+    setSearchResults(resultsData.items);
     setLoadingSearchResults(false);
   }
 
-  async function fetchMoreResults() : Promise<void>
+  async function handleMoreEntriesTriggered() : Promise<void>
   {
-    const resultData = await YoutubeSearchController.search(currentSearchQuery, nextPageToken);
-    setNextPageToken(resultData.nextPageToken);
-    setSearchResults(oldData => oldData!.concat(resultData.items));
+    const resultsData = await YoutubeAPIController.search(currentSearchQuery, nextPageToken);
+    setNextPageToken(resultsData.nextPageToken);
+    setSearchResults(oldData => oldData!.concat(resultsData.items));
   }
 
-  function showVideoDetails(videoId : string) : void
+  function handleShowEntryDetailsTriggered(videoId : string) : void
   {
     setDetailedVideoId(videoId);
-    const videoEntryDetailsContainer = document.querySelector("#VideoEntryDetailsContainer") as HTMLElement;
-    videoEntryDetailsContainer.animate(
-      [
-        {transform: "translateX(0)"}     
-      ],
-      {
-        duration: 700,
-        easing: "ease",
-        fill: "forwards"
-      }
-    );
-    setTimeout(() => setShowingVideoDetails(true), 750);
+    setVideoEntryDetailsVisible(true);
   }
 
-  function hideVideoDetails() : void
+  function handleHideEntryDetailsTriggered() : void
   {
-    const videoEntryDetailsContainer = document.querySelector("#VideoEntryDetailsContainer") as HTMLElement;
-    videoEntryDetailsContainer.animate(
-      [
-        {transform: "translateX(100vw)"}     
-      ],
-      {
-        duration: 700,
-        easing: "ease",
-        fill: "forwards"
-      }
-    );
-    setTimeout(() => setShowingVideoDetails(false), 750);
+    setVideoEntryDetailsVisible(false);
   }
 
   return (
     <Main id="Main">
-      <SearchBox 
-        searchActivated={searchActivated}
-        runSearch={runSearch}
+      <SearchBar 
+        onSearchTriggered={handleSearchTriggered}
       />
       {
-        searchActivated ? 
+        searchTriggered ? 
           loadingSearchResults ?
             <ResultsCircularProgress /> :
             <VideoEntryList 
-              fetchMoreEntries={fetchMoreResults} 
+              onMoreEntriesTriggered={handleMoreEntriesTriggered} 
               entries={searchResults!}
-              showVideoDetails={showVideoDetails}
+              onShowEntryDetailsTriggered={handleShowEntryDetailsTriggered}
             /> :
           <></>
       }
-      <VideoDetails 
-        visible={showingVideoDetails} 
+      <VideoEntryDetails 
+        isVisible={videoEntryDetailsVisible} 
         videoId={detailedVideoId} 
-        hideVideoDetails={hideVideoDetails}
+        onHideEntryDetailsTriggered={handleHideEntryDetailsTriggered}
       />
     </ Main>
   );

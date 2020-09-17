@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import compression from "compression";
-import YoutubeAPIService from "./Services/YoutubeSearchService";
+import YoutubeAPIService from "./Services/YoutubeAPIService";
 
 const expressApp = express();
 dotenv.config();
@@ -18,6 +18,8 @@ expressApp.get("/search", async (req, res) =>
   // const {query, pageToken} = req.query;
   // const [status, data] = await YoutubeAPIService.search(query as string || "", pageToken as string);
   // res.status(status).send(data);
+
+  // setTimeout(() => res.send({items: []}), 1500);
 
   // MOCK
   setTimeout(() =>
@@ -272,7 +274,7 @@ expressApp.get("/search", async (req, res) =>
       ]
     }), 1500);
 
-  // setTimeout(() => res.send({items: []}), 1500);
+  
 });
 
 expressApp.get("/details", async (req, res) =>

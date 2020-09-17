@@ -86,10 +86,10 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/Services/YoutubeSearchService.ts":
-/*!**********************************************!*\
-  !*** ./src/Services/YoutubeSearchService.ts ***!
-  \**********************************************/
+/***/ "./src/Services/YoutubeAPIService.ts":
+/*!*******************************************!*\
+  !*** ./src/Services/YoutubeAPIService.ts ***!
+  \*******************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -213,7 +213,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var cors__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(cors__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var compression__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! compression */ "compression");
 /* harmony import */ var compression__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(compression__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _Services_YoutubeSearchService__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Services/YoutubeSearchService */ "./src/Services/YoutubeSearchService.ts");
+/* harmony import */ var _Services_YoutubeAPIService__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Services/YoutubeAPIService */ "./src/Services/YoutubeAPIService.ts");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -283,6 +283,7 @@ expressApp.get("/search", function (req, res) { return __awaiter(void 0, void 0,
         // const {query, pageToken} = req.query;
         // const [status, data] = await YoutubeAPIService.search(query as string || "", pageToken as string);
         // res.status(status).send(data);
+        // setTimeout(() => res.send({items: []}), 1500);
         // MOCK
         setTimeout(function () {
             return res.status(200).send({
@@ -545,7 +546,7 @@ expressApp.get("/details", function (req, res) { return __awaiter(void 0, void 0
         switch (_b.label) {
             case 0:
                 videoId = req.query.videoId;
-                return [4 /*yield*/, _Services_YoutubeSearchService__WEBPACK_IMPORTED_MODULE_4__["default"].details(videoId || "")];
+                return [4 /*yield*/, _Services_YoutubeAPIService__WEBPACK_IMPORTED_MODULE_4__["default"].details(videoId || "")];
             case 1:
                 _a = __read.apply(void 0, [_b.sent(), 2]), status = _a[0], data = _a[1];
                 res.status(status).send(data);
