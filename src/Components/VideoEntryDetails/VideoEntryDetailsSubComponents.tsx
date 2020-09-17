@@ -4,7 +4,8 @@ import { videoFrameDimensions } from "../../Theming/Globals";
 import MUIThumbUpIcon from "@material-ui/icons/ThumbUp";
 import MUIThumbDownIcon from "@material-ui/icons/ThumbDown";
 import MUIVisibilityIcon from "@material-ui/icons/Visibility";
-import MUIButton from "@material-ui/core/Button";
+import MUIButton from "@material-ui/core/IconButton";
+import MUIDivider from "@material-ui/core/Divider";
 
 export const Container = styled.div`
   position: absolute;
@@ -14,32 +15,57 @@ export const Container = styled.div`
   z-index: 2;
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
+  /* padding: 0 20px; */
   overflow-y: scroll;
 
   background-color: ${props => props.theme.color.background};
 `;
 
+export const Divider = styled(MUIDivider).attrs(() => ({
+  variant: "fullWidth"
+}))`
+  && {
+    margin-top: 10px;
+  } 
+`;
+
+
 export const Header = styled.div`
   display: flex;
   flex-direction: row;
-  padding: 25px 0;
+  padding: 25px 20px;
   align-items: center;
-`;
+  margin-bottom: 25px;
+
+  background-color: ${props => props.theme.color.secondary.darker};
+  color: white;
+  `;
 
 export const NavigateBeforeButton = styled(MUIButton)`
+  && {
+    margin-right: 20px;
+    padding: 0 20px;
 
+    font-size: 32px;
+
+    &:hover {
+      background-color: inherit;
+    }
+  }
 `;
 
 export const NavigateBeforeIcon = styled(MUIArrowBackIcon).attrs(() => ({
   fontSize: "inherit"
 }))`
   && {
-    margin-right: 20px;
-
-    color: ${props => props.theme.color.secondary.dark};
-    font-size: 32px;
+    color: white;
   }
+  `;
+
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const Title = styled.h2`

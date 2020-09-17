@@ -54,7 +54,7 @@ export const LightTheme = {
       light: "#FF7D80",
       main: "#FF5156",
       dark: "#FF252B",
-      darker: "FF0007"
+      darker: "#FF0007"
     },
     background: "#FFF",
     font: {

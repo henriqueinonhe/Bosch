@@ -21,6 +21,7 @@ const Main = styled.main`
   background-color: ${props => props.theme.color.primary.lighter};
 
   font-family: Roboto, sans-serif;
+  letter-spacing: 0.2px;
 `;
 
 const ResultsCircularProgress = styled(CircularProgress).attrs(() => ({

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { YoutubeVideoDetailsResponseData } from "../../Models/YoutubeVideoDetailsResponseData";
 import YoutubeAPIController from "../../Controllers/YoutubeAPIController";
-import { Header, NavigateBeforeButton, NavigateBeforeIcon, Video, VideoInfo, ChannelAndRatingsContainer, Ratings, ThumbUpIcon, RatingNumber, ThumbDownIcon, Views, VisibilityIcon, ViewCount, Container, Title, Channel, Description } from "./VideoEntryDetailsSubComponents";
+import { Header, NavigateBeforeButton, NavigateBeforeIcon, Video, VideoInfo, ChannelAndRatingsContainer, Ratings, ThumbUpIcon, RatingNumber, ThumbDownIcon, Views, VisibilityIcon, ViewCount, Container, Title, Channel, Description, Wrapper, Divider } from "./VideoEntryDetailsSubComponents";
 
 interface ResultEntryDetailsProps
 {
@@ -81,30 +81,34 @@ export default function VideoEntryDetails(props : ResultEntryDetailsProps) : JSX
         displayingInfo &&
         <>
           <Header>
-            <NavigateBeforeButton>
-              <NavigateBeforeIcon onClick={onHideEntryDetailsTriggered} />
+            <NavigateBeforeButton  onClick={onHideEntryDetailsTriggered} >
+              <NavigateBeforeIcon/>
             </NavigateBeforeButton>
             <Title>{title}</Title>
           </Header>
-          {
-            videoId !== "" && <Video src={videoURL} />
-          }
-          <VideoInfo>
-            <ChannelAndRatingsContainer>
-              <Channel>{channel}</Channel>
-              <Ratings>
-                <ThumbUpIcon />
-                <RatingNumber>{likes}</RatingNumber>
-                <ThumbDownIcon />
-                <RatingNumber>{dislikes}</RatingNumber>
-              </Ratings>
-            </ChannelAndRatingsContainer>
-            <Description>{description}</Description>
-            <Views>
-              <VisibilityIcon />
-              <ViewCount>{views}</ViewCount>
-            </Views>
-          </VideoInfo>
+          <Wrapper>
+            {
+              videoId !== "" && <Video src={videoURL} />
+            }
+            <VideoInfo>
+              <ChannelAndRatingsContainer>
+                <Channel>{channel}</Channel>
+                <Ratings>
+                  <ThumbUpIcon />
+                  <RatingNumber>{likes}</RatingNumber>
+                  <ThumbDownIcon />
+                  <RatingNumber>{dislikes}</RatingNumber>
+                </Ratings>
+              </ChannelAndRatingsContainer>
+              <Divider />
+              <Description>{description}</Description>
+              <Divider />
+              <Views>
+                <VisibilityIcon />
+                <ViewCount>{views}</ViewCount>
+              </Views>
+            </VideoInfo>
+          </Wrapper>
         </>
       }
     </Container>

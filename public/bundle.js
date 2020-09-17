@@ -3073,6 +3073,429 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/@material-ui/core/esm/Divider/Divider.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/Divider/Divider.js ***!
+  \***************************************************************/
+/*! exports provided: styles, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "styles", function() { return styles; });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
+/* harmony import */ var _styles_withStyles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../styles/withStyles */ "./node_modules/@material-ui/core/esm/styles/withStyles.js");
+/* harmony import */ var _styles_colorManipulator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../styles/colorManipulator */ "./node_modules/@material-ui/core/esm/styles/colorManipulator.js");
+
+
+
+
+
+
+
+var styles = function styles(theme) {
+  return {
+    /* Styles applied to the root element. */
+    root: {
+      height: 1,
+      margin: 0,
+      // Reset browser default style.
+      border: 'none',
+      flexShrink: 0,
+      backgroundColor: theme.palette.divider
+    },
+
+    /* Styles applied to the root element if `absolute={true}`. */
+    absolute: {
+      position: 'absolute',
+      bottom: 0,
+      left: 0,
+      width: '100%'
+    },
+
+    /* Styles applied to the root element if `variant="inset"`. */
+    inset: {
+      marginLeft: 72
+    },
+
+    /* Styles applied to the root element if `light={true}`. */
+    light: {
+      backgroundColor: Object(_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_6__["fade"])(theme.palette.divider, 0.08)
+    },
+
+    /* Styles applied to the root element if `variant="middle"`. */
+    middle: {
+      marginLeft: theme.spacing(2),
+      marginRight: theme.spacing(2)
+    },
+
+    /* Styles applied to the root element if `orientation="vertical"`. */
+    vertical: {
+      height: '100%',
+      width: 1
+    },
+
+    /* Styles applied to the root element if `flexItem={true}`. */
+    flexItem: {
+      alignSelf: 'stretch',
+      height: 'auto'
+    }
+  };
+};
+var Divider = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["forwardRef"](function Divider(props, ref) {
+  var _props$absolute = props.absolute,
+      absolute = _props$absolute === void 0 ? false : _props$absolute,
+      classes = props.classes,
+      className = props.className,
+      _props$component = props.component,
+      Component = _props$component === void 0 ? 'hr' : _props$component,
+      _props$flexItem = props.flexItem,
+      flexItem = _props$flexItem === void 0 ? false : _props$flexItem,
+      _props$light = props.light,
+      light = _props$light === void 0 ? false : _props$light,
+      _props$orientation = props.orientation,
+      orientation = _props$orientation === void 0 ? 'horizontal' : _props$orientation,
+      _props$role = props.role,
+      role = _props$role === void 0 ? Component !== 'hr' ? 'separator' : undefined : _props$role,
+      _props$variant = props.variant,
+      variant = _props$variant === void 0 ? 'fullWidth' : _props$variant,
+      other = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(props, ["absolute", "classes", "className", "component", "flexItem", "light", "orientation", "role", "variant"]);
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"](Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])(classes.root, className, variant !== 'fullWidth' && classes[variant], absolute && classes.absolute, flexItem && classes.flexItem, light && classes.light, orientation === 'vertical' && classes.vertical),
+    role: role,
+    ref: ref
+  }, other));
+});
+ true ? Divider.propTypes = {
+  // ----------------------------- Warning --------------------------------
+  // | These PropTypes are generated from the TypeScript type definitions |
+  // |     To update them edit the d.ts file and run "yarn proptypes"     |
+  // ----------------------------------------------------------------------
+
+  /**
+   * Absolutely position the element.
+   */
+  absolute: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool,
+
+  /**
+   * @ignore
+   */
+  children: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.node,
+
+  /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css) below for more details.
+   */
+  classes: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
+
+  /**
+   * @ignore
+   */
+  className: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
+
+  /**
+   * The component used for the root node.
+   * Either a string to use a HTML element or a component.
+   */
+  component: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a
+  /* @typescript-to-proptypes-ignore */
+  .elementType,
+
+  /**
+   * If `true`, a vertical divider will have the correct height when used in flex container.
+   * (By default, a vertical divider will have a calculated height of `0px` if it is the child of a flex container.)
+   */
+  flexItem: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool,
+
+  /**
+   * If `true`, the divider will have a lighter color.
+   */
+  light: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool,
+
+  /**
+   * The divider orientation.
+   */
+  orientation: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.oneOf(['horizontal', 'vertical']),
+
+  /**
+   * @ignore
+   */
+  role: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
+
+  /**
+   * The variant to use.
+   */
+  variant: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.oneOf(['fullWidth', 'inset', 'middle'])
+} : undefined;
+/* harmony default export */ __webpack_exports__["default"] = (Object(_styles_withStyles__WEBPACK_IMPORTED_MODULE_5__["default"])(styles, {
+  name: 'MuiDivider'
+})(Divider));
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/Divider/index.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/Divider/index.js ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Divider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Divider */ "./node_modules/@material-ui/core/esm/Divider/Divider.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _Divider__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/IconButton/IconButton.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/IconButton/IconButton.js ***!
+  \*********************************************************************/
+/*! exports provided: styles, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "styles", function() { return styles; });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
+/* harmony import */ var _material_ui_utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/utils */ "./node_modules/@material-ui/utils/esm/index.js");
+/* harmony import */ var _styles_withStyles__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../styles/withStyles */ "./node_modules/@material-ui/core/esm/styles/withStyles.js");
+/* harmony import */ var _styles_colorManipulator__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../styles/colorManipulator */ "./node_modules/@material-ui/core/esm/styles/colorManipulator.js");
+/* harmony import */ var _ButtonBase__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../ButtonBase */ "./node_modules/@material-ui/core/esm/ButtonBase/index.js");
+/* harmony import */ var _utils_capitalize__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../utils/capitalize */ "./node_modules/@material-ui/core/esm/utils/capitalize.js");
+
+
+
+
+
+
+
+
+
+
+var styles = function styles(theme) {
+  return {
+    /* Styles applied to the root element. */
+    root: {
+      textAlign: 'center',
+      flex: '0 0 auto',
+      fontSize: theme.typography.pxToRem(24),
+      padding: 12,
+      borderRadius: '50%',
+      overflow: 'visible',
+      // Explicitly set the default value to solve a bug on IE 11.
+      color: theme.palette.action.active,
+      transition: theme.transitions.create('background-color', {
+        duration: theme.transitions.duration.shortest
+      }),
+      '&:hover': {
+        backgroundColor: Object(_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_7__["fade"])(theme.palette.action.active, theme.palette.action.hoverOpacity),
+        // Reset on touch devices, it doesn't add specificity
+        '@media (hover: none)': {
+          backgroundColor: 'transparent'
+        }
+      },
+      '&$disabled': {
+        backgroundColor: 'transparent',
+        color: theme.palette.action.disabled
+      }
+    },
+
+    /* Styles applied to the root element if `edge="start"`. */
+    edgeStart: {
+      marginLeft: -12,
+      '$sizeSmall&': {
+        marginLeft: -3
+      }
+    },
+
+    /* Styles applied to the root element if `edge="end"`. */
+    edgeEnd: {
+      marginRight: -12,
+      '$sizeSmall&': {
+        marginRight: -3
+      }
+    },
+
+    /* Styles applied to the root element if `color="inherit"`. */
+    colorInherit: {
+      color: 'inherit'
+    },
+
+    /* Styles applied to the root element if `color="primary"`. */
+    colorPrimary: {
+      color: theme.palette.primary.main,
+      '&:hover': {
+        backgroundColor: Object(_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_7__["fade"])(theme.palette.primary.main, theme.palette.action.hoverOpacity),
+        // Reset on touch devices, it doesn't add specificity
+        '@media (hover: none)': {
+          backgroundColor: 'transparent'
+        }
+      }
+    },
+
+    /* Styles applied to the root element if `color="secondary"`. */
+    colorSecondary: {
+      color: theme.palette.secondary.main,
+      '&:hover': {
+        backgroundColor: Object(_styles_colorManipulator__WEBPACK_IMPORTED_MODULE_7__["fade"])(theme.palette.secondary.main, theme.palette.action.hoverOpacity),
+        // Reset on touch devices, it doesn't add specificity
+        '@media (hover: none)': {
+          backgroundColor: 'transparent'
+        }
+      }
+    },
+
+    /* Pseudo-class applied to the root element if `disabled={true}`. */
+    disabled: {},
+
+    /* Styles applied to the root element if `size="small"`. */
+    sizeSmall: {
+      padding: 3,
+      fontSize: theme.typography.pxToRem(18)
+    },
+
+    /* Styles applied to the children container element. */
+    label: {
+      width: '100%',
+      display: 'flex',
+      alignItems: 'inherit',
+      justifyContent: 'inherit'
+    }
+  };
+};
+/**
+ * Refer to the [Icons](/components/icons/) section of the documentation
+ * regarding the available icon options.
+ */
+
+var IconButton = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["forwardRef"](function IconButton(props, ref) {
+  var _props$edge = props.edge,
+      edge = _props$edge === void 0 ? false : _props$edge,
+      children = props.children,
+      classes = props.classes,
+      className = props.className,
+      _props$color = props.color,
+      color = _props$color === void 0 ? 'default' : _props$color,
+      _props$disabled = props.disabled,
+      disabled = _props$disabled === void 0 ? false : _props$disabled,
+      _props$disableFocusRi = props.disableFocusRipple,
+      disableFocusRipple = _props$disableFocusRi === void 0 ? false : _props$disableFocusRi,
+      _props$size = props.size,
+      size = _props$size === void 0 ? 'medium' : _props$size,
+      other = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(props, ["edge", "children", "classes", "className", "color", "disabled", "disableFocusRipple", "size"]);
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"](_ButtonBase__WEBPACK_IMPORTED_MODULE_8__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])(classes.root, className, color !== 'default' && classes["color".concat(Object(_utils_capitalize__WEBPACK_IMPORTED_MODULE_9__["default"])(color))], disabled && classes.disabled, size === "small" && classes["size".concat(Object(_utils_capitalize__WEBPACK_IMPORTED_MODULE_9__["default"])(size))], {
+      'start': classes.edgeStart,
+      'end': classes.edgeEnd
+    }[edge]),
+    centerRipple: true,
+    focusRipple: !disableFocusRipple,
+    disabled: disabled,
+    ref: ref
+  }, other), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"]("span", {
+    className: classes.label
+  }, children));
+});
+ true ? IconButton.propTypes = {
+  /**
+   * The icon element.
+   */
+  children: Object(_material_ui_utils__WEBPACK_IMPORTED_MODULE_5__["chainPropTypes"])(prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.node, function (props) {
+    var found = react__WEBPACK_IMPORTED_MODULE_2__["Children"].toArray(props.children).some(function (child) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["isValidElement"](child) && child.props.onClick;
+    });
+
+    if (found) {
+      return new Error(['Material-UI: You are providing an onClick event listener ' + 'to a child of a button element.', 'Firefox will never trigger the event.', 'You should move the onClick listener to the parent button element.', 'https://github.com/mui-org/material-ui/issues/13957'].join('\n'));
+    }
+
+    return null;
+  }),
+
+  /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css) below for more details.
+   */
+  classes: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object.isRequired,
+
+  /**
+   * @ignore
+   */
+  className: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
+
+  /**
+   * The color of the component. It supports those theme colors that make sense for this component.
+   */
+  color: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.oneOf(['default', 'inherit', 'primary', 'secondary']),
+
+  /**
+   * If `true`, the button will be disabled.
+   */
+  disabled: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool,
+
+  /**
+   * If `true`, the  keyboard focus ripple will be disabled.
+   */
+  disableFocusRipple: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool,
+
+  /**
+   * If `true`, the ripple effect will be disabled.
+   */
+  disableRipple: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool,
+
+  /**
+   * If given, uses a negative margin to counteract the padding on one
+   * side (this is often helpful for aligning the left or right
+   * side of the icon with content above or below, without ruining the border
+   * size and shape).
+   */
+  edge: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.oneOf(['start', 'end', false]),
+
+  /**
+   * The size of the button.
+   * `small` is equivalent to the dense button styling.
+   */
+  size: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.oneOf(['small', 'medium'])
+} : undefined;
+/* harmony default export */ __webpack_exports__["default"] = (Object(_styles_withStyles__WEBPACK_IMPORTED_MODULE_6__["default"])(styles, {
+  name: 'MuiIconButton'
+})(IconButton));
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/IconButton/index.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/IconButton/index.js ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _IconButton__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./IconButton */ "./node_modules/@material-ui/core/esm/IconButton/IconButton.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _IconButton__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+
+
+/***/ }),
+
 /***/ "./node_modules/@material-ui/core/esm/SvgIcon/SvgIcon.js":
 /*!***************************************************************!*\
   !*** ./node_modules/@material-ui/core/esm/SvgIcon/SvgIcon.js ***!
@@ -46161,7 +46584,7 @@ var __read = (undefined && undefined.__read) || function (o, n) {
 
 
 
-var Main = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].main(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center;\n  height: 100%;\n  overflow-x: hidden;\n  background-color: ", ";\n\n  font-family: Roboto, sans-serif;\n"], ["\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center;\n  height: 100%;\n  overflow-x: hidden;\n  background-color: ", ";\n\n  font-family: Roboto, sans-serif;\n"])), function (props) { return props.theme.color.primary.lighter; });
+var Main = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].main(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center;\n  height: 100%;\n  overflow-x: hidden;\n  background-color: ", ";\n\n  font-family: Roboto, sans-serif;\n  letter-spacing: 0.2px;\n"], ["\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center;\n  height: 100%;\n  overflow-x: hidden;\n  background-color: ", ";\n\n  font-family: Roboto, sans-serif;\n  letter-spacing: 0.2px;\n"])), function (props) { return props.theme.color.primary.lighter; });
 var ResultsCircularProgress = Object(styled_components__WEBPACK_IMPORTED_MODULE_6__["default"])(_material_ui_core_CircularProgress__WEBPACK_IMPORTED_MODULE_7__["default"]).attrs(function () { return ({
     size: 100
 }); })(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n\n  && {\n    margin-top: 25vh;\n  }\n"], ["\n\n  && {\n    margin-top: 25vh;\n  }\n"])));
@@ -46587,22 +47010,25 @@ function VideoEntryDetails(props) {
     return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["Container"], { ref: containerRef, id: "VideoEntryDetailsContainer" }, displayingInfo &&
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null,
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["Header"], null,
-                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["NavigateBeforeButton"], null,
-                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["NavigateBeforeIcon"], { onClick: onHideEntryDetailsTriggered })),
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["NavigateBeforeButton"], { onClick: onHideEntryDetailsTriggered },
+                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["NavigateBeforeIcon"], null)),
                 react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["Title"], null, title)),
-            videoId !== "" && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["Video"], { src: videoURL }),
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["VideoInfo"], null,
-                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["ChannelAndRatingsContainer"], null,
-                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["Channel"], null, channel),
-                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["Ratings"], null,
-                        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["ThumbUpIcon"], null),
-                        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["RatingNumber"], null, likes),
-                        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["ThumbDownIcon"], null),
-                        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["RatingNumber"], null, dislikes))),
-                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["Description"], null, description),
-                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["Views"], null,
-                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["VisibilityIcon"], null),
-                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["ViewCount"], null, views))))));
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["Wrapper"], null,
+                videoId !== "" && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["Video"], { src: videoURL }),
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["VideoInfo"], null,
+                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["ChannelAndRatingsContainer"], null,
+                        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["Channel"], null, channel),
+                        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["Ratings"], null,
+                            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["ThumbUpIcon"], null),
+                            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["RatingNumber"], null, likes),
+                            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["ThumbDownIcon"], null),
+                            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["RatingNumber"], null, dislikes))),
+                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["Divider"], null),
+                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["Description"], null, description),
+                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["Divider"], null),
+                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["Views"], null,
+                        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["VisibilityIcon"], null),
+                        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["ViewCount"], null, views)))))));
 }
 
 
@@ -46612,15 +47038,17 @@ function VideoEntryDetails(props) {
 /*!*****************************************************************************!*\
   !*** ./src/Components/VideoEntryDetails/VideoEntryDetailsSubComponents.tsx ***!
   \*****************************************************************************/
-/*! exports provided: Container, Header, NavigateBeforeButton, NavigateBeforeIcon, Title, Video, VideoInfo, ChannelAndRatingsContainer, ThumbUpIcon, ThumbDownIcon, Channel, Ratings, RatingNumber, Description, Views, VisibilityIcon, ViewCount */
+/*! exports provided: Container, Divider, Header, NavigateBeforeButton, NavigateBeforeIcon, Wrapper, Title, Video, VideoInfo, ChannelAndRatingsContainer, ThumbUpIcon, ThumbDownIcon, Channel, Ratings, RatingNumber, Description, Views, VisibilityIcon, ViewCount */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Container", function() { return Container; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Divider", function() { return Divider; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Header", function() { return Header; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavigateBeforeButton", function() { return NavigateBeforeButton; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavigateBeforeIcon", function() { return NavigateBeforeIcon; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Wrapper", function() { return Wrapper; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Title", function() { return Title; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Video", function() { return Video; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VideoInfo", function() { return VideoInfo; });
@@ -46644,7 +47072,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_icons_ThumbDown__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_ThumbDown__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _material_ui_icons_Visibility__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/icons/Visibility */ "./node_modules/@material-ui/icons/Visibility.js");
 /* harmony import */ var _material_ui_icons_Visibility__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Visibility__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/esm/Button/index.js");
+/* harmony import */ var _material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/IconButton */ "./node_modules/@material-ui/core/esm/IconButton/index.js");
+/* harmony import */ var _material_ui_core_Divider__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/Divider */ "./node_modules/@material-ui/core/esm/Divider/index.js");
 var __makeTemplateObject = (undefined && undefined.__makeTemplateObject) || function (cooked, raw) {
     if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
     return cooked;
@@ -46656,36 +47085,41 @@ var __makeTemplateObject = (undefined && undefined.__makeTemplateObject) || func
 
 
 
-var Container = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  position: absolute;\n  width: 100vw;\n  height: 100vh;\n  transform: translateX(100vw);\n  z-index: 2;\n  display: flex;\n  flex-direction: column;\n  padding: 0 20px;\n  overflow-y: scroll;\n\n  background-color: ", ";\n"], ["\n  position: absolute;\n  width: 100vw;\n  height: 100vh;\n  transform: translateX(100vw);\n  z-index: 2;\n  display: flex;\n  flex-direction: column;\n  padding: 0 20px;\n  overflow-y: scroll;\n\n  background-color: ", ";\n"])), function (props) { return props.theme.color.background; });
-var Header = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  display: flex;\n  flex-direction: row;\n  padding: 25px 0;\n  align-items: center;\n"], ["\n  display: flex;\n  flex-direction: row;\n  padding: 25px 0;\n  align-items: center;\n"])));
-var NavigateBeforeButton = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_6__["default"])(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n\n"], ["\n\n"])));
+
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  position: absolute;\n  width: 100vw;\n  height: 100vh;\n  transform: translateX(100vw);\n  z-index: 2;\n  display: flex;\n  flex-direction: column;\n  /* padding: 0 20px; */\n  overflow-y: scroll;\n\n  background-color: ", ";\n"], ["\n  position: absolute;\n  width: 100vw;\n  height: 100vh;\n  transform: translateX(100vw);\n  z-index: 2;\n  display: flex;\n  flex-direction: column;\n  /* padding: 0 20px; */\n  overflow-y: scroll;\n\n  background-color: ", ";\n"])), function (props) { return props.theme.color.background; });
+var Divider = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_material_ui_core_Divider__WEBPACK_IMPORTED_MODULE_7__["default"]).attrs(function () { return ({
+    variant: "fullWidth"
+}); })(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  && {\n    margin-top: 10px;\n  } \n"], ["\n  && {\n    margin-top: 10px;\n  } \n"])));
+var Header = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  display: flex;\n  flex-direction: row;\n  padding: 25px 20px;\n  align-items: center;\n  margin-bottom: 25px;\n\n  background-color: ", ";\n  color: white;\n  "], ["\n  display: flex;\n  flex-direction: row;\n  padding: 25px 20px;\n  align-items: center;\n  margin-bottom: 25px;\n\n  background-color: ", ";\n  color: white;\n  "])), function (props) { return props.theme.color.secondary.darker; });
+var NavigateBeforeButton = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_6__["default"])(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  && {\n    margin-right: 20px;\n    padding: 0 20px;\n\n    font-size: 32px;\n\n    &:hover {\n      background-color: inherit;\n    }\n  }\n"], ["\n  && {\n    margin-right: 20px;\n    padding: 0 20px;\n\n    font-size: 32px;\n\n    &:hover {\n      background-color: inherit;\n    }\n  }\n"])));
 var NavigateBeforeIcon = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_material_ui_icons_ArrowBack__WEBPACK_IMPORTED_MODULE_1___default.a).attrs(function () { return ({
     fontSize: "inherit"
-}); })(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  && {\n    margin-right: 20px;\n\n    color: ", ";\n    font-size: 32px;\n  }\n"], ["\n  && {\n    margin-right: 20px;\n\n    color: ", ";\n    font-size: 32px;\n  }\n"])), function (props) { return props.theme.color.secondary.dark; });
-var Title = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h2(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n  font-size: 20px;\n  font-weight: normal;\n"], ["\n  font-size: 20px;\n  font-weight: normal;\n"])));
+}); })(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n  && {\n    color: white;\n  }\n  "], ["\n  && {\n    color: white;\n  }\n  "])));
+var Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n"], ["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n"])));
+var Title = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h2(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  font-size: 20px;\n  font-weight: normal;\n"], ["\n  font-size: 20px;\n  font-weight: normal;\n"])));
 var Video = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].iframe.attrs(function () { return ({
     frameborder: "0",
     allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
     allowfullscreen: true
-}); })(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  min-width: ", ";\n  min-height: ", ";\n  max-width: ", ";\n  max-height: ", ";\n  width: 90vw;\n  height: 50.62vw;\n  align-self: center;\n  flex-shrink: 0;\n  \n  border: none;\n"], ["\n  min-width: ", ";\n  min-height: ", ";\n  max-width: ", ";\n  max-height: ", ";\n  width: 90vw;\n  height: 50.62vw;\n  align-self: center;\n  flex-shrink: 0;\n  \n  border: none;\n"])), _Theming_Globals__WEBPACK_IMPORTED_MODULE_2__["videoFrameDimensions"].xs.width, _Theming_Globals__WEBPACK_IMPORTED_MODULE_2__["videoFrameDimensions"].xs.height, _Theming_Globals__WEBPACK_IMPORTED_MODULE_2__["videoFrameDimensions"].xl.width, _Theming_Globals__WEBPACK_IMPORTED_MODULE_2__["videoFrameDimensions"].xl.height);
-var VideoInfo = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  width: 90vw;\n  max-width: ", ";\n  max-height: ", ";\n  display: flex;\n  flex-direction: column;\n  align-self: center;\n"], ["\n  width: 90vw;\n  max-width: ", ";\n  max-height: ", ";\n  display: flex;\n  flex-direction: column;\n  align-self: center;\n"])), _Theming_Globals__WEBPACK_IMPORTED_MODULE_2__["videoFrameDimensions"].xl.width, _Theming_Globals__WEBPACK_IMPORTED_MODULE_2__["videoFrameDimensions"].xl.height);
-var ChannelAndRatingsContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_8 || (templateObject_8 = __makeTemplateObject(["\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  margin-top: 20px;\n  align-items: center;\n  width: 100%;\n"], ["\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  margin-top: 20px;\n  align-items: center;\n  width: 100%;\n"])));
+}); })(templateObject_8 || (templateObject_8 = __makeTemplateObject(["\n  min-width: ", ";\n  min-height: ", ";\n  max-width: ", ";\n  max-height: ", ";\n  width: 90vw;\n  height: 50.62vw;\n  align-self: center;\n  flex-shrink: 0;\n  \n  border: none;\n"], ["\n  min-width: ", ";\n  min-height: ", ";\n  max-width: ", ";\n  max-height: ", ";\n  width: 90vw;\n  height: 50.62vw;\n  align-self: center;\n  flex-shrink: 0;\n  \n  border: none;\n"])), _Theming_Globals__WEBPACK_IMPORTED_MODULE_2__["videoFrameDimensions"].xs.width, _Theming_Globals__WEBPACK_IMPORTED_MODULE_2__["videoFrameDimensions"].xs.height, _Theming_Globals__WEBPACK_IMPORTED_MODULE_2__["videoFrameDimensions"].xl.width, _Theming_Globals__WEBPACK_IMPORTED_MODULE_2__["videoFrameDimensions"].xl.height);
+var VideoInfo = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_9 || (templateObject_9 = __makeTemplateObject(["\n  width: 90vw;\n  max-width: ", ";\n  max-height: ", ";\n  display: flex;\n  flex-direction: column;\n  align-self: center;\n"], ["\n  width: 90vw;\n  max-width: ", ";\n  max-height: ", ";\n  display: flex;\n  flex-direction: column;\n  align-self: center;\n"])), _Theming_Globals__WEBPACK_IMPORTED_MODULE_2__["videoFrameDimensions"].xl.width, _Theming_Globals__WEBPACK_IMPORTED_MODULE_2__["videoFrameDimensions"].xl.height);
+var ChannelAndRatingsContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_10 || (templateObject_10 = __makeTemplateObject(["\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  margin-top: 20px;\n  align-items: center;\n  width: 100%;\n"], ["\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  margin-top: 20px;\n  align-items: center;\n  width: 100%;\n"])));
 var ThumbUpIcon = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_material_ui_icons_ThumbUp__WEBPACK_IMPORTED_MODULE_3___default.a).attrs(function () { return ({
     fontSize: "inherit"
-}); })(templateObject_9 || (templateObject_9 = __makeTemplateObject(["\n  && {\n    margin-right: 10px;\n    color: ", ";\n  }\n"], ["\n  && {\n    margin-right: 10px;\n    color: ", ";\n  }\n"])), function (props) { return props.theme.color.secondary.dark; });
+}); })(templateObject_11 || (templateObject_11 = __makeTemplateObject(["\n  && {\n    margin-right: 10px;\n    color: ", ";\n  }\n"], ["\n  && {\n    margin-right: 10px;\n    color: ", ";\n  }\n"])), function (props) { return props.theme.color.secondary.dark; });
 var ThumbDownIcon = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_material_ui_icons_ThumbDown__WEBPACK_IMPORTED_MODULE_4___default.a).attrs(function () { return ({
     fontSize: "inherit"
-}); })(templateObject_10 || (templateObject_10 = __makeTemplateObject(["\n  && {\n    margin-right: 10px;\n    color: ", ";\n  }\n"], ["\n  && {\n    margin-right: 10px;\n    color: ", ";\n  }\n"])), function (props) { return props.theme.color.secondary.dark; });
-var Channel = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_11 || (templateObject_11 = __makeTemplateObject(["\n  font-size: 12px;\n  font-weight: bold;\n"], ["\n  font-size: 12px;\n  font-weight: bold;\n"])));
-var Ratings = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_12 || (templateObject_12 = __makeTemplateObject(["\n  flex-shrink: 0;\n  display: flex;\n  align-items: center;\n"], ["\n  flex-shrink: 0;\n  display: flex;\n  align-items: center;\n"])));
-var RatingNumber = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].span(templateObject_13 || (templateObject_13 = __makeTemplateObject(["\n  margin-right: 10px;\n"], ["\n  margin-right: 10px;\n"])));
-var Description = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p(templateObject_14 || (templateObject_14 = __makeTemplateObject(["\n  margin-top: 15px;\n  font-size: 14px;\n"], ["\n  margin-top: 15px;\n  font-size: 14px;\n"])));
-var Views = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_15 || (templateObject_15 = __makeTemplateObject(["\n  margin-top: 15px;\n  margin-bottom: 40px;\n  display: flex;\n  align-items: center;\n"], ["\n  margin-top: 15px;\n  margin-bottom: 40px;\n  display: flex;\n  align-items: center;\n"])));
+}); })(templateObject_12 || (templateObject_12 = __makeTemplateObject(["\n  && {\n    margin-right: 10px;\n    color: ", ";\n  }\n"], ["\n  && {\n    margin-right: 10px;\n    color: ", ";\n  }\n"])), function (props) { return props.theme.color.secondary.dark; });
+var Channel = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_13 || (templateObject_13 = __makeTemplateObject(["\n  font-size: 12px;\n  font-weight: bold;\n"], ["\n  font-size: 12px;\n  font-weight: bold;\n"])));
+var Ratings = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_14 || (templateObject_14 = __makeTemplateObject(["\n  flex-shrink: 0;\n  display: flex;\n  align-items: center;\n"], ["\n  flex-shrink: 0;\n  display: flex;\n  align-items: center;\n"])));
+var RatingNumber = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].span(templateObject_15 || (templateObject_15 = __makeTemplateObject(["\n  margin-right: 10px;\n"], ["\n  margin-right: 10px;\n"])));
+var Description = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p(templateObject_16 || (templateObject_16 = __makeTemplateObject(["\n  margin-top: 15px;\n  font-size: 14px;\n"], ["\n  margin-top: 15px;\n  font-size: 14px;\n"])));
+var Views = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_17 || (templateObject_17 = __makeTemplateObject(["\n  margin-top: 15px;\n  margin-bottom: 40px;\n  display: flex;\n  align-items: center;\n"], ["\n  margin-top: 15px;\n  margin-bottom: 40px;\n  display: flex;\n  align-items: center;\n"])));
 var VisibilityIcon = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_material_ui_icons_Visibility__WEBPACK_IMPORTED_MODULE_5___default.a).attrs(function () { return ({
     fontSize: "inherit"
-}); })(templateObject_16 || (templateObject_16 = __makeTemplateObject(["\n  && {\n    margin-right: 5px;\n    color: ", ";\n  }\n  \n"], ["\n  && {\n    margin-right: 5px;\n    color: ", ";\n  }\n  \n"])), function (props) { return props.theme.color.secondary.dark; });
-var ViewCount = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].span(templateObject_17 || (templateObject_17 = __makeTemplateObject(["\n"], ["\n"])));
-var templateObject_1, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6, templateObject_7, templateObject_8, templateObject_9, templateObject_10, templateObject_11, templateObject_12, templateObject_13, templateObject_14, templateObject_15, templateObject_16, templateObject_17;
+}); })(templateObject_18 || (templateObject_18 = __makeTemplateObject(["\n  && {\n    margin-right: 5px;\n    color: ", ";\n  }\n  \n"], ["\n  && {\n    margin-right: 5px;\n    color: ", ";\n  }\n  \n"])), function (props) { return props.theme.color.secondary.dark; });
+var ViewCount = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].span(templateObject_19 || (templateObject_19 = __makeTemplateObject(["\n"], ["\n"])));
+var templateObject_1, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6, templateObject_7, templateObject_8, templateObject_9, templateObject_10, templateObject_11, templateObject_12, templateObject_13, templateObject_14, templateObject_15, templateObject_16, templateObject_17, templateObject_18, templateObject_19;
 
 
 /***/ }),
@@ -47006,7 +47440,7 @@ var LightTheme = __assign(__assign({}, Common), { color: {
             light: "#FF7D80",
             main: "#FF5156",
             dark: "#FF252B",
-            darker: "FF0007"
+            darker: "#FF0007"
         },
         background: "#FFF",
         font: {
