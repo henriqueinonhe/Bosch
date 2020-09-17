@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { YoutubeSearchResource } from "../Models/YoutubeSearchResponseData";
 import VideoEntry from "./VideoEntry";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import Skeleton from "@material-ui/lab/Skeleton";
 
 const Container = styled.div`
   display: flex;
@@ -60,12 +61,18 @@ export default function VideoEntryList(props : VideoEntryListProps) : JSX.Elemen
       }
     };
 
+    //If the window already has enough size to contain 
+    //all entries, fetches new entries automatically until
+    // the whole page is full
+    callback();
+
     const container = document.querySelector("#VideoEntryListContainer")!;
     container.addEventListener("scroll", callback);
     return () =>
     {
       container.removeEventListener("scroll", callback);
     };
+
 
   }, [isLoading]);
 

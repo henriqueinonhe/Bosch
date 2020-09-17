@@ -46701,6 +46701,10 @@ function VideoEntryList(props) {
                 }
             });
         }); };
+        //If the window already has enough size to contain 
+        //all entries, fetches new entries automatically until
+        // the whole page is full
+        callback();
         var container = document.querySelector("#VideoEntryListContainer");
         container.addEventListener("scroll", callback);
         return function () {
