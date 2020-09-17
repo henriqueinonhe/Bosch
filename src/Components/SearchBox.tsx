@@ -2,7 +2,7 @@ import React, { SyntheticEvent, useState } from "react";
 import styled from "styled-components";
 import Theme from "../Theming/Theme";
 import MUISearchIcon from "@material-ui/icons/Search";
-
+import MUIButton from "@material-ui/core/Button";
 
 interface SearchBoxContainerProps
 {
@@ -12,35 +12,48 @@ interface SearchBoxContainerProps
 const SearchBoxContainer = styled.div<SearchBoxContainerProps>`
   --height: 85px;
 
-  box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.4);
+  /* transition: box-shadow 500ms;
+  
+  &:hover {
+    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.4);
+  } */
+
   z-index: 1;
   top: calc(50% - var(--height) / 2);
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   background-color: white;
+  transition: box-shadow 500ms;
+  max-width: 600px;
+  width: calc(100% - 40px);
+  padding: 0;
+  top: calc(50% - var(--height) / 2);
+  
+  &:hover, &:focus-within  {
+    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.4);
+  }
 
+  ${props => props.searchActivated &&
+  `
   animation-name: moveUp;
   animation-duration: 500ms;
   animation-timing-function: ease;
-  animation-play-state: ${props => props.searchActivated ? "running" : "paused"};
   animation-fill-mode: forwards;
 
   @keyframes moveUp {
-    from {
-      width: calc(100% - 40px);
-      padding: 0;
-      top: calc(50% - var(--height) / 2);
-    }
     to {
+      max-width: 100%;
       width: 100%;
       padding: 20px;
       top: 0;
       position: fixed;
+      box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.4);
     }
   }
+  ` };
 `;
-
 
 const SearchBoxWrapper = styled.div`
   /* background-color: rgba(255, 255, 255, 0.3); */
@@ -50,6 +63,7 @@ const SearchBoxWrapper = styled.div`
   flex-direction: row;
   align-items: center;
   height: 45px;
+  max-width: 800px;
 `;
 
 const SearchInput = styled.input.attrs(() => ({
@@ -70,10 +84,16 @@ const SearchIcon = styled(MUISearchIcon)`
   margin-right: 10px;
 `;
 
-const SearchButton = styled.button`
-  border: none;
-  background-color: rgba(255, 255, 255, 0);
-  outline: none;
+const SearchButton = styled(MUIButton)`
+  && {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    outline: none;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    min-width: 0;
+  }
 `;
 
 interface SearchBoxProps

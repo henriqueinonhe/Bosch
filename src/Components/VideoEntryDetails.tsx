@@ -7,6 +7,7 @@ import MUIThumbDownIcon from "@material-ui/icons/ThumbDown";
 import MUIVisibilityIcon from "@material-ui/icons/Visibility";
 import YoutubeVideoDetailsController from "../Controllers/YoutubeVideoDetailsController";
 import { YoutubeVideoDetailsResponseData } from "../Models/YoutubeVideoDetailsResponseData";
+import MUIButton from "@material-ui/core/Button";
 
 const Container = styled.div`
   position: absolute;
@@ -18,6 +19,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 20px;
+  overflow-y: scroll;
 `;
 
 const Header = styled.div`
@@ -25,6 +27,10 @@ const Header = styled.div`
   flex-direction: row;
   padding: 25px 0;
   align-items: center;
+`;
+
+const NavigateBeforeButton = styled(MUIButton)`
+
 `;
 
 const NavigateBeforeIcon = styled(MUINavigateBeforeIcon).attrs(() => ({
@@ -55,6 +61,7 @@ const Video = styled.iframe.attrs(() => ({
   height: 50.62vw;
   align-self: center;
   border: none;
+  flex-shrink: 0;
 `;
 
 const VideoInfo = styled.div`
@@ -97,6 +104,7 @@ const Channel = styled.div`
 `;
 
 const Ratings = styled.div`
+  flex-shrink: 0;
 `;
 
 const RatingNumber = styled.span`
@@ -110,6 +118,7 @@ const Description = styled.p`
 
 const Views = styled.div`
   margin-top: 15px;
+  margin-bottom: 40px;
 `;
 
 const VisibilityIcon = styled(MUIVisibilityIcon).attrs(() => ({
@@ -133,12 +142,12 @@ export default function VideoEntryDetails(props : ResultEntryDetailsProps) : JSX
   const {visible, videoId, hideVideoDetails} = props;
   const [videoDetails, setVideoDetails] = useState<YoutubeVideoDetailsResponseData>();
 
-  const title = videoDetails?.items[0]!.snippet.title || "";
-  const channel = videoDetails?.items[0]!.snippet.channelTitle || "";
-  const description = videoDetails?.items[0]!.snippet.description || "";
-  const likes = videoDetails?.items[0]!.statistics.likeCount || "";
-  const dislikes = videoDetails?.items[0]!.statistics.dislikeCount || "";
-  const views = videoDetails?.items[0]!.statistics.viewCount || "";
+  const title = videoDetails?.items[0]?.snippet.title || "";
+  const channel = videoDetails?.items[0]?.snippet.channelTitle || "";
+  const description = videoDetails?.items[0]?.snippet.description || "";
+  const likes = videoDetails?.items[0]?.statistics.likeCount || "";
+  const dislikes = videoDetails?.items[0]?.statistics.dislikeCount || "";
+  const views = videoDetails?.items[0]?.statistics.viewCount || "";
   const videoURL = `https://www.youtube.com/embed/${videoId}`;
 
   useEffect(() => 
@@ -156,7 +165,9 @@ export default function VideoEntryDetails(props : ResultEntryDetailsProps) : JSX
         visible &&
         <>
           <Header>
-            <NavigateBeforeIcon onClick={hideVideoDetails} />
+            <NavigateBeforeButton>
+              <NavigateBeforeIcon onClick={hideVideoDetails} />
+            </NavigateBeforeButton>
             <Title>{title}</Title>
           </Header>
           {

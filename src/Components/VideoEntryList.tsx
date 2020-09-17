@@ -22,17 +22,21 @@ const ListWrapper = styled.ul`
   margin-top: 85px;
 `;
 
+const ErrorMessage = styled.p`
+  text-align: center;
+`;
+
+const MoreEntriesCircularProgress = styled(CircularProgress).attrs(() => ({
+  size: 70
+}))`
+`;
+
 interface VideoEntryListProps
 {
   entries : Array<YoutubeSearchResource>;
   fetchMoreEntries() : Promise<void>;
   showVideoDetails(videoId : string) : void;
 }
-
-const MoreEntriesCircularProgress = styled(CircularProgress).attrs(() => ({
-  size: 70
-}))`
-`;
 
 export default function VideoEntryList(props : VideoEntryListProps) : JSX.Element
 {
@@ -70,10 +74,10 @@ export default function VideoEntryList(props : VideoEntryListProps) : JSX.Elemen
       <ListWrapper id="VideoEntryList">
         {
           entries.length === 0 ?
-            <p>Não encontramos vídeos com o termo buscado.<br />Utilize outras palavras-chave.</p> :
+            <ErrorMessage>Não encontramos vídeos com o termo buscado.<br />Utilize outras palavras-chave.</ErrorMessage> :
             entries.map((entry, index) => 
               <VideoEntry 
-                key={/*item.etag*/ index}
+                key={index}
                 thumbnail={entry.snippet.thumbnails["medium"].url}
                 title={entry.snippet.title}
                 channel={entry.snippet.channelTitle}

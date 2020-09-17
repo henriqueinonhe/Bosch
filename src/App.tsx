@@ -34,28 +34,29 @@ function App() : JSX.Element
 {
   const [searchActivated, setSearchActivated] = useState(false);
   const [nextPageToken, setNextPageToken] = useState<string>("");
+  const [currentSearchQuery, setCurrentSearchQuery] = useState<string>("");
   const [searchResults, setSearchResults] = useState<Array<YoutubeSearchResource>>();
   const [showingVideoDetails, setShowingVideoDetails] = useState(false);
   const [detailedVideoId, setDetailedVideoId] = useState<string>("");
+  const [loadingSearchResults, setLoadingSearchResults] = useState<boolean>(false);
 
   async function runSearch(searchQuery : string) : Promise<void>
   {
     setSearchActivated(true);
+    setLoadingSearchResults(true);
+    setCurrentSearchQuery(searchQuery);
     
     const resultData = await YoutubeSearchController.search(searchQuery);
-    setSearchResults(resultData.items);
     setNextPageToken(resultData.nextPageToken);
+    setSearchResults(resultData.items);
+    setLoadingSearchResults(false);
   }
 
   async function fetchMoreResults() : Promise<void>
   {
-    //Mock fetch
-    const promise = new Promise(resolve => 
-    {
-      setTimeout(resolve, 1500);
-    }).then(() => setSearchResults(results => results?.concat(results.slice(0, 5))));
-
-    await promise;
+    const resultData = await YoutubeSearchController.search(currentSearchQuery, nextPageToken);
+    setNextPageToken(resultData.nextPageToken);
+    setSearchResults(oldData => oldData!.concat(resultData.items));
   }
 
   function showVideoDetails(videoId : string) : void
@@ -67,12 +68,12 @@ function App() : JSX.Element
         {transform: "translateX(0)"}     
       ],
       {
-        duration: 500,
+        duration: 700,
         easing: "ease",
         fill: "forwards"
       }
     );
-    setTimeout(() => setShowingVideoDetails(true), 500);
+    setTimeout(() => setShowingVideoDetails(true), 750);
   }
 
   function hideVideoDetails() : void
@@ -83,15 +84,13 @@ function App() : JSX.Element
         {transform: "translateX(100vw)"}     
       ],
       {
-        duration: 500,
+        duration: 700,
         easing: "ease",
         fill: "forwards"
       }
     );
-    setTimeout(() => setShowingVideoDetails(false), 500);
+    setTimeout(() => setShowingVideoDetails(false), 750);
   }
-
-  const fetchingSearchResults = searchActivated && searchResults === undefined;
 
   return (
     <Main id="Main">
@@ -101,7 +100,7 @@ function App() : JSX.Element
       />
       {
         searchActivated ? 
-          fetchingSearchResults ?
+          loadingSearchResults ?
             <ResultsCircularProgress /> :
             <VideoEntryList 
               fetchMoreEntries={fetchMoreResults} 

@@ -9,11 +9,12 @@ const api = axios.create({
 
 export default class YoutubeSearchController
 {
-  public static async search(query : string) : Promise<YoutubeSearchResponseData>
+  public static async search(query : string, pageToken = "") : Promise<YoutubeSearchResponseData>
   {
     const response = await api.get("", {
       params: {
-        query
+        query,
+        pageToken
       }
     });
     return await response.data;

@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import compression from "compression";
-import YoutubeSearchService from "./Services/YoutubeSearchService";
+import YoutubeAPIService from "./Services/YoutubeSearchService";
 
 const expressApp = express();
 dotenv.config();
@@ -14,241 +14,262 @@ expressApp.use(cors());
 
 expressApp.get("/search", async (req, res) =>
 {
-  // const {query} = req.query;
-  // const [status, data] = await YoutubeSearchService.search(query as string || "");
+  //Real
+  // const {query, pageToken} = req.query;
+  // const [status, data] = await YoutubeAPIService.search(query as string || "", pageToken as string);
   // res.status(status).send(data);
 
-  //MOCK
-  setTimeout(() =>
-    res.status(200).send({
-      "kind": "youtube#searchListResponse",
-      "etag": "vSz2NY5agQ3HqsIYtmxY6y4BS8U",
-      "nextPageToken": "CAUQAA",
-      "regionCode": "BR",
-      "pageInfo": {
-        "totalResults": 1000000,
-        "resultsPerPage": 5
-      },
-      "items": [
-        {
-          "kind": "youtube#searchResult",
-          "etag": "25deBUum8MDoQlzjjt9ha3QOQA8",
-          "id": {
-            "kind": "youtube#video",
-            "videoId": "IM-9bRmiAgU"
-          },
-          "snippet": {
-            "publishedAt": "2020-09-15T18:00:02Z",
-            "channelId": "UCSh4uYOKH6K2Mtp8od1UwIw",
-            "title": "8th in DREAMHACK SOLOS 🥇 (100+ ping/$1,000) | FaZe Dubs",
-            "description": "Use Code 'FaZeDubs' in the Item Shop! Subscribe to NEVER miss a video Follow other socials to keep up to date: ▻ Twitch: https://www.twitch.tv/dubs/ ...",
-            "thumbnails": {
-              "default": {
-                "url": "https://i.ytimg.com/vi/IM-9bRmiAgU/default.jpg",
-                "width": 120,
-                "height": 90
-              },
-              "medium": {
-                "url": "https://i.ytimg.com/vi/IM-9bRmiAgU/mqdefault.jpg",
-                "width": 320,
-                "height": 180
-              },
-              "high": {
-                "url": "https://i.ytimg.com/vi/IM-9bRmiAgU/hqdefault.jpg",
-                "width": 480,
-                "height": 360
-              }
-            },
-            "channelTitle": "FaZe Dubs",
-            "liveBroadcastContent": "none",
-            "publishTime": "2020-09-15T18:00:02Z"
-          }
-        },
-        {
-          "kind": "youtube#searchResult",
-          "etag": "gxwTpH1C-2nBVQ7cAh2K-xDUHUU",
-          "id": {
-            "kind": "youtube#channel",
-            "channelId": "UCSh4uYOKH6K2Mtp8od1UwIw"
-          },
-          "snippet": {
-            "publishedAt": "2015-08-02T14:11:25Z",
-            "channelId": "UCSh4uYOKH6K2Mtp8od1UwIw",
-            "title": "FaZe Dubs",
-            "description": "Pro Fortnite Player for @FaZeClan 5x World Cup Qualifier | 16 y/o Creator Code: FaZeDubs Instagram: FaZe_Dubs Twitter: Dubsfn Twitch: dubs_tv.",
-            "thumbnails": {
-              "default": {
-                "url": "https://yt3.ggpht.com/-b8sKwpQr6PM/AAAAAAAAAAI/AAAAAAAAAAA/mIwNQCuqK18/s88-c-k-no-mo-rj-c0xffffff/photo.jpg"
-              },
-              "medium": {
-                "url": "https://yt3.ggpht.com/-b8sKwpQr6PM/AAAAAAAAAAI/AAAAAAAAAAA/mIwNQCuqK18/s240-c-k-no-mo-rj-c0xffffff/photo.jpg"
-              },
-              "high": {
-                "url": "https://yt3.ggpht.com/-b8sKwpQr6PM/AAAAAAAAAAI/AAAAAAAAAAA/mIwNQCuqK18/s800-c-k-no-mo-rj-c0xffffff/photo.jpg"
-              }
-            },
-            "channelTitle": "FaZe Dubs",
-            "liveBroadcastContent": "upcoming",
-            "publishTime": "2015-08-02T14:11:25Z"
-          }
-        },
-        {
-          "kind": "youtube#searchResult",
-          "etag": "hKnw3yNleALuSRkGH1OVbsemp9Y",
-          "id": {
-            "kind": "youtube#channel",
-            "channelId": "UCFhY4CngxbnRlMX-F5x9_Kw"
-          },
-          "snippet": {
-            "publishedAt": "2013-01-16T22:48:51Z",
-            "channelId": "UCFhY4CngxbnRlMX-F5x9_Kw",
-            "title": "DUBS",
-            "description": "Hello everyone and welcome to my channel. If you enjoy the content here feel free to subscribe. I try to keep this channel as active as possible so don't forget to ...",
-            "thumbnails": {
-              "default": {
-                "url": "https://yt3.ggpht.com/-QVu7iaTIOHE/AAAAAAAAAAI/AAAAAAAAAAA/orZzqljoRQU/s88-c-k-no-mo-rj-c0xffffff/photo.jpg"
-              },
-              "medium": {
-                "url": "https://yt3.ggpht.com/-QVu7iaTIOHE/AAAAAAAAAAI/AAAAAAAAAAA/orZzqljoRQU/s240-c-k-no-mo-rj-c0xffffff/photo.jpg"
-              },
-              "high": {
-                "url": "https://yt3.ggpht.com/-QVu7iaTIOHE/AAAAAAAAAAI/AAAAAAAAAAA/orZzqljoRQU/s800-c-k-no-mo-rj-c0xffffff/photo.jpg"
-              }
-            },
-            "channelTitle": "DUBS",
-            "liveBroadcastContent": "none",
-            "publishTime": "2013-01-16T22:48:51Z"
-          }
-        },
-        {
-          "kind": "youtube#searchResult",
-          "etag": "izqmFQfZoFp1yyLupaHfvFf4B_U",
-          "id": {
-            "kind": "youtube#video",
-            "videoId": "j5IV9WninR4"
-          },
-          "snippet": {
-            "publishedAt": "2020-08-28T22:37:47Z",
-            "channelId": "UCSh4uYOKH6K2Mtp8od1UwIw",
-            "title": "FaZe Dubs - 💪 The Last Solo Cash Cup... (Popping off)",
-            "description": "https://gfuel.ly/faze-bogo Use Code 'FaZeDubs' in the Item Shop! Subscribe to NEVER miss a video Follow other socials to keep up to date: ▻ Twitch: ...",
-            "thumbnails": {
-              "default": {
-                "url": "https://i.ytimg.com/vi/j5IV9WninR4/default.jpg",
-                "width": 120,
-                "height": 90
-              },
-              "medium": {
-                "url": "https://i.ytimg.com/vi/j5IV9WninR4/mqdefault.jpg",
-                "width": 320,
-                "height": 180
-              },
-              "high": {
-                "url": "https://i.ytimg.com/vi/j5IV9WninR4/hqdefault.jpg",
-                "width": 480,
-                "height": 360
-              }
-            },
-            "channelTitle": "FaZe Dubs",
-            "liveBroadcastContent": "none",
-            "publishTime": "2020-08-28T22:37:47Z"
-          }
-        },
-        {
-          "kind": "youtube#searchResult",
-          "etag": "lRNDGkUqXWdWmWGlH9UnM0wMkhE",
-          "id": {
-            "kind": "youtube#video",
-            "videoId": "y73hNld1KVc"
-          },
-          "snippet": {
-            "publishedAt": "2019-07-23T14:01:17Z",
-            "channelId": "UClG8odDC8TS6Zpqk9CGVQiQ",
-            "title": "Fortnite World Cup - Player Profile - Dubs",
-            "description": "Watch the Fortnite World Cup Finals - July 26 - 28, 12:30pm ET The Greatest Tournament of All Time! Watch in-game and Fortnite.com/Watch on July 26 - 28 at ...",
-            "thumbnails": {
-              "default": {
-                "url": "https://i.ytimg.com/vi/y73hNld1KVc/default.jpg",
-                "width": 120,
-                "height": 90
-              },
-              "medium": {
-                "url": "https://i.ytimg.com/vi/y73hNld1KVc/mqdefault.jpg",
-                "width": 320,
-                "height": 180
-              },
-              "high": {
-                "url": "https://i.ytimg.com/vi/y73hNld1KVc/hqdefault.jpg",
-                "width": 480,
-                "height": 360
-              }
-            },
-            "channelTitle": "Fortnite",
-            "liveBroadcastContent": "none",
-            "publishTime": "2019-07-23T14:01:17Z"
-          }
-        }
-      ]
-    }), 1500);
+  // MOCK
+  // setTimeout(() =>
+  //   res.status(200).send({
+  //     "kind": "youtube#searchListResponse",
+  //     "etag": "I_VfimA1o9IyEshS715xZrdjFvY",
+  //     "nextPageToken": "CAUQAA",
+  //     "regionCode": "BR",
+  //     "pageInfo": {
+  //       "totalResults": 1000000,
+  //       "resultsPerPage": 5
+  //     },
+  //     "items": [
+  //       {
+  //         "kind": "youtube#searchResult",
+  //         "etag": "ZiWnftpnVdgJAsx7SGfvmKx-Fv0",
+  //         "id": {
+  //           "kind": "youtube#video",
+  //           "videoId": "eThlEPyvF1Y"
+  //         },
+  //         "snippet": {
+  //           "publishedAt": "2020-09-16T05:18:19Z",
+  //           "channelId": "UCTRNV3t2jxbkZgBjhyDv8UQ",
+  //           "title": "LOL Surprise REMIX OMG Super Surprise NEW OMG Dolls LOL Hair Flips HUGE UNBOXING!",
+  //           "description": "It's a HUGE LOL Surprise Remix Unboxing! All new LOL Remix Super Surprise 4 new OMG fashion dolls and all new LOL Surprise Hair Flips and Remix Pets.",
+  //           "thumbnails": {
+  //             "default": {
+  //               "url": "https://i.ytimg.com/vi/eThlEPyvF1Y/default.jpg",
+  //               "width": 120,
+  //               "height": 90
+  //             },
+  //             "medium": {
+  //               "url": "https://i.ytimg.com/vi/eThlEPyvF1Y/mqdefault.jpg",
+  //               "width": 320,
+  //               "height": 180
+  //             },
+  //             "high": {
+  //               "url": "https://i.ytimg.com/vi/eThlEPyvF1Y/hqdefault.jpg",
+  //               "width": 480,
+  //               "height": 360
+  //             }
+  //           },
+  //           "channelTitle": "Cupcake Squad",
+  //           "liveBroadcastContent": "none",
+  //           "publishTime": "2020-09-16T05:18:19Z"
+  //         }
+  //       },
+  //       {
+  //         "kind": "youtube#searchResult",
+  //         "etag": "pg99-HijDmnKM9qiEGzZnlpuulY",
+  //         "id": {
+  //           "kind": "youtube#video",
+  //           "videoId": "1TyRbPTN970"
+  //         },
+  //         "snippet": {
+  //           "publishedAt": "2020-09-16T15:00:00Z",
+  //           "channelId": "UCHnjNAMpCREywRsLoBWt86g",
+  //           "title": "¡Nunca Eres Grande Para Las Muñecas! 6 Diys De Ladybug Para Lol Surprise",
+  //           "description": "Subscríbete aquí: https://www.youtube.com/channel/UCHnjNAMpCREywRsLoBWt86g?sub_confirmation=1 15 Trucos Y Manualidades Para Muñecas Bebés ...",
+  //           "thumbnails": {
+  //             "default": {
+  //               "url": "https://i.ytimg.com/vi/1TyRbPTN970/default.jpg",
+  //               "width": 120,
+  //               "height": 90
+  //             },
+  //             "medium": {
+  //               "url": "https://i.ytimg.com/vi/1TyRbPTN970/mqdefault.jpg",
+  //               "width": 320,
+  //               "height": 180
+  //             },
+  //             "high": {
+  //               "url": "https://i.ytimg.com/vi/1TyRbPTN970/hqdefault.jpg",
+  //               "width": 480,
+  //               "height": 360
+  //             }
+  //           },
+  //           "channelTitle": "LaLiLu ES",
+  //           "liveBroadcastContent": "none",
+  //           "publishTime": "2020-09-16T15:00:00Z"
+  //         }
+  //       },
+  //       {
+  //         "kind": "youtube#searchResult",
+  //         "etag": "UKupOWfQ5JEy7hM0WR3BDRa768g",
+  //         "id": {
+  //           "kind": "youtube#video",
+  //           "videoId": "iWoMgKPPfns"
+  //         },
+  //         "snippet": {
+  //           "publishedAt": "2020-09-15T13:00:23Z",
+  //           "channelId": "UCeBC9W6J2TmXUW7sZ4rcZGQ",
+  //           "title": "OMG NEONLICIOUS FAMILY VACATION MOVIE 🌴 - AIRPLANE HOTEL &amp; SPA LOL FAMILY DAZZLE TRIP WITH BABY!",
+  //           "description": "Click here to Subscribe guys! ❤ https://goo.gl/FNis9t! Please give this video a LIKE & SUBSCRIBE guys! OMG Dolls Dazzle and her sisters Neonlicious ...",
+  //           "thumbnails": {
+  //             "default": {
+  //               "url": "https://i.ytimg.com/vi/iWoMgKPPfns/default.jpg",
+  //               "width": 120,
+  //               "height": 90
+  //             },
+  //             "medium": {
+  //               "url": "https://i.ytimg.com/vi/iWoMgKPPfns/mqdefault.jpg",
+  //               "width": 320,
+  //               "height": 180
+  //             },
+  //             "high": {
+  //               "url": "https://i.ytimg.com/vi/iWoMgKPPfns/hqdefault.jpg",
+  //               "width": 480,
+  //               "height": 360
+  //             }
+  //           },
+  //           "channelTitle": "Minky Toys and Dolls",
+  //           "liveBroadcastContent": "none",
+  //           "publishTime": "2020-09-15T13:00:23Z"
+  //         }
+  //       },
+  //       {
+  //         "kind": "youtube#searchResult",
+  //         "etag": "KhO-K_TMBcwepKcSB1RYyAA6B7w",
+  //         "id": {
+  //           "kind": "youtube#video",
+  //           "videoId": "8hM4-znOsF4"
+  //         },
+  //         "snippet": {
+  //           "publishedAt": "2020-08-07T12:00:04Z",
+  //           "channelId": "UCYiBIqmMGTTSiPj78bCpE1Q",
+  //           "title": "Nunca se é Velha Demais para Bonecas! 10 DIYs com LOL Surprise da Branca de Neve",
+  //           "description": "Subscreve aqui: https://www.youtube.com/channel/UCYiBIqmMGTTSiPj78bCpE1Q?sub_confirmation=1 Bonecas de Papel Vestidas/ Scoob vs Monstros de ...",
+  //           "thumbnails": {
+  //             "default": {
+  //               "url": "https://i.ytimg.com/vi/8hM4-znOsF4/default.jpg",
+  //               "width": 120,
+  //               "height": 90
+  //             },
+  //             "medium": {
+  //               "url": "https://i.ytimg.com/vi/8hM4-znOsF4/mqdefault.jpg",
+  //               "width": 320,
+  //               "height": 180
+  //             },
+  //             "high": {
+  //               "url": "https://i.ytimg.com/vi/8hM4-znOsF4/hqdefault.jpg",
+  //               "width": 480,
+  //               "height": 360
+  //             }
+  //           },
+  //           "channelTitle": "LaLiLu PT",
+  //           "liveBroadcastContent": "none",
+  //           "publishTime": "2020-08-07T12:00:04Z"
+  //         }
+  //       },
+  //       {
+  //         "kind": "youtube#searchResult",
+  //         "etag": "hnxHWb1M9-5689dvB1__wGvdIsg",
+  //         "id": {
+  //           "kind": "youtube#video",
+  //           "videoId": "tSRYh0B9srA"
+  //         },
+  //         "snippet": {
+  //           "publishedAt": "2020-09-16T15:45:02Z",
+  //           "channelId": "UCZnlRhSFoDwlKhJYH0aeXMw",
+  //           "title": "When your boss doesn&#39;t find you funny // LOL COMEDIHA Season 6 Meme Compilation",
+  //           "description": "00:00 Orchestra 00:56 Flirting Seduction 01:41 Bank Security 02:41 Crucial Battle 03:46 Orchestra II 04:28 Toxic Clean Up 05:11 Room Service Lol ...",
+  //           "thumbnails": {
+  //             "default": {
+  //               "url": "https://i.ytimg.com/vi/tSRYh0B9srA/default.jpg",
+  //               "width": 120,
+  //               "height": 90
+  //             },
+  //             "medium": {
+  //               "url": "https://i.ytimg.com/vi/tSRYh0B9srA/mqdefault.jpg",
+  //               "width": 320,
+  //               "height": 180
+  //             },
+  //             "high": {
+  //               "url": "https://i.ytimg.com/vi/tSRYh0B9srA/hqdefault.jpg",
+  //               "width": 480,
+  //               "height": 360
+  //             }
+  //           },
+  //           "channelTitle": "LOL ComediHa! Official Comedy TV show",
+  //           "liveBroadcastContent": "none",
+  //           "publishTime": "2020-09-16T15:45:02Z"
+  //         }
+  //       }
+  //     ]
+  //   }), 1500);
+
+  setTimeout(() => res.send({items: []}), 1500);
 });
 
 expressApp.get("/details", async (req, res) =>
 {
-  setTimeout(() => 
-  {
-    res.send({
-      "kind": "youtube#videoListResponse",
-      "etag": "xuLFotUPZYrcWeiLRdAYHTH-v-I",
-      "items": [
-        {
-          "kind": "youtube#video",
-          "etag": "9HM4gdHqlkSqwC3rru8HWKRTpzs",
-          "id": "fhfSPWIJbe0",
-          "snippet": {
-            "publishedAt": "2020-07-02T20:46:15Z",
-            "channelId": "UCj2DbLZbFfhV8WsZMZ2tIJA",
-            "title": "The Borborema Province",
-            "description": "Prof. Dr. Fabricio de Andrade Caxito (UFMG) -  Toward an integrated model of geological evolution for NE Brazil–NW Africa: The Borborema Province and its connections to the Trans-Saharan (Benino-Nigerian and Tuareg shields) and Central African orogens",
-            "thumbnails": {
-              "default": {
-                "url": "https://i.ytimg.com/vi/fhfSPWIJbe0/default.jpg",
-                "width": 120,
-                "height": 90
-              },
-              "medium": {
-                "url": "https://i.ytimg.com/vi/fhfSPWIJbe0/mqdefault.jpg",
-                "width": 320,
-                "height": 180
-              },
-              "high": {
-                "url": "https://i.ytimg.com/vi/fhfSPWIJbe0/hqdefault.jpg",
-                "width": 480,
-                "height": 360
-              }
-            },
-            "channelTitle": "Sociedade Brasileira de Geologia",
-            "categoryId": "24",
-            "liveBroadcastContent": "none",
-            "localized": {
-              "title": "The Borborema Province",
-              "description": "Prof. Dr. Fabricio de Andrade Caxito (UFMG) -  Toward an integrated model of geological evolution for NE Brazil–NW Africa: The Borborema Province and its connections to the Trans-Saharan (Benino-Nigerian and Tuareg shields) and Central African orogens"
-            }
-          },
-          "statistics": {
-            "viewCount": "957",
-            "likeCount": "142",
-            "dislikeCount": "0",
-            "favoriteCount": "0",
-            "commentCount": "2"
-          }
-        }
-      ],
-      "pageInfo": {
-        "totalResults": 1,
-        "resultsPerPage": 1
-      }
-    });
-  }, 1500);
+  const {videoId} = req.query;
+  const [status, data] = await YoutubeAPIService.details(videoId as string || "");
+  res.status(status).send(data);
+
+
+  //MOCK
+  // setTimeout(() => 
+  // {
+  //   res.send({
+  //     "kind": "youtube#videoListResponse",
+  //     "etag": "xuLFotUPZYrcWeiLRdAYHTH-v-I",
+  //     "items": [
+  //       {
+  //         "kind": "youtube#video",
+  //         "etag": "9HM4gdHqlkSqwC3rru8HWKRTpzs",
+  //         "id": "fhfSPWIJbe0",
+  //         "snippet": {
+  //           "publishedAt": "2020-07-02T20:46:15Z",
+  //           "channelId": "UCj2DbLZbFfhV8WsZMZ2tIJA",
+  //           "title": "The Borborema Province",
+  //           "description": "Prof. Dr. Fabricio de Andrade Caxito (UFMG) -  Toward an integrated model of geological evolution for NE Brazil–NW Africa: The Borborema Province and its connections to the Trans-Saharan (Benino-Nigerian and Tuareg shields) and Central African orogens",
+  //           "thumbnails": {
+  //             "default": {
+  //               "url": "https://i.ytimg.com/vi/fhfSPWIJbe0/default.jpg",
+  //               "width": 120,
+  //               "height": 90
+  //             },
+  //             "medium": {
+  //               "url": "https://i.ytimg.com/vi/fhfSPWIJbe0/mqdefault.jpg",
+  //               "width": 320,
+  //               "height": 180
+  //             },
+  //             "high": {
+  //               "url": "https://i.ytimg.com/vi/fhfSPWIJbe0/hqdefault.jpg",
+  //               "width": 480,
+  //               "height": 360
+  //             }
+  //           },
+  //           "channelTitle": "Sociedade Brasileira de Geologia",
+  //           "categoryId": "24",
+  //           "liveBroadcastContent": "none",
+  //           "localized": {
+  //             "title": "The Borborema Province",
+  //             "description": "Prof. Dr. Fabricio de Andrade Caxito (UFMG) -  Toward an integrated model of geological evolution for NE Brazil–NW Africa: The Borborema Province and its connections to the Trans-Saharan (Benino-Nigerian and Tuareg shields) and Central African orogens"
+  //           }
+  //         },
+  //         "statistics": {
+  //           "viewCount": "957",
+  //           "likeCount": "142",
+  //           "dislikeCount": "0",
+  //           "favoriteCount": "0",
+  //           "commentCount": "2"
+  //         }
+  //       }
+  //     ],
+  //     "pageInfo": {
+  //       "totalResults": 1,
+  //       "resultsPerPage": 1
+  //     }
+  //   });
+  // }, 1500);
 });
 
 expressApp.listen(process.env.PORT || 3000, () =>
