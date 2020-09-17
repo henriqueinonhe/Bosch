@@ -26,6 +26,9 @@ export default function VideoEntryDetails(props : ResultEntryDetailsProps) : JSX
   const views = videoDetails?.items[0]?.statistics.viewCount || "";
   const videoURL = `https://www.youtube.com/embed/${videoId}`;
 
+  /**
+   * Fetching video details data.
+   */
   useEffect(() => 
   {
     (async () => 
@@ -36,6 +39,9 @@ export default function VideoEntryDetails(props : ResultEntryDetailsProps) : JSX
 
   }, [videoId]);
 
+  /**
+   * Animations.
+   */
   useEffect(() => 
   {
     const videoEntryDetailsContainer = containerRef.current!;

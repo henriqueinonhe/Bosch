@@ -10,7 +10,7 @@ export const Container = styled.li`
   flex-direction: column;
 
   box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.4);
-  background-color: white;
+  background-color: ${props => props.theme.color.background};
 
   @media (min-width: 600px) {
     margin-right: 20px;
@@ -64,9 +64,15 @@ export const DetailsButton = styled(MUIButton)`
     align-self: flex-start;
     
     text-transform: uppercase;
-    border: none;
+    border-radius: 0;
     outline: none;
-    background-color: #EEE;
+    color: white;
+    background-color: ${props => props.theme.color.secondary.main};
+
+    &:hover {
+      background-color: ${props => props.theme.color.secondary.dark};
+      box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.4);
+    }
   }
 `;
 

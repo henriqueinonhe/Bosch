@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import MUINavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
+import MUIArrowBackIcon from "@material-ui/icons/ArrowBack";
 import { videoFrameDimensions } from "../../Theming/Globals";
 import MUIThumbUpIcon from "@material-ui/icons/ThumbUp";
 import MUIThumbDownIcon from "@material-ui/icons/ThumbDown";
@@ -17,7 +17,7 @@ export const Container = styled.div`
   padding: 0 20px;
   overflow-y: scroll;
 
-  background-color: white;
+  background-color: ${props => props.theme.color.background};
 `;
 
 export const Header = styled.div`
@@ -31,13 +31,13 @@ export const NavigateBeforeButton = styled(MUIButton)`
 
 `;
 
-export const NavigateBeforeIcon = styled(MUINavigateBeforeIcon).attrs(() => ({
+export const NavigateBeforeIcon = styled(MUIArrowBackIcon).attrs(() => ({
   fontSize: "inherit"
 }))`
   && {
     margin-right: 20px;
 
-    border: 2px solid gray;
+    color: ${props => props.theme.color.secondary.dark};
     font-size: 32px;
   }
 `;
@@ -87,6 +87,7 @@ export const ThumbUpIcon = styled(MUIThumbUpIcon).attrs(() => ({
 }))`
   && {
     margin-right: 10px;
+    color: ${props => props.theme.color.secondary.dark};
   }
 `;
 
@@ -95,6 +96,7 @@ export const ThumbDownIcon = styled(MUIThumbDownIcon).attrs(() => ({
 }))`
   && {
     margin-right: 10px;
+    color: ${props => props.theme.color.secondary.dark};
   }
 `;
 
@@ -105,6 +107,8 @@ export const Channel = styled.div`
 
 export const Ratings = styled.div`
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
 `;
 
 export const RatingNumber = styled.span`
@@ -119,12 +123,18 @@ export const Description = styled.p`
 export const Views = styled.div`
   margin-top: 15px;
   margin-bottom: 40px;
+  display: flex;
+  align-items: center;
 `;
 
 export const VisibilityIcon = styled(MUIVisibilityIcon).attrs(() => ({
   fontSize: "inherit"
 }))`
-  margin-right: 5px;
+  && {
+    margin-right: 5px;
+    color: ${props => props.theme.color.secondary.dark};
+  }
+  
 `;
 
 export const ViewCount = styled.span`

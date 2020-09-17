@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import YoutubeAPIController from "./Controllers/YoutubeAPIController";
 import { YoutubeSearchResource } from "./Models/YoutubeSearchResponseData";
@@ -8,6 +8,8 @@ import SearchBar from "./Components/SearchBox/SearchBar";
 import styled from "styled-components";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import MUISkeleton from "@material-ui/lab/Skeleton";
+import { ThemeProvider } from "styled-components";
+import { LightTheme, ThemeInterface } from "./Theming/Theme";
 
 const Main = styled.main`
   display: flex;
@@ -16,6 +18,7 @@ const Main = styled.main`
   align-items: center;
   height: 100%;
   overflow-x: hidden;
+  background-color: ${props => props.theme.color.primary.lighter};
 
   font-family: Roboto, sans-serif;
 `;
@@ -38,6 +41,7 @@ function App() : JSX.Element
   const [videoEntryDetailsVisible, setVideoEntryDetailsVisible] = useState(false);
   const [detailedVideoId, setDetailedVideoId] = useState<string>("");
   const [loadingSearchResults, setLoadingSearchResults] = useState<boolean>(false);
+  const [currentTheme, setCurrentTheme] = useState<ThemeInterface>(LightTheme);
 
   async function handleSearchTriggered(searchQuery : string) : Promise<void>
   {
@@ -70,27 +74,29 @@ function App() : JSX.Element
   }
 
   return (
-    <Main id="Main">
-      <SearchBar 
-        onSearchTriggered={handleSearchTriggered}
-      />
-      {
-        searchTriggered ? 
-          loadingSearchResults ?
-            <ResultsCircularProgress /> :
-            <VideoEntryList 
-              onMoreEntriesTriggered={handleMoreEntriesTriggered} 
-              entries={searchResults!}
-              onShowEntryDetailsTriggered={handleShowEntryDetailsTriggered}
-            /> :
-          <></>
-      }
-      <VideoEntryDetails 
-        isVisible={videoEntryDetailsVisible} 
-        videoId={detailedVideoId} 
-        onHideEntryDetailsTriggered={handleHideEntryDetailsTriggered}
-      />
-    </ Main>
+    <ThemeProvider theme={currentTheme}>
+      <Main id="Main">
+        <SearchBar 
+          onSearchTriggered={handleSearchTriggered}
+        />
+        {
+          searchTriggered ? 
+            loadingSearchResults ?
+              <ResultsCircularProgress /> :
+              <VideoEntryList 
+                onMoreEntriesTriggered={handleMoreEntriesTriggered} 
+                entries={searchResults!}
+                onShowEntryDetailsTriggered={handleShowEntryDetailsTriggered}
+              /> :
+            <></>
+        }
+        <VideoEntryDetails 
+          isVisible={videoEntryDetailsVisible} 
+          videoId={detailedVideoId} 
+          onHideEntryDetailsTriggered={handleHideEntryDetailsTriggered}
+        />
+      </ Main>
+    </ThemeProvider>
   );
 }
 

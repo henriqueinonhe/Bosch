@@ -1,5 +1,4 @@
 import styled, { css, keyframes } from "styled-components";
-import Theme from "../../Theming/Theme";
 import MUISearchIcon from "@material-ui/icons/Search";
 import MUIButton from "@material-ui/core/Button";
 
@@ -32,8 +31,8 @@ export const SearchBoxContainer = styled.div<SearchBoxContainerProps>`
   width: calc(100% - 40px);
   top: calc(50% - var(--height) / 2);
   
-  background-color: white;
-  transition: box-shadow 500ms;
+  background-color: ${props => props.theme.color.primary.dark};
+  transition: box-shadow 400ms;
 
   &:hover, &:focus-within  {
     box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.4);
@@ -48,13 +47,15 @@ export const SearchBoxContainer = styled.div<SearchBoxContainerProps>`
 `;
 
 export const SearchBoxWrapper = styled.div`
-  border: 2px solid gray;
+  border: 2px solid ${props => props.theme.color.secondary.main};
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   height: 45px;
   max-width: 800px;
+
+  background-color: white;
 `;
 
 export const SearchInput = styled.input.attrs(() => ({
@@ -67,14 +68,16 @@ export const SearchInput = styled.input.attrs(() => ({
 
   border: none;
   outline: none;
-  color: ${Theme.color.font.default};
+  color: ${props => props.theme.color.font.default};
   background-color: rgba(255, 255, 255, 0);
 `;
 
 export const SearchIcon = styled(MUISearchIcon)`
   margin-right: 10px;
 
-  color: ${Theme.color.font.default};
+  && {
+    color: ${props => props.theme.color.secondary.main};
+  }
 `;
 
 export const SearchButton = styled(MUIButton)`

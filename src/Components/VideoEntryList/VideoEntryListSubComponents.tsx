@@ -7,7 +7,7 @@ export const Container = styled.div`
   align-items: center;
   height: 100%;
   overflow-y: scroll;
-`;
+  `;
 
 export const ListWrapper = styled.ul`
   display: flex;
@@ -17,7 +17,7 @@ export const ListWrapper = styled.ul`
   margin-top: 85px;
   
   list-style: none;
-  background-color: white;
+  background-color: ${props => props.theme.color.primary.lighter};
 `;
 
 export const ErrorMessage = styled.p`
