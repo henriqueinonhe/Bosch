@@ -1,10 +1,18 @@
 import React from "react";
 import styled from "styled-components";
+import { videoFrameDimensions } from "../Theming/Globals";
 
 const ListItemWrapper = styled.li`
-  width: 280px;
+  width: ${videoFrameDimensions.xs.width};
   margin-bottom: 20px;
   background-color: white;
+  height: 354px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 600px) {
+    margin-right: 20px;
+  }
 `;
 
 interface ThumbnailProps
@@ -17,8 +25,8 @@ const Thumbnail = styled.div<ThumbnailProps>`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 280px;
-  height: 157px;
+  width: ${videoFrameDimensions.xs.width};
+  height: ${videoFrameDimensions.xs.height};
 `;
 
 const Title = styled.h2`
@@ -44,6 +52,11 @@ const DetailsButton = styled.button`
   padding: 10px;
   font-size: 14px;
   outline: none;
+  align-self: flex-start;
+`;
+
+const ListItemPadding = styled.div`
+  flex-grow: 1;
 `;
 
 interface ResultEntryProps 
@@ -52,10 +65,10 @@ interface ResultEntryProps
   title : string;
   channel : string;
   description : string;
-  showDetails() : Promise<void>;
+  showDetails() : void;
 }
 
-export default function ResultEntry(props : ResultEntryProps) : JSX.Element
+export default function VideoEntry(props : ResultEntryProps) : JSX.Element
 {
   const {thumbnail, title, channel, description, showDetails} = props;
 
@@ -65,6 +78,7 @@ export default function ResultEntry(props : ResultEntryProps) : JSX.Element
       <Title>{title}</Title>
       <Channel>{channel}</Channel>
       <Description>{description}</Description>
+      <ListItemPadding />
       <DetailsButton onClick={showDetails}>Detalhes do Vídeo</DetailsButton>
     </ListItemWrapper>
   );  

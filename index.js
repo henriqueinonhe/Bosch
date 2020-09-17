@@ -330,6 +330,65 @@ expressApp.get("/search", function (req, res) { return __awaiter(void 0, void 0,
         return [2 /*return*/];
     });
 }); });
+expressApp.get("/details", function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        setTimeout(function () {
+            res.send({
+                "kind": "youtube#videoListResponse",
+                "etag": "xuLFotUPZYrcWeiLRdAYHTH-v-I",
+                "items": [
+                    {
+                        "kind": "youtube#video",
+                        "etag": "9HM4gdHqlkSqwC3rru8HWKRTpzs",
+                        "id": "fhfSPWIJbe0",
+                        "snippet": {
+                            "publishedAt": "2020-07-02T20:46:15Z",
+                            "channelId": "UCj2DbLZbFfhV8WsZMZ2tIJA",
+                            "title": "The Borborema Province",
+                            "description": "Prof. Dr. Fabricio de Andrade Caxito (UFMG) -  Toward an integrated model of geological evolution for NE Brazil–NW Africa: The Borborema Province and its connections to the Trans-Saharan (Benino-Nigerian and Tuareg shields) and Central African orogens",
+                            "thumbnails": {
+                                "default": {
+                                    "url": "https://i.ytimg.com/vi/fhfSPWIJbe0/default.jpg",
+                                    "width": 120,
+                                    "height": 90
+                                },
+                                "medium": {
+                                    "url": "https://i.ytimg.com/vi/fhfSPWIJbe0/mqdefault.jpg",
+                                    "width": 320,
+                                    "height": 180
+                                },
+                                "high": {
+                                    "url": "https://i.ytimg.com/vi/fhfSPWIJbe0/hqdefault.jpg",
+                                    "width": 480,
+                                    "height": 360
+                                }
+                            },
+                            "channelTitle": "Sociedade Brasileira de Geologia",
+                            "categoryId": "24",
+                            "liveBroadcastContent": "none",
+                            "localized": {
+                                "title": "The Borborema Province",
+                                "description": "Prof. Dr. Fabricio de Andrade Caxito (UFMG) -  Toward an integrated model of geological evolution for NE Brazil–NW Africa: The Borborema Province and its connections to the Trans-Saharan (Benino-Nigerian and Tuareg shields) and Central African orogens"
+                            }
+                        },
+                        "statistics": {
+                            "viewCount": "957",
+                            "likeCount": "142",
+                            "dislikeCount": "0",
+                            "favoriteCount": "0",
+                            "commentCount": "2"
+                        }
+                    }
+                ],
+                "pageInfo": {
+                    "totalResults": 1,
+                    "resultsPerPage": 1
+                }
+            });
+        }, 1500);
+        return [2 /*return*/];
+    });
+}); });
 expressApp.listen(process.env.PORT || 3000, function () {
     console.log("Server up!");
 });

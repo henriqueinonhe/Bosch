@@ -1,5 +1,6 @@
 import axios from "axios";
 import { YoutubeSearchResponseData } from "../Models/YoutubeSearchResponseData";
+import { YoutubeVideoDetailsResponseData } from "../Models/YoutubeVideoDetailsResponseData";
 
 const api = axios.create({
   baseURL: "http://localhost:3000/search"

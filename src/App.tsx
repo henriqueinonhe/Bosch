@@ -1,13 +1,13 @@
-import React, { SyntheticEvent, useState } from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import styled from "styled-components";
-import MUISearchIcon from "@material-ui/icons/Search";
 import YoutubeSearchController from "./Controllers/YoutubeSearchController";
 import { YoutubeSearchResource } from "./Models/YoutubeSearchResponseData";
-import SearchResultsList from "./Components/SearchResultsList";
+import VideoEntryList from "./Components/VideoEntryList";
+import VideoDetails from "./Components/VideoEntryDetails";
+import SearchBox from "./Components/SearchBox";
+import styled from "styled-components";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Theme from "./Theming/Theme";
-import ResultEntryDetails from "./Components/ResultEntryDetails";
 
 const Main = styled.main`
   font-family: Roboto, sans-serif;
@@ -16,73 +16,9 @@ const Main = styled.main`
   justify-content: flex-start;
   align-items: center;
   height: 100%;
-  padding: 0 20px;
-  overflow-y: scroll;
+  overflow-x: hidden;
+  /* letter-spacing: 0.75px; */
   /* background-color: ${Theme.color.primary.main}; */
-`;
-
-interface SearchBoxProps
-{
-  searchActivated : boolean;
-}
-
-const SearchBox = styled.div<SearchBoxProps>`
-  --height: 45px;
-
-  background-color: rgba(255, 255, 255, 1);
-  border: 2px solid gray;
-  height: var(--height);
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  top: calc(50% - var(--height) / 2);
-  z-index: 1;
-  margin-bottom: 20px;
-
-  animation-name: moveUp;
-  animation-duration: 500ms;
-  animation-timing-function: ease;
-  animation-play-state: ${props => props.searchActivated ? "running" : "paused"};
-  animation-fill-mode: forwards;
-
-  @keyframes moveUp {
-    from {
-      margin-top: 0;
-      top: calc(50% - var(--height) / 2);
-    }
-    to {
-      margin-top: 20px;
-      top: 0;
-    }
-  }
-`;
-
-const SearchInput = styled.input.attrs(() => ({
-  type: "search",
-  placeholder: "Pesquisar"
-}))`
-  background-color: rgba(255, 255, 255, 0);
-  color: ${Theme.color.font.default};
-  text-indent: 10px;
-  border: none;
-  outline: none;
-  height: 100%;
-  flex-grow: 1;
-`;
-
-const SearchIcon = styled(MUISearchIcon)`
-  color: ${Theme.color.font.default};
-  margin-right: 10px;
-`;
-
-const SearchButton = styled.button`
-  border: none;
-  background-color: rgba(255, 255, 255, 0);
-  outline: none;
-`;
-
-const ResultsDisplay = styled.div`
 `;
 
 const ResultsCircularProgress = styled(CircularProgress).attrs(() => ({
@@ -92,18 +28,17 @@ const ResultsCircularProgress = styled(CircularProgress).attrs(() => ({
   && {
     margin-top: 25vh;
   }
-
 `;
 
 function App() : JSX.Element
 {
   const [searchActivated, setSearchActivated] = useState(false);
-  const [searchQuery, setSearchQuery] = useState<string>("");
   const [nextPageToken, setNextPageToken] = useState<string>("");
   const [searchResults, setSearchResults] = useState<Array<YoutubeSearchResource>>();
   const [showingVideoDetails, setShowingVideoDetails] = useState(false);
+  const [detailedVideoId, setDetailedVideoId] = useState<string>("");
 
-  async function runSearch() : Promise<void>
+  async function runSearch(searchQuery : string) : Promise<void>
   {
     setSearchActivated(true);
     
@@ -123,54 +58,63 @@ function App() : JSX.Element
     await promise;
   }
 
-  async function handleSearchButtonClick() : Promise<void>
+  function showVideoDetails(videoId : string) : void
   {
-    await runSearch();
+    setDetailedVideoId(videoId);
+    const videoEntryDetailsContainer = document.querySelector("#VideoEntryDetailsContainer") as HTMLElement;
+    videoEntryDetailsContainer.animate(
+      [
+        {transform: "translateX(0)"}     
+      ],
+      {
+        duration: 500,
+        easing: "ease",
+        fill: "forwards"
+      }
+    );
+    setTimeout(() => setShowingVideoDetails(true), 500);
   }
 
-  function handleSearchInputChange(event : SyntheticEvent) : void
+  function hideVideoDetails() : void
   {
-    const currentSearchQuery = (event.target as HTMLInputElement).value;
-    setSearchQuery(currentSearchQuery);
-  }
-
-  async function handleSearchInputKeyPress(event : React.KeyboardEvent) :  Promise<void>
-  {
-    if(event.key === "Enter")
-    {
-      await runSearch();
-    }
+    const videoEntryDetailsContainer = document.querySelector("#VideoEntryDetailsContainer") as HTMLElement;
+    videoEntryDetailsContainer.animate(
+      [
+        {transform: "translateX(100vw)"}     
+      ],
+      {
+        duration: 500,
+        easing: "ease",
+        fill: "forwards"
+      }
+    );
+    setTimeout(() => setShowingVideoDetails(false), 500);
   }
 
   const fetchingSearchResults = searchActivated && searchResults === undefined;
 
   return (
     <Main id="Main">
-      <SearchBox searchActivated={searchActivated}>
-        <SearchInput 
-          onKeyPress={handleSearchInputKeyPress} 
-          value={searchQuery} 
-          onChange={handleSearchInputChange}
-        />
-        <SearchButton onClick={handleSearchButtonClick}> 
-          <SearchIcon />
-        </SearchButton>
-      </SearchBox>
+      <SearchBox 
+        searchActivated={searchActivated}
+        runSearch={runSearch}
+      />
       {
-        searchActivated &&
-        <ResultsDisplay>
-          {
-            fetchingSearchResults ?
-              <ResultsCircularProgress /> :
-              <SearchResultsList 
-                fetchMoreEntries={fetchMoreResults} 
-                entries={searchResults!}
-                setShowingDetails={setShowingVideoDetails}
-              />
-          }
-        </ResultsDisplay>
+        searchActivated ? 
+          fetchingSearchResults ?
+            <ResultsCircularProgress /> :
+            <VideoEntryList 
+              fetchMoreEntries={fetchMoreResults} 
+              entries={searchResults!}
+              showVideoDetails={showVideoDetails}
+            /> :
+          <></>
       }
-      <ResultEntryDetails visible={showingVideoDetails} />
+      <VideoDetails 
+        visible={showingVideoDetails} 
+        videoId={detailedVideoId} 
+        hideVideoDetails={hideVideoDetails}
+      />
     </ Main>
   );
 }

@@ -3272,6 +3272,35 @@ function capitalize(string) {
 
 /***/ }),
 
+/***/ "./node_modules/@material-ui/icons/NavigateBefore.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/@material-ui/icons/NavigateBefore.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@material-ui/icons/utils/createSvgIcon.js"));
+
+var _default = (0, _createSvgIcon.default)(_react.default.createElement("path", {
+  d: "M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+}), 'NavigateBefore');
+
+exports.default = _default;
+
+/***/ }),
+
 /***/ "./node_modules/@material-ui/icons/Search.js":
 /*!***************************************************!*\
   !*** ./node_modules/@material-ui/icons/Search.js ***!
@@ -3296,6 +3325,93 @@ var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/crea
 var _default = (0, _createSvgIcon.default)(_react.default.createElement("path", {
   d: "M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
 }), 'Search');
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/icons/ThumbDown.js":
+/*!******************************************************!*\
+  !*** ./node_modules/@material-ui/icons/ThumbDown.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@material-ui/icons/utils/createSvgIcon.js"));
+
+var _default = (0, _createSvgIcon.default)(_react.default.createElement("path", {
+  d: "M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z"
+}), 'ThumbDown');
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/icons/ThumbUp.js":
+/*!****************************************************!*\
+  !*** ./node_modules/@material-ui/icons/ThumbUp.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@material-ui/icons/utils/createSvgIcon.js"));
+
+var _default = (0, _createSvgIcon.default)(_react.default.createElement("path", {
+  d: "M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"
+}), 'ThumbUp');
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/icons/Visibility.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/@material-ui/icons/Visibility.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@material-ui/icons/utils/createSvgIcon.js"));
+
+var _default = (0, _createSvgIcon.default)(_react.default.createElement("path", {
+  d: "M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
+}), 'Visibility');
 
 exports.default = _default;
 
@@ -42197,14 +42313,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/icons/Search */ "./node_modules/@material-ui/icons/Search.js");
-/* harmony import */ var _material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _Controllers_YoutubeSearchController__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Controllers/YoutubeSearchController */ "./src/Controllers/YoutubeSearchController.ts");
-/* harmony import */ var _Components_SearchResultsList__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Components/SearchResultsList */ "./src/Components/SearchResultsList.tsx");
-/* harmony import */ var _material_ui_core_CircularProgress__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/CircularProgress */ "./node_modules/@material-ui/core/esm/CircularProgress/index.js");
-/* harmony import */ var _Theming_Theme__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Theming/Theme */ "./src/Theming/Theme.ts");
-/* harmony import */ var _Components_ResultEntryDetails__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Components/ResultEntryDetails */ "./src/Components/ResultEntryDetails.tsx");
+/* harmony import */ var _Controllers_YoutubeSearchController__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Controllers/YoutubeSearchController */ "./src/Controllers/YoutubeSearchController.ts");
+/* harmony import */ var _Components_VideoEntryList__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Components/VideoEntryList */ "./src/Components/VideoEntryList.tsx");
+/* harmony import */ var _Components_VideoEntryDetails__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Components/VideoEntryDetails */ "./src/Components/VideoEntryDetails.tsx");
+/* harmony import */ var _Components_SearchBox__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Components/SearchBox */ "./src/Components/SearchBox.tsx");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _material_ui_core_CircularProgress__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/CircularProgress */ "./node_modules/@material-ui/core/esm/CircularProgress/index.js");
+/* harmony import */ var _Theming_Theme__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Theming/Theme */ "./src/Theming/Theme.ts");
 var __makeTemplateObject = (undefined && undefined.__makeTemplateObject) || function (cooked, raw) {
     if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
     return cooked;
@@ -42270,32 +42385,24 @@ var __read = (undefined && undefined.__read) || function (o, n) {
 
 
 
-var Main = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].main(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  font-family: Roboto, sans-serif;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center;\n  height: 100%;\n  padding: 0 20px;\n  overflow-y: scroll;\n  /* background-color: ", "; */\n"], ["\n  font-family: Roboto, sans-serif;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center;\n  height: 100%;\n  padding: 0 20px;\n  overflow-y: scroll;\n  /* background-color: ", "; */\n"])), _Theming_Theme__WEBPACK_IMPORTED_MODULE_7__["default"].color.primary.main);
-var SearchBox = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  --height: 45px;\n\n  background-color: rgba(255, 255, 255, 1);\n  border: 2px solid gray;\n  height: var(--height);\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  top: calc(50% - var(--height) / 2);\n  z-index: 1;\n  margin-bottom: 20px;\n\n  animation-name: moveUp;\n  animation-duration: 500ms;\n  animation-timing-function: ease;\n  animation-play-state: ", ";\n  animation-fill-mode: forwards;\n\n  @keyframes moveUp {\n    from {\n      margin-top: 0;\n      top: calc(50% - var(--height) / 2);\n    }\n    to {\n      margin-top: 20px;\n      top: 0;\n    }\n  }\n"], ["\n  --height: 45px;\n\n  background-color: rgba(255, 255, 255, 1);\n  border: 2px solid gray;\n  height: var(--height);\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  top: calc(50% - var(--height) / 2);\n  z-index: 1;\n  margin-bottom: 20px;\n\n  animation-name: moveUp;\n  animation-duration: 500ms;\n  animation-timing-function: ease;\n  animation-play-state: ", ";\n  animation-fill-mode: forwards;\n\n  @keyframes moveUp {\n    from {\n      margin-top: 0;\n      top: calc(50% - var(--height) / 2);\n    }\n    to {\n      margin-top: 20px;\n      top: 0;\n    }\n  }\n"])), function (props) { return props.searchActivated ? "running" : "paused"; });
-var SearchInput = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].input.attrs(function () { return ({
-    type: "search",
-    placeholder: "Pesquisar"
-}); })(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  background-color: rgba(255, 255, 255, 0);\n  color: ", ";\n  text-indent: 10px;\n  border: none;\n  outline: none;\n  height: 100%;\n  flex-grow: 1;\n"], ["\n  background-color: rgba(255, 255, 255, 0);\n  color: ", ";\n  text-indent: 10px;\n  border: none;\n  outline: none;\n  height: 100%;\n  flex-grow: 1;\n"])), _Theming_Theme__WEBPACK_IMPORTED_MODULE_7__["default"].color.font.default);
-var SearchIcon = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["default"])(_material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_3___default.a)(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  color: ", ";\n  margin-right: 10px;\n"], ["\n  color: ", ";\n  margin-right: 10px;\n"])), _Theming_Theme__WEBPACK_IMPORTED_MODULE_7__["default"].color.font.default);
-var SearchButton = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].button(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n  border: none;\n  background-color: rgba(255, 255, 255, 0);\n  outline: none;\n"], ["\n  border: none;\n  background-color: rgba(255, 255, 255, 0);\n  outline: none;\n"])));
-var ResultsDisplay = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n"], ["\n"])));
-var ResultsCircularProgress = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["default"])(_material_ui_core_CircularProgress__WEBPACK_IMPORTED_MODULE_6__["default"]).attrs(function () { return ({
+var Main = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].main(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  font-family: Roboto, sans-serif;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center;\n  height: 100%;\n  overflow-x: hidden;\n  /* letter-spacing: 0.75px; */\n  /* background-color: ", "; */\n"], ["\n  font-family: Roboto, sans-serif;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center;\n  height: 100%;\n  overflow-x: hidden;\n  /* letter-spacing: 0.75px; */\n  /* background-color: ", "; */\n"])), _Theming_Theme__WEBPACK_IMPORTED_MODULE_8__["default"].color.primary.main);
+var ResultsCircularProgress = Object(styled_components__WEBPACK_IMPORTED_MODULE_6__["default"])(_material_ui_core_CircularProgress__WEBPACK_IMPORTED_MODULE_7__["default"]).attrs(function () { return ({
     size: 100
-}); })(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n\n  && {\n    margin-top: 25vh;\n  }\n\n"], ["\n\n  && {\n    margin-top: 25vh;\n  }\n\n"])));
+}); })(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n\n  && {\n    margin-top: 25vh;\n  }\n"], ["\n\n  && {\n    margin-top: 25vh;\n  }\n"])));
 function App() {
     var _a = __read(Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false), 2), searchActivated = _a[0], setSearchActivated = _a[1];
-    var _b = __read(Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""), 2), searchQuery = _b[0], setSearchQuery = _b[1];
-    var _c = __read(Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""), 2), nextPageToken = _c[0], setNextPageToken = _c[1];
-    var _d = __read(Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(), 2), searchResults = _d[0], setSearchResults = _d[1];
-    var _e = __read(Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false), 2), showingVideoDetails = _e[0], setShowingVideoDetails = _e[1];
-    function runSearch() {
+    var _b = __read(Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""), 2), nextPageToken = _b[0], setNextPageToken = _b[1];
+    var _c = __read(Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(), 2), searchResults = _c[0], setSearchResults = _c[1];
+    var _d = __read(Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false), 2), showingVideoDetails = _d[0], setShowingVideoDetails = _d[1];
+    var _e = __read(Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""), 2), detailedVideoId = _e[0], setDetailedVideoId = _e[1];
+    function runSearch(searchQuery) {
         return __awaiter(this, void 0, void 0, function () {
             var resultData;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         setSearchActivated(true);
-                        return [4 /*yield*/, _Controllers_YoutubeSearchController__WEBPACK_IMPORTED_MODULE_4__["default"].search(searchQuery)];
+                        return [4 /*yield*/, _Controllers_YoutubeSearchController__WEBPACK_IMPORTED_MODULE_2__["default"].search(searchQuery)];
                     case 1:
                         resultData = _a.sent();
                         setSearchResults(resultData.items);
@@ -42322,11 +42429,142 @@ function App() {
             });
         });
     }
+    function showVideoDetails(videoId) {
+        setDetailedVideoId(videoId);
+        var videoEntryDetailsContainer = document.querySelector("#VideoEntryDetailsContainer");
+        videoEntryDetailsContainer.animate([
+            { transform: "translateX(0)" }
+        ], {
+            duration: 500,
+            easing: "ease",
+            fill: "forwards"
+        });
+        setTimeout(function () { return setShowingVideoDetails(true); }, 500);
+    }
+    function hideVideoDetails() {
+        var videoEntryDetailsContainer = document.querySelector("#VideoEntryDetailsContainer");
+        videoEntryDetailsContainer.animate([
+            { transform: "translateX(100vw)" }
+        ], {
+            duration: 500,
+            easing: "ease",
+            fill: "forwards"
+        });
+        setTimeout(function () { return setShowingVideoDetails(false); }, 500);
+    }
+    var fetchingSearchResults = searchActivated && searchResults === undefined;
+    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Main, { id: "Main" },
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_SearchBox__WEBPACK_IMPORTED_MODULE_5__["default"], { searchActivated: searchActivated, runSearch: runSearch }),
+        searchActivated ?
+            fetchingSearchResults ?
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ResultsCircularProgress, null) :
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_VideoEntryList__WEBPACK_IMPORTED_MODULE_3__["default"], { fetchMoreEntries: fetchMoreResults, entries: searchResults, showVideoDetails: showVideoDetails }) :
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null),
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_VideoEntryDetails__WEBPACK_IMPORTED_MODULE_4__["default"], { visible: showingVideoDetails, videoId: detailedVideoId, hideVideoDetails: hideVideoDetails })));
+}
+var rootElement = document.getElementById("root");
+react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), rootElement);
+var templateObject_1, templateObject_2;
+
+
+/***/ }),
+
+/***/ "./src/Components/SearchBox.tsx":
+/*!**************************************!*\
+  !*** ./src/Components/SearchBox.tsx ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SearchBox; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _Theming_Theme__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Theming/Theme */ "./src/Theming/Theme.ts");
+/* harmony import */ var _material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/icons/Search */ "./node_modules/@material-ui/icons/Search.js");
+/* harmony import */ var _material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_3__);
+var __makeTemplateObject = (undefined && undefined.__makeTemplateObject) || function (cooked, raw) {
+    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+    return cooked;
+};
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+var __read = (undefined && undefined.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+
+
+
+
+var SearchBoxContainer = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  --height: 85px;\n\n  box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.4);\n  z-index: 1;\n  top: calc(50% - var(--height) / 2);\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  background-color: white;\n\n  animation-name: moveUp;\n  animation-duration: 500ms;\n  animation-timing-function: ease;\n  animation-play-state: ", ";\n  animation-fill-mode: forwards;\n\n  @keyframes moveUp {\n    from {\n      width: calc(100% - 40px);\n      padding: 0;\n      top: calc(50% - var(--height) / 2);\n    }\n    to {\n      width: 100%;\n      padding: 20px;\n      top: 0;\n      position: fixed;\n    }\n  }\n"], ["\n  --height: 85px;\n\n  box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.4);\n  z-index: 1;\n  top: calc(50% - var(--height) / 2);\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  background-color: white;\n\n  animation-name: moveUp;\n  animation-duration: 500ms;\n  animation-timing-function: ease;\n  animation-play-state: ", ";\n  animation-fill-mode: forwards;\n\n  @keyframes moveUp {\n    from {\n      width: calc(100% - 40px);\n      padding: 0;\n      top: calc(50% - var(--height) / 2);\n    }\n    to {\n      width: 100%;\n      padding: 20px;\n      top: 0;\n      position: fixed;\n    }\n  }\n"])), function (props) { return props.searchActivated ? "running" : "paused"; });
+var SearchBoxWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  /* background-color: rgba(255, 255, 255, 0.3); */\n  border: 2px solid gray;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  height: 45px;\n"], ["\n  /* background-color: rgba(255, 255, 255, 0.3); */\n  border: 2px solid gray;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  height: 45px;\n"])));
+var SearchInput = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].input.attrs(function () { return ({
+    type: "search",
+    placeholder: "Pesquisar"
+}); })(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  background-color: rgba(255, 255, 255, 0);\n  color: ", ";\n  text-indent: 10px;\n  border: none;\n  outline: none;\n  height: 100%;\n  flex-grow: 1;\n"], ["\n  background-color: rgba(255, 255, 255, 0);\n  color: ", ";\n  text-indent: 10px;\n  border: none;\n  outline: none;\n  height: 100%;\n  flex-grow: 1;\n"])), _Theming_Theme__WEBPACK_IMPORTED_MODULE_2__["default"].color.font.default);
+var SearchIcon = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_3___default.a)(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  color: ", ";\n  margin-right: 10px;\n"], ["\n  color: ", ";\n  margin-right: 10px;\n"])), _Theming_Theme__WEBPACK_IMPORTED_MODULE_2__["default"].color.font.default);
+var SearchButton = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n  border: none;\n  background-color: rgba(255, 255, 255, 0);\n  outline: none;\n"], ["\n  border: none;\n  background-color: rgba(255, 255, 255, 0);\n  outline: none;\n"])));
+function SearchBox(props) {
+    var searchActivated = props.searchActivated, runSearch = props.runSearch;
+    var _a = __read(Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""), 2), searchQuery = _a[0], setSearchQuery = _a[1];
+    function handleSearchInputChange(event) {
+        var currentSearchQuery = event.target.value;
+        setSearchQuery(currentSearchQuery);
+    }
     function handleSearchButtonClick() {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, runSearch()];
+                    case 0: return [4 /*yield*/, runSearch(searchQuery)];
                     case 1:
                         _a.sent();
                         return [2 /*return*/];
@@ -42334,17 +42572,13 @@ function App() {
             });
         });
     }
-    function handleSearchInputChange(event) {
-        var currentSearchQuery = event.target.value;
-        setSearchQuery(currentSearchQuery);
-    }
     function handleSearchInputKeyPress(event) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         if (!(event.key === "Enter")) return [3 /*break*/, 2];
-                        return [4 /*yield*/, runSearch()];
+                        return [4 /*yield*/, runSearch(searchQuery)];
                     case 1:
                         _a.sent();
                         _a.label = 2;
@@ -42353,110 +42587,238 @@ function App() {
             });
         });
     }
-    var fetchingSearchResults = searchActivated && searchResults === undefined;
-    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Main, { id: "Main" },
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SearchBox, { searchActivated: searchActivated },
+    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SearchBoxContainer, { searchActivated: searchActivated },
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SearchBoxWrapper, null,
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SearchInput, { onKeyPress: handleSearchInputKeyPress, value: searchQuery, onChange: handleSearchInputChange }),
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SearchButton, { onClick: handleSearchButtonClick },
-                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SearchIcon, null))),
-        searchActivated &&
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ResultsDisplay, null, fetchingSearchResults ?
-                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ResultsCircularProgress, null) :
-                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_SearchResultsList__WEBPACK_IMPORTED_MODULE_5__["default"], { fetchMoreEntries: fetchMoreResults, entries: searchResults, setShowingDetails: setShowingVideoDetails })),
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_ResultEntryDetails__WEBPACK_IMPORTED_MODULE_8__["default"], { visible: showingVideoDetails })));
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SearchIcon, null)))));
 }
-var rootElement = document.getElementById("root");
-react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), rootElement);
-var templateObject_1, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6, templateObject_7;
+var templateObject_1, templateObject_2, templateObject_3, templateObject_4, templateObject_5;
 
 
 /***/ }),
 
-/***/ "./src/Components/ResultEntry.tsx":
-/*!****************************************!*\
-  !*** ./src/Components/ResultEntry.tsx ***!
-  \****************************************/
+/***/ "./src/Components/VideoEntry.tsx":
+/*!***************************************!*\
+  !*** ./src/Components/VideoEntry.tsx ***!
+  \***************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ResultEntry; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return VideoEntry; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _Theming_Globals__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Theming/Globals */ "./src/Theming/Globals.ts");
 var __makeTemplateObject = (undefined && undefined.__makeTemplateObject) || function (cooked, raw) {
     if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
     return cooked;
 };
 
 
-var ListItemWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].li(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  width: 280px;\n  margin-bottom: 20px;\n  background-color: white;\n"], ["\n  width: 280px;\n  margin-bottom: 20px;\n  background-color: white;\n"])));
-var Thumbnail = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  background-image: url(", ");\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center;\n  width: 280px;\n  height: 157px;\n"], ["\n  background-image: url(", ");\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center;\n  width: 280px;\n  height: 157px;\n"])), function (props) { return props.url; });
+
+var ListItemWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].li(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  width: ", ";\n  margin-bottom: 20px;\n  background-color: white;\n  height: 354px;\n  display: flex;\n  flex-direction: column;\n\n  @media (min-width: 600px) {\n    margin-right: 20px;\n  }\n"], ["\n  width: ", ";\n  margin-bottom: 20px;\n  background-color: white;\n  height: 354px;\n  display: flex;\n  flex-direction: column;\n\n  @media (min-width: 600px) {\n    margin-right: 20px;\n  }\n"])), _Theming_Globals__WEBPACK_IMPORTED_MODULE_2__["videoFrameDimensions"].xs.width);
+var Thumbnail = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  background-image: url(", ");\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center;\n  width: ", ";\n  height: ", ";\n"], ["\n  background-image: url(", ");\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center;\n  width: ", ";\n  height: ", ";\n"])), function (props) { return props.url; }, _Theming_Globals__WEBPACK_IMPORTED_MODULE_2__["videoFrameDimensions"].xs.width, _Theming_Globals__WEBPACK_IMPORTED_MODULE_2__["videoFrameDimensions"].xs.height);
 var Title = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h2(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  margin-top: 10px;\n  font-size: 16px;\n"], ["\n  margin-top: 10px;\n  font-size: 16px;\n"])));
 var Channel = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h3(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  margin-top: 10px;\n  font-size: 12px;\n"], ["\n  margin-top: 10px;\n  font-size: 12px;\n"])));
 var Description = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n  margin-top: 10px;\n  font-size: 12px;\n  line-height: 18px;\n"], ["\n  margin-top: 10px;\n  font-size: 12px;\n  line-height: 18px;\n"])));
-var DetailsButton = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  margin-top: 10px;\n  text-transform: uppercase;\n  border: none;\n  padding: 10px;\n  font-size: 14px;\n  outline: none;\n"], ["\n  margin-top: 10px;\n  text-transform: uppercase;\n  border: none;\n  padding: 10px;\n  font-size: 14px;\n  outline: none;\n"])));
-function ResultEntry(props) {
+var DetailsButton = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  margin-top: 10px;\n  text-transform: uppercase;\n  border: none;\n  padding: 10px;\n  font-size: 14px;\n  outline: none;\n  align-self: flex-start;\n"], ["\n  margin-top: 10px;\n  text-transform: uppercase;\n  border: none;\n  padding: 10px;\n  font-size: 14px;\n  outline: none;\n  align-self: flex-start;\n"])));
+var ListItemPadding = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  flex-grow: 1;\n"], ["\n  flex-grow: 1;\n"])));
+function VideoEntry(props) {
     var thumbnail = props.thumbnail, title = props.title, channel = props.channel, description = props.description, showDetails = props.showDetails;
     return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ListItemWrapper, null,
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Thumbnail, { url: thumbnail }),
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, null, title),
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Channel, null, channel),
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Description, null, description),
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ListItemPadding, null),
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DetailsButton, { onClick: showDetails }, "Detalhes do V\u00EDdeo")));
 }
-var templateObject_1, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6;
+var templateObject_1, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6, templateObject_7;
 
 
 /***/ }),
 
-/***/ "./src/Components/ResultEntryDetails.tsx":
-/*!***********************************************!*\
-  !*** ./src/Components/ResultEntryDetails.tsx ***!
-  \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ResultEntryDetails; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-var __makeTemplateObject = (undefined && undefined.__makeTemplateObject) || function (cooked, raw) {
-    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
-    return cooked;
-};
-
-
-var Container = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  position: absolute;\n  background-color: white;\n  width: 100vw;\n  height: 100vh;\n  left: 100vw;\n  z-index: 2;\n\n  animation-name: slideLeft;\n  animation-duration: 500ms;\n  animation-timing-function: ease;\n  animation-play-state: ", ";\n  animation-fill-mode: forwards;\n\n  @keyframes slideLeft {\n    from {\n      left: 100vw;\n    }\n    to {\n      left: 0;\n    }\n  }\n"], ["\n  position: absolute;\n  background-color: white;\n  width: 100vw;\n  height: 100vh;\n  left: 100vw;\n  z-index: 2;\n\n  animation-name: slideLeft;\n  animation-duration: 500ms;\n  animation-timing-function: ease;\n  animation-play-state: ", ";\n  animation-fill-mode: forwards;\n\n  @keyframes slideLeft {\n    from {\n      left: 100vw;\n    }\n    to {\n      left: 0;\n    }\n  }\n"])), function (props) { return props.visible ? "running" : "paused"; });
-function ResultEntryDetails(props) {
-    var visible = props.visible;
-    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Container, { visible: visible },
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null,
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "<"),
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null))));
-}
-var templateObject_1;
-
-
-/***/ }),
-
-/***/ "./src/Components/SearchResultsList.tsx":
+/***/ "./src/Components/VideoEntryDetails.tsx":
 /*!**********************************************!*\
-  !*** ./src/Components/SearchResultsList.tsx ***!
+  !*** ./src/Components/VideoEntryDetails.tsx ***!
   \**********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SearchResultsList; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return VideoEntryDetails; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _ResultEntry__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ResultEntry */ "./src/Components/ResultEntry.tsx");
+/* harmony import */ var _material_ui_icons_NavigateBefore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/icons/NavigateBefore */ "./node_modules/@material-ui/icons/NavigateBefore.js");
+/* harmony import */ var _material_ui_icons_NavigateBefore__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_NavigateBefore__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Theming_Globals__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Theming/Globals */ "./src/Theming/Globals.ts");
+/* harmony import */ var _material_ui_icons_ThumbUp__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/icons/ThumbUp */ "./node_modules/@material-ui/icons/ThumbUp.js");
+/* harmony import */ var _material_ui_icons_ThumbUp__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_ThumbUp__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _material_ui_icons_ThumbDown__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/icons/ThumbDown */ "./node_modules/@material-ui/icons/ThumbDown.js");
+/* harmony import */ var _material_ui_icons_ThumbDown__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_ThumbDown__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _material_ui_icons_Visibility__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/icons/Visibility */ "./node_modules/@material-ui/icons/Visibility.js");
+/* harmony import */ var _material_ui_icons_Visibility__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Visibility__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _Controllers_YoutubeVideoDetailsController__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Controllers/YoutubeVideoDetailsController */ "./src/Controllers/YoutubeVideoDetailsController.ts");
+var __makeTemplateObject = (undefined && undefined.__makeTemplateObject) || function (cooked, raw) {
+    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+    return cooked;
+};
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+var __read = (undefined && undefined.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+
+
+
+
+
+
+
+
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  position: absolute;\n  background-color: white;\n  width: 100vw;\n  height: 100vh;\n  transform: translateX(100vw);\n  z-index: 2;\n  display: flex;\n  flex-direction: column;\n  padding: 0 20px;\n"], ["\n  position: absolute;\n  background-color: white;\n  width: 100vw;\n  height: 100vh;\n  transform: translateX(100vw);\n  z-index: 2;\n  display: flex;\n  flex-direction: column;\n  padding: 0 20px;\n"])));
+var Header = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  display: flex;\n  flex-direction: row;\n  padding: 25px 0;\n  align-items: center;\n"], ["\n  display: flex;\n  flex-direction: row;\n  padding: 25px 0;\n  align-items: center;\n"])));
+var NavigateBeforeIcon = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_material_ui_icons_NavigateBefore__WEBPACK_IMPORTED_MODULE_2___default.a).attrs(function () { return ({
+    fontSize: "inherit"
+}); })(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  && {\n    border: 2px solid gray;\n    font-size: 32px;\n    margin-right: 20px;\n  }\n"], ["\n  && {\n    border: 2px solid gray;\n    font-size: 32px;\n    margin-right: 20px;\n  }\n"])));
+var Title = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h2(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  font-size: 20px;\n  font-weight: normal;\n"], ["\n  font-size: 20px;\n  font-weight: normal;\n"])));
+var Video = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].iframe.attrs(function () { return ({
+    frameborder: "0",
+    allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+    allowfullscreen: true
+}); })(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n  min-width: ", ";\n  min-height: ", ";\n  max-width: ", ";\n  max-height: ", ";\n  width: 90vw;\n  height: 50.62vw;\n  align-self: center;\n  border: none;\n"], ["\n  min-width: ", ";\n  min-height: ", ";\n  max-width: ", ";\n  max-height: ", ";\n  width: 90vw;\n  height: 50.62vw;\n  align-self: center;\n  border: none;\n"])), _Theming_Globals__WEBPACK_IMPORTED_MODULE_3__["videoFrameDimensions"].xs.width, _Theming_Globals__WEBPACK_IMPORTED_MODULE_3__["videoFrameDimensions"].xs.height, _Theming_Globals__WEBPACK_IMPORTED_MODULE_3__["videoFrameDimensions"].xl.width, _Theming_Globals__WEBPACK_IMPORTED_MODULE_3__["videoFrameDimensions"].xl.height);
+var VideoInfo = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  width: 90vw;\n  max-width: ", ";\n  max-height: ", ";\n  display: flex;\n  flex-direction: column;\n  align-self: center;\n"], ["\n  width: 90vw;\n  max-width: ", ";\n  max-height: ", ";\n  display: flex;\n  flex-direction: column;\n  align-self: center;\n"])), _Theming_Globals__WEBPACK_IMPORTED_MODULE_3__["videoFrameDimensions"].xl.width, _Theming_Globals__WEBPACK_IMPORTED_MODULE_3__["videoFrameDimensions"].xl.height);
+var ChannelAndRatingsContainer = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  margin-top: 20px;\n  align-items: center;\n  width: 100%;\n"], ["\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  margin-top: 20px;\n  align-items: center;\n  width: 100%;\n"])));
+var ThumbUpIcon = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_material_ui_icons_ThumbUp__WEBPACK_IMPORTED_MODULE_4___default.a).attrs(function () { return ({
+    fontSize: "inherit"
+}); })(templateObject_8 || (templateObject_8 = __makeTemplateObject(["\n  && {\n    margin-right: 10px;\n  }\n"], ["\n  && {\n    margin-right: 10px;\n  }\n"])));
+var ThumbDownIcon = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_material_ui_icons_ThumbDown__WEBPACK_IMPORTED_MODULE_5___default.a).attrs(function () { return ({
+    fontSize: "inherit"
+}); })(templateObject_9 || (templateObject_9 = __makeTemplateObject(["\n  && {\n    margin-right: 10px;\n  }\n"], ["\n  && {\n    margin-right: 10px;\n  }\n"])));
+var Channel = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(templateObject_10 || (templateObject_10 = __makeTemplateObject(["\n  font-size: 12px;\n  font-weight: bold;\n"], ["\n  font-size: 12px;\n  font-weight: bold;\n"])));
+var Ratings = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(templateObject_11 || (templateObject_11 = __makeTemplateObject(["\n"], ["\n"])));
+var RatingNumber = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].span(templateObject_12 || (templateObject_12 = __makeTemplateObject(["\n  margin-right: 10px;\n"], ["\n  margin-right: 10px;\n"])));
+var Description = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(templateObject_13 || (templateObject_13 = __makeTemplateObject(["\n  margin-top: 15px;\n  font-size: 14px;\n"], ["\n  margin-top: 15px;\n  font-size: 14px;\n"])));
+var Views = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(templateObject_14 || (templateObject_14 = __makeTemplateObject(["\n  margin-top: 15px;\n"], ["\n  margin-top: 15px;\n"])));
+var VisibilityIcon = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_material_ui_icons_Visibility__WEBPACK_IMPORTED_MODULE_6___default.a).attrs(function () { return ({
+    fontSize: "inherit"
+}); })(templateObject_15 || (templateObject_15 = __makeTemplateObject(["\n  margin-right: 5px;\n"], ["\n  margin-right: 5px;\n"])));
+var ViewCount = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].span(templateObject_16 || (templateObject_16 = __makeTemplateObject(["\n"], ["\n"])));
+function VideoEntryDetails(props) {
+    var _this = this;
+    var visible = props.visible, videoId = props.videoId, hideVideoDetails = props.hideVideoDetails;
+    var _a = __read(Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(), 2), videoDetails = _a[0], setVideoDetails = _a[1];
+    var title = (videoDetails === null || videoDetails === void 0 ? void 0 : videoDetails.items[0].snippet.title) || "";
+    var channel = (videoDetails === null || videoDetails === void 0 ? void 0 : videoDetails.items[0].snippet.channelTitle) || "";
+    var description = (videoDetails === null || videoDetails === void 0 ? void 0 : videoDetails.items[0].snippet.description) || "";
+    var likes = (videoDetails === null || videoDetails === void 0 ? void 0 : videoDetails.items[0].statistics.likeCount) || "";
+    var dislikes = (videoDetails === null || videoDetails === void 0 ? void 0 : videoDetails.items[0].statistics.dislikeCount) || "";
+    var views = (videoDetails === null || videoDetails === void 0 ? void 0 : videoDetails.items[0].statistics.viewCount) || "";
+    var videoURL = "https://www.youtube.com/embed/" + videoId;
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+        (function () { return __awaiter(_this, void 0, void 0, function () {
+            var data;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, _Controllers_YoutubeVideoDetailsController__WEBPACK_IMPORTED_MODULE_7__["default"].details(videoId)];
+                    case 1:
+                        data = _a.sent();
+                        setVideoDetails(data);
+                        return [2 /*return*/];
+                }
+            });
+        }); })();
+    }, [videoId]);
+    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Container, { id: "VideoEntryDetailsContainer" }, visible &&
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null,
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Header, null,
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigateBeforeIcon, { onClick: hideVideoDetails }),
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Title, null, title)),
+            videoId !== "" && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Video, { src: videoURL }),
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(VideoInfo, null,
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ChannelAndRatingsContainer, null,
+                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Channel, null, channel),
+                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Ratings, null,
+                        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ThumbUpIcon, null),
+                        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(RatingNumber, null, likes),
+                        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ThumbDownIcon, null),
+                        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(RatingNumber, null, dislikes))),
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Description, null, description),
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Views, null,
+                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(VisibilityIcon, null),
+                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ViewCount, null, views))))));
+}
+var templateObject_1, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6, templateObject_7, templateObject_8, templateObject_9, templateObject_10, templateObject_11, templateObject_12, templateObject_13, templateObject_14, templateObject_15, templateObject_16;
+
+
+/***/ }),
+
+/***/ "./src/Components/VideoEntryList.tsx":
+/*!*******************************************!*\
+  !*** ./src/Components/VideoEntryList.tsx ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return VideoEntryList; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _VideoEntry__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./VideoEntry */ "./src/Components/VideoEntry.tsx");
 /* harmony import */ var _material_ui_core_CircularProgress__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/CircularProgress */ "./node_modules/@material-ui/core/esm/CircularProgress/index.js");
 var __makeTemplateObject = (undefined && undefined.__makeTemplateObject) || function (cooked, raw) {
     if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
@@ -42518,14 +42880,14 @@ var __read = (undefined && undefined.__read) || function (o, n) {
 
 
 
-var Container = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  overflow-x: hidden;\n"], ["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  overflow-x: hidden;\n"])));
-var ListWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].ul(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  list-style: none;\n  display: flex;\n  flex-flow: row wrap;\n  background-color: white;\n"], ["\n  list-style: none;\n  display: flex;\n  flex-flow: row wrap;\n  background-color: white;\n"])));
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  height: 100%;\n  overflow-y: scroll;\n"], ["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  height: 100%;\n  overflow-y: scroll;\n"])));
+var ListWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].ul(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  list-style: none;\n  display: flex;\n  flex-flow: row wrap;\n  background-color: white;\n  justify-content: center;\n  padding: 20px 20px 0 20px;\n  margin-top: 85px;\n"], ["\n  list-style: none;\n  display: flex;\n  flex-flow: row wrap;\n  background-color: white;\n  justify-content: center;\n  padding: 20px 20px 0 20px;\n  margin-top: 85px;\n"])));
 var MoreEntriesCircularProgress = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["default"])(_material_ui_core_CircularProgress__WEBPACK_IMPORTED_MODULE_3__["default"]).attrs(function () { return ({
     size: 70
 }); })(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n"], ["\n"])));
-function SearchResultsList(props) {
+function VideoEntryList(props) {
     var _this = this;
-    var entries = props.entries, fetchMoreEntries = props.fetchMoreEntries, setShowingDetails = props.setShowingDetails;
+    var entries = props.entries, fetchMoreEntries = props.fetchMoreEntries, showVideoDetails = props.showVideoDetails;
     var _a = __read(Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false), 2), isLoading = _a[0], setIsLoading = _a[1];
     //Infinite Scroll
     Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
@@ -42534,7 +42896,7 @@ function SearchResultsList(props) {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        listWrapper = document.querySelector("#SearchResultsList");
+                        listWrapper = document.querySelector("#VideoEntryList");
                         listWrapperYOffset = listWrapper.getBoundingClientRect().top;
                         listWrapperHeight = listWrapper.getBoundingClientRect().height;
                         if (!(window.innerHeight >= listWrapperYOffset + listWrapperHeight && !isLoading)) return [3 /*break*/, 2];
@@ -42548,28 +42910,20 @@ function SearchResultsList(props) {
                 }
             });
         }); };
-        var main = document.querySelector("#Main");
-        main.addEventListener("scroll", callback);
+        var container = document.querySelector("#VideoEntryListContainer");
+        container.addEventListener("scroll", callback);
         return function () {
-            main.removeEventListener("scroll", callback);
+            container.removeEventListener("scroll", callback);
         };
     }, [isLoading]);
-    function showVideoDetails() {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                setShowingDetails(function (status) { return !status; });
-                return [2 /*return*/];
-            });
-        });
-    }
-    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Container, null,
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ListWrapper, { id: "SearchResultsList" }, entries.length === 0 ?
+    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Container, { id: "VideoEntryListContainer" },
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ListWrapper, { id: "VideoEntryList" }, entries.length === 0 ?
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null,
                 "N\u00E3o encontramos v\u00EDdeos com o termo buscado.",
                 react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null),
                 "Utilize outras palavras-chave.") :
-            entries.map(function (item, index) {
-                return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ResultEntry__WEBPACK_IMPORTED_MODULE_2__["default"], { key: /*item.etag*/ index, thumbnail: item.snippet.thumbnails["medium"].url, title: item.snippet.title, channel: item.snippet.channelTitle, description: item.snippet.description, showDetails: showVideoDetails });
+            entries.map(function (entry, index) {
+                return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntry__WEBPACK_IMPORTED_MODULE_2__["default"], { key: /*item.etag*/ index, thumbnail: entry.snippet.thumbnails["medium"].url, title: entry.snippet.title, channel: entry.snippet.channelTitle, description: entry.snippet.description, showDetails: function () { return showVideoDetails(entry.id.videoId); } });
             })),
         isLoading && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MoreEntriesCircularProgress, null)));
 }
@@ -42657,6 +43011,109 @@ var YoutubeSearchController = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/Controllers/YoutubeVideoDetailsController.ts":
+/*!**********************************************************!*\
+  !*** ./src/Controllers/YoutubeVideoDetailsController.ts ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (undefined && undefined.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+var api = axios__WEBPACK_IMPORTED_MODULE_0___default.a.create({
+    baseURL: "http://localhost:3000/details"
+});
+var YoutubeVideoDetailsController = /** @class */ (function () {
+    function YoutubeVideoDetailsController() {
+    }
+    YoutubeVideoDetailsController.details = function (videoId) {
+        return __awaiter(this, void 0, void 0, function () {
+            var response;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, api.get("/", {
+                            params: {
+                                videoId: videoId
+                            }
+                        })];
+                    case 1:
+                        response = _a.sent();
+                        return [4 /*yield*/, response.data];
+                    case 2: return [2 /*return*/, _a.sent()];
+                }
+            });
+        });
+    };
+    return YoutubeVideoDetailsController;
+}());
+/* harmony default export */ __webpack_exports__["default"] = (YoutubeVideoDetailsController);
+
+
+/***/ }),
+
+/***/ "./src/Theming/Globals.ts":
+/*!********************************!*\
+  !*** ./src/Theming/Globals.ts ***!
+  \********************************/
+/*! exports provided: videoFrameDimensions */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "videoFrameDimensions", function() { return videoFrameDimensions; });
+var videoFrameDimensions = {
+    xs: {
+        width: "280px",
+        height: "157px"
+    },
+    xl: {
+        width: "1080px",
+        height: "607px"
+    }
+};
+
+
+/***/ }),
+
 /***/ "./src/Theming/Theme.ts":
 /*!******************************!*\
   !*** ./src/Theming/Theme.ts ***!
@@ -42667,6 +43124,13 @@ var YoutubeSearchController = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
+    breakpoints: {
+        xs: "(max-width: 600px)",
+        sm: "(min-width: 601px)",
+        md: "(min-width: 961px)",
+        lg: "(min-width: 1281px)",
+        xl: "(min-width: 1921px)"
+    },
     color: {
         primary: {
             lighter: "#98D2FE",
