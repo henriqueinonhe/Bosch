@@ -3,3 +3,7 @@ build
 coverage
 docs
 .env
+index.js
+index.js.map
+public/bundle.js
+public/bundle.js.map
