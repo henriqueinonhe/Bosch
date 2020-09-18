@@ -5457,6 +5457,64 @@ exports.default = _default;
 
 /***/ }),
 
+/***/ "./node_modules/@material-ui/icons/Brightness3.js":
+/*!********************************************************!*\
+  !*** ./node_modules/@material-ui/icons/Brightness3.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@material-ui/icons/utils/createSvgIcon.js"));
+
+var _default = (0, _createSvgIcon.default)(_react.default.createElement("path", {
+  d: "M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.06 7 9.54 0 4.48-2.94 8.27-7 9.54.95.3 1.95.46 3 .46 5.52 0 10-4.48 10-10S14.52 2 9 2z"
+}), 'Brightness3');
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/icons/Brightness5.js":
+/*!********************************************************!*\
+  !*** ./node_modules/@material-ui/icons/Brightness5.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@material-ui/icons/utils/createSvgIcon.js"));
+
+var _default = (0, _createSvgIcon.default)(_react.default.createElement("path", {
+  d: "M20 15.31L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69zM12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"
+}), 'Brightness5');
+
+exports.default = _default;
+
+/***/ }),
+
 /***/ "./node_modules/@material-ui/icons/Search.js":
 /*!***************************************************!*\
   !*** ./node_modules/@material-ui/icons/Search.js ***!
@@ -46517,7 +46575,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Components_SearchBox_SearchBar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Components/SearchBox/SearchBar */ "./src/Components/SearchBox/SearchBar.tsx");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var _material_ui_core_CircularProgress__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/CircularProgress */ "./node_modules/@material-ui/core/esm/CircularProgress/index.js");
-/* harmony import */ var _Theming_Theme__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Theming/Theme */ "./src/Theming/Theme.ts");
+/* harmony import */ var _material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/core/IconButton */ "./node_modules/@material-ui/core/esm/IconButton/index.js");
+/* harmony import */ var _material_ui_icons_Brightness5__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/icons/Brightness5 */ "./node_modules/@material-ui/icons/Brightness5.js");
+/* harmony import */ var _material_ui_icons_Brightness5__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Brightness5__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _material_ui_icons_Brightness3__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/icons/Brightness3 */ "./node_modules/@material-ui/icons/Brightness3.js");
+/* harmony import */ var _material_ui_icons_Brightness3__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Brightness3__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _Theming_Theme__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./Theming/Theme */ "./src/Theming/Theme.ts");
 var __makeTemplateObject = (undefined && undefined.__makeTemplateObject) || function (cooked, raw) {
     if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
     return cooked;
@@ -46584,10 +46647,21 @@ var __read = (undefined && undefined.__read) || function (o, n) {
 
 
 
-var Main = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].main(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center;\n  height: 100%;\n  overflow-x: hidden;\n  background-color: ", ";\n\n  font-family: Roboto, sans-serif;\n  letter-spacing: 0.2px;\n"], ["\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center;\n  height: 100%;\n  overflow-x: hidden;\n  background-color: ", ";\n\n  font-family: Roboto, sans-serif;\n  letter-spacing: 0.2px;\n"])), function (props) { return props.theme.color.primary.lighter; });
+
+
+
+var Main = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].main(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center;\n  height: 100%;\n  overflow-x: hidden;\n  \n  background-color: ", ";\n  font-family: Roboto, sans-serif;\n  letter-spacing: 0.2px;\n  color: ", ";\n  line-height: 18px;\n  white-space: pre-line;\n"], ["\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  align-items: center;\n  height: 100%;\n  overflow-x: hidden;\n  \n  background-color: ", ";\n  font-family: Roboto, sans-serif;\n  letter-spacing: 0.2px;\n  color: ", ";\n  line-height: 18px;\n  white-space: pre-line;\n"])), function (props) { return props.theme.type === "light" ? props.theme.color.primary.lighter : props.theme.color.background; }, function (props) { return props.theme.color.textOverBackground; });
 var ResultsCircularProgress = Object(styled_components__WEBPACK_IMPORTED_MODULE_6__["default"])(_material_ui_core_CircularProgress__WEBPACK_IMPORTED_MODULE_7__["default"]).attrs(function () { return ({
-    size: 100
-}); })(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n\n  && {\n    margin-top: 25vh;\n  }\n"], ["\n\n  && {\n    margin-top: 25vh;\n  }\n"])));
+    size: 100,
+    color: "inherit"
+}); })(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n\n  && {\n    margin-top: 25vh;\n\n    color: ", ";\n  }\n"], ["\n\n  && {\n    margin-top: 25vh;\n\n    color: ", ";\n  }\n"])), function (props) { return props.theme.color.secondary.main; });
+var ThemeSwitchButton = Object(styled_components__WEBPACK_IMPORTED_MODULE_6__["default"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_8__["default"]).attrs(function () { return ({}); })(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  && {\n    position: fixed;\n    bottom: 30px;\n    right: 30px;\n    width: 60px;\n    height: 60px;\n    border-radius: 100%;\n    background-color: ", ";\n    z-index: 4;\n\n    &:hover {\n      background-color: gray;\n    }\n  }\n"], ["\n  && {\n    position: fixed;\n    bottom: 30px;\n    right: 30px;\n    width: 60px;\n    height: 60px;\n    border-radius: 100%;\n    background-color: ", ";\n    z-index: 4;\n\n    &:hover {\n      background-color: gray;\n    }\n  }\n"])), function (props) { return props.theme.type === "light" ? "black" : "white"; });
+var SunIcon = Object(styled_components__WEBPACK_IMPORTED_MODULE_6__["default"])(_material_ui_icons_Brightness5__WEBPACK_IMPORTED_MODULE_9___default.a).attrs(function () { return ({
+    fontSize: "inherit"
+}); })(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  && {\n    font-size: 36px;\n    color: black;\n  }\n"], ["\n  && {\n    font-size: 36px;\n    color: black;\n  }\n"])));
+var MoonIcon = Object(styled_components__WEBPACK_IMPORTED_MODULE_6__["default"])(_material_ui_icons_Brightness3__WEBPACK_IMPORTED_MODULE_10___default.a).attrs(function () { return ({
+    fontSize: "inherit"
+}); })(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n  && {\n    font-size: 36px;\n    color: white;\n  }\n"], ["\n  && {\n    font-size: 36px;\n    color: white;\n  }\n"])));
 function App() {
     var _a = __read(Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false), 2), searchTriggered = _a[0], setSearchTriggered = _a[1];
     var _b = __read(Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""), 2), currentSearchQuery = _b[0], setCurrentSearchQuery = _b[1];
@@ -46596,7 +46670,7 @@ function App() {
     var _e = __read(Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false), 2), videoEntryDetailsVisible = _e[0], setVideoEntryDetailsVisible = _e[1];
     var _f = __read(Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""), 2), detailedVideoId = _f[0], setDetailedVideoId = _f[1];
     var _g = __read(Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false), 2), loadingSearchResults = _g[0], setLoadingSearchResults = _g[1];
-    var _h = __read(Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(_Theming_Theme__WEBPACK_IMPORTED_MODULE_8__["LightTheme"]), 2), currentTheme = _h[0], setCurrentTheme = _h[1];
+    var _h = __read(Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(_Theming_Theme__WEBPACK_IMPORTED_MODULE_11__["LightTheme"]), 2), currentTheme = _h[0], setCurrentTheme = _h[1];
     function handleSearchTriggered(searchQuery) {
         return __awaiter(this, void 0, void 0, function () {
             var resultsData;
@@ -46639,6 +46713,9 @@ function App() {
     function handleHideEntryDetailsTriggered() {
         setVideoEntryDetailsVisible(false);
     }
+    function handleThemeSwitchButtonClick() {
+        setCurrentTheme(function (theme) { return theme.type === "light" ? _Theming_Theme__WEBPACK_IMPORTED_MODULE_11__["DarkTheme"] : _Theming_Theme__WEBPACK_IMPORTED_MODULE_11__["LightTheme"]; });
+    }
     return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(styled_components__WEBPACK_IMPORTED_MODULE_6__["ThemeProvider"], { theme: currentTheme },
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Main, { id: "Main" },
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_SearchBox_SearchBar__WEBPACK_IMPORTED_MODULE_5__["default"], { onSearchTriggered: handleSearchTriggered }),
@@ -46647,11 +46724,14 @@ function App() {
                     react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ResultsCircularProgress, null) :
                     react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_VideoEntryList_VideoEntryList__WEBPACK_IMPORTED_MODULE_3__["default"], { onMoreEntriesTriggered: handleMoreEntriesTriggered, entries: searchResults, onShowEntryDetailsTriggered: handleShowEntryDetailsTriggered }) :
                 react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null),
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_VideoEntryDetails_VideoEntryDetails__WEBPACK_IMPORTED_MODULE_4__["default"], { isVisible: videoEntryDetailsVisible, videoId: detailedVideoId, onHideEntryDetailsTriggered: handleHideEntryDetailsTriggered }))));
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_VideoEntryDetails_VideoEntryDetails__WEBPACK_IMPORTED_MODULE_4__["default"], { isVisible: videoEntryDetailsVisible, videoId: detailedVideoId, onHideEntryDetailsTriggered: handleHideEntryDetailsTriggered }),
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ThemeSwitchButton, { onClick: handleThemeSwitchButtonClick }, currentTheme.type === "light" ?
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MoonIcon, null) :
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SunIcon, null)))));
 }
 var rootElement = document.getElementById("root");
 react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), rootElement);
-var templateObject_1, templateObject_2;
+var templateObject_1, templateObject_2, templateObject_3, templateObject_4, templateObject_5;
 
 
 /***/ }),
@@ -46789,6 +46869,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/icons/Search */ "./node_modules/@material-ui/icons/Search.js");
 /* harmony import */ var _material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/esm/Button/index.js");
+/* harmony import */ var _Theming_Theme__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Theming/Theme */ "./src/Theming/Theme.ts");
 var __makeTemplateObject = (undefined && undefined.__makeTemplateObject) || function (cooked, raw) {
     if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
     return cooked;
@@ -46796,17 +46877,17 @@ var __makeTemplateObject = (undefined && undefined.__makeTemplateObject) || func
 
 
 
-var moveUp = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["keyframes"])(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  to {\n    max-width: 100%;\n    width: 100%;\n    padding: 20px;\n    top: 0;\n    position: fixed;\n    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.4);\n  }\n"], ["\n  to {\n    max-width: 100%;\n    width: 100%;\n    padding: 20px;\n    top: 0;\n    position: fixed;\n    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.4);\n  }\n"])));
-var SearchBoxContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  --height: 85px;\n\n  z-index: 1;\n  top: calc(50% - var(--height) / 2);\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  max-width: 600px;\n  width: calc(100% - 40px);\n  top: calc(50% - var(--height) / 2);\n  \n  background-color: ", ";\n  transition: box-shadow 400ms;\n\n  &:hover, &:focus-within  {\n    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.4);\n  }\n\n  ", ";\n"], ["\n  --height: 85px;\n\n  z-index: 1;\n  top: calc(50% - var(--height) / 2);\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  max-width: 600px;\n  width: calc(100% - 40px);\n  top: calc(50% - var(--height) / 2);\n  \n  background-color: ", ";\n  transition: box-shadow 400ms;\n\n  &:hover, &:focus-within  {\n    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.4);\n  }\n\n  ",
-    ";\n"])), function (props) { return props.theme.color.primary.dark; }, function (props) { return props.searchTriggered && Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n    animation-name: ", ";\n    animation-duration: 500ms;\n    animation-timing-function: ease;\n    animation-fill-mode: forwards;\n  "], ["\n    animation-name: ", ";\n    animation-duration: 500ms;\n    animation-timing-function: ease;\n    animation-fill-mode: forwards;\n  "])), moveUp); });
-var SearchBoxWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  border: 2px solid ", ";\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  height: 45px;\n  max-width: 800px;\n\n  background-color: white;\n"], ["\n  border: 2px solid ", ";\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  height: 45px;\n  max-width: 800px;\n\n  background-color: white;\n"])), function (props) { return props.theme.color.secondary.main; });
+
+var SearchBoxContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  --height: 85px;\n\n  z-index: 1;\n  top: calc(50% - var(--height) / 2);\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  max-width: 600px;\n  width: calc(100% - 40px);\n  top: calc(50% - var(--height) / 2);\n  \n  background-color: ", ";\n  transition: box-shadow 400ms;\n\n  &:hover, &:focus-within  {\n    box-shadow: ", ";\n  }\n\n  ", ";\n\n  @keyframes moveUp {\n    to {\n      max-width: 100%;\n      width: 100%;\n      padding: 20px;\n      top: 0;\n      position: fixed;\n      box-shadow: ", ";\n    }\n  }\n"], ["\n  --height: 85px;\n\n  z-index: 1;\n  top: calc(50% - var(--height) / 2);\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  max-width: 600px;\n  width: calc(100% - 40px);\n  top: calc(50% - var(--height) / 2);\n  \n  background-color: ", ";\n  transition: box-shadow 400ms;\n\n  &:hover, &:focus-within  {\n    box-shadow: ", ";\n  }\n\n  ",
+    ";\n\n  @keyframes moveUp {\n    to {\n      max-width: 100%;\n      width: 100%;\n      padding: 20px;\n      top: 0;\n      position: fixed;\n      box-shadow: ", ";\n    }\n  }\n"])), function (props) { return props.theme.type === "light" ? props.theme.color.primary.dark : props.theme.color.primary.main; }, function (props) { return props.theme.type === "light" ? props.theme.elevation(3) : Object(_Theming_Theme__WEBPACK_IMPORTED_MODULE_3__["lightShadow"])(2); }, function (props) { return props.searchTriggered && Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    animation-name: moveUp;\n    animation-duration: 500ms;\n    animation-timing-function: ease;\n    animation-fill-mode: forwards;\n  "], ["\n    animation-name: moveUp;\n    animation-duration: 500ms;\n    animation-timing-function: ease;\n    animation-fill-mode: forwards;\n  "]))); }, function (props) { return props.theme.type === "light" ? props.theme.elevation(3) : Object(_Theming_Theme__WEBPACK_IMPORTED_MODULE_3__["lightShadow"])(2); });
+var SearchBoxWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  border: 2px solid ", ";\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  height: 45px;\n  max-width: 800px;\n\n  background-color: ", ";\n"], ["\n  border: 2px solid ", ";\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  height: 45px;\n  max-width: 800px;\n\n  background-color: ", ";\n"])), function (props) { return props.theme.color.secondary.main; }, function (props) { return props.theme.color.background; });
 var SearchInput = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].input.attrs(function () { return ({
     type: "search",
     placeholder: "Pesquisar"
-}); })(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n  text-indent: 10px;\n  height: 100%;\n  flex-grow: 1;\n\n  border: none;\n  outline: none;\n  color: ", ";\n  background-color: rgba(255, 255, 255, 0);\n"], ["\n  text-indent: 10px;\n  height: 100%;\n  flex-grow: 1;\n\n  border: none;\n  outline: none;\n  color: ", ";\n  background-color: rgba(255, 255, 255, 0);\n"])), function (props) { return props.theme.color.font.default; });
-var SearchIcon = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_1___default.a)(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  margin-right: 10px;\n\n  && {\n    color: ", ";\n  }\n"], ["\n  margin-right: 10px;\n\n  && {\n    color: ", ";\n  }\n"])), function (props) { return props.theme.color.secondary.main; });
-var SearchButton = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_2__["default"])(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  && {\n    border-radius: 100%;\n    width: 40px;\n    height: 40px;\n    min-width: 0;\n\n    border: none;\n    background-color: rgba(255, 255, 255, 0);\n    outline: none;\n  }\n"], ["\n  && {\n    border-radius: 100%;\n    width: 40px;\n    height: 40px;\n    min-width: 0;\n\n    border: none;\n    background-color: rgba(255, 255, 255, 0);\n    outline: none;\n  }\n"])));
-var templateObject_1, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6, templateObject_7;
+}); })(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  text-indent: 10px;\n  height: 100%;\n  flex-grow: 1;\n\n  border: none;\n  outline: none;\n  color: ", ";\n  background-color: rgba(255, 255, 255, 0);\n"], ["\n  text-indent: 10px;\n  height: 100%;\n  flex-grow: 1;\n\n  border: none;\n  outline: none;\n  color: ", ";\n  background-color: rgba(255, 255, 255, 0);\n"])), function (props) { return props.theme.color.textOverBackground; });
+var SearchIcon = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_1___default.a)(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n  margin-right: 10px;\n\n  && {\n    color: ", ";\n  }\n"], ["\n  margin-right: 10px;\n\n  && {\n    color: ", ";\n  }\n"])), function (props) { return props.theme.color.secondary.main; });
+var SearchButton = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_2__["default"])(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  && {\n    border-radius: 100%;\n    width: 40px;\n    height: 40px;\n    min-width: 0;\n\n    border: none;\n    background-color: rgba(0, 0, 0, 0);\n    outline: none;\n\n    &:hover {\n      background-color: gray;\n    }\n  }\n"], ["\n  && {\n    border-radius: 100%;\n    width: 40px;\n    height: 40px;\n    min-width: 0;\n\n    border: none;\n    background-color: rgba(0, 0, 0, 0);\n    outline: none;\n\n    &:hover {\n      background-color: gray;\n    }\n  }\n"])));
+var templateObject_1, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6;
 
 
 /***/ }),
@@ -46861,6 +46942,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var _Theming_Globals__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Theming/Globals */ "./src/Theming/Globals.ts");
 /* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/esm/Button/index.js");
+/* harmony import */ var _Theming_Theme__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Theming/Theme */ "./src/Theming/Theme.ts");
 var __makeTemplateObject = (undefined && undefined.__makeTemplateObject) || function (cooked, raw) {
     if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
     return cooked;
@@ -46868,13 +46950,14 @@ var __makeTemplateObject = (undefined && undefined.__makeTemplateObject) || func
 
 
 
-var Container = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].li(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  width: ", ";\n  margin-bottom: 20px;\n  height: 430px;\n  display: flex;\n  flex-direction: column;\n\n  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.4);\n  background-color: ", ";\n\n  @media (min-width: 600px) {\n    margin-right: 20px;\n  }\n"], ["\n  width: ", ";\n  margin-bottom: 20px;\n  height: 430px;\n  display: flex;\n  flex-direction: column;\n\n  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.4);\n  background-color: ", ";\n\n  @media (min-width: 600px) {\n    margin-right: 20px;\n  }\n"])), _Theming_Globals__WEBPACK_IMPORTED_MODULE_1__["videoFrameDimensions"].xs.width, function (props) { return props.theme.color.background; });
+
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].li(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  width: ", ";\n  margin-bottom: 20px;\n  height: 430px;\n  display: flex;\n  flex-direction: column;\n\n  background-color: ", ";\n  box-shadow: ", ";\n\n  @media (min-width: 600px) {\n    margin-right: 20px;\n  }\n"], ["\n  width: ", ";\n  margin-bottom: 20px;\n  height: 430px;\n  display: flex;\n  flex-direction: column;\n\n  background-color: ", ";\n  box-shadow: ", ";\n\n  @media (min-width: 600px) {\n    margin-right: 20px;\n  }\n"])), _Theming_Globals__WEBPACK_IMPORTED_MODULE_1__["videoFrameDimensions"].xs.width, function (props) { return props.theme.type === "light" ? props.theme.color.surface : props.theme.elevation(2); }, function (props) { return props.theme.type === "light" ? props.theme.elevation(2) : "none"; });
 var Thumbnail = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  width: ", ";\n  height: ", ";\n  flex-shrink: 0;\n\n  background-image: url(", ");\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center;\n"], ["\n  width: ", ";\n  height: ", ";\n  flex-shrink: 0;\n\n  background-image: url(", ");\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center;\n"])), _Theming_Globals__WEBPACK_IMPORTED_MODULE_1__["videoFrameDimensions"].xs.width, _Theming_Globals__WEBPACK_IMPORTED_MODULE_1__["videoFrameDimensions"].xs.height, function (props) { return props.url; });
 var Info = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  padding: 10px;\n  display: flex;\n  flex-direction: column;\n  flex-grow: 1;\n"], ["\n  padding: 10px;\n  display: flex;\n  flex-direction: column;\n  flex-grow: 1;\n"])));
 var Title = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h2(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  margin-top: 10px;\n  font-size: 16px;\n"], ["\n  margin-top: 10px;\n  font-size: 16px;\n"])));
 var Channel = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h3(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n  margin-top: 10px;\n  font-size: 12px;\n"], ["\n  margin-top: 10px;\n  font-size: 12px;\n"])));
-var Description = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  margin-top: 10px;\n  font-size: 12px;\n  line-height: 18px;\n"], ["\n  margin-top: 10px;\n  font-size: 12px;\n  line-height: 18px;\n"])));
-var DetailsButton = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_2__["default"])(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  && {\n    margin-top: 10px;\n    padding: 10px;\n    font-size: 14px;\n    align-self: flex-start;\n    \n    text-transform: uppercase;\n    border-radius: 0;\n    outline: none;\n    color: white;\n    background-color: ", ";\n\n    &:hover {\n      background-color: ", ";\n      box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.4);\n    }\n  }\n"], ["\n  && {\n    margin-top: 10px;\n    padding: 10px;\n    font-size: 14px;\n    align-self: flex-start;\n    \n    text-transform: uppercase;\n    border-radius: 0;\n    outline: none;\n    color: white;\n    background-color: ", ";\n\n    &:hover {\n      background-color: ", ";\n      box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.4);\n    }\n  }\n"])), function (props) { return props.theme.color.secondary.main; }, function (props) { return props.theme.color.secondary.dark; });
+var Description = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  margin-top: 10px;\n  font-size: 12px;\n"], ["\n  margin-top: 10px;\n  font-size: 12px;\n"])));
+var DetailsButton = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_2__["default"])(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  && {\n    margin-top: 10px;\n    padding: 10px;\n    font-size: 14px;\n    align-self: flex-start;\n    \n    text-transform: uppercase;\n    border-radius: 0;\n    outline: none;\n    color: white;\n    background-color: ", ";\n\n    &:hover {\n      background-color: ", ";\n      box-shadow: ", ";\n    }\n  }\n"], ["\n  && {\n    margin-top: 10px;\n    padding: 10px;\n    font-size: 14px;\n    align-self: flex-start;\n    \n    text-transform: uppercase;\n    border-radius: 0;\n    outline: none;\n    color: white;\n    background-color: ", ";\n\n    &:hover {\n      background-color: ", ";\n      box-shadow: ", ";\n    }\n  }\n"])), function (props) { return props.theme.color.secondary.main; }, function (props) { return props.theme.type === "light" ? props.theme.color.secondary.dark : props.theme.color.secondary.light; }, function (props) { return props.theme.type === "light" ? props.theme.elevation(3) : Object(_Theming_Theme__WEBPACK_IMPORTED_MODULE_3__["lightShadow"])(2); });
 var ListItemPadding = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_8 || (templateObject_8 = __makeTemplateObject(["\n  flex-grow: 1;\n"], ["\n  flex-grow: 1;\n"])));
 var templateObject_1, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6, templateObject_7, templateObject_8;
 
@@ -47020,15 +47103,15 @@ function VideoEntryDetails(props) {
                         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["Channel"], null, channel),
                         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["Ratings"], null,
                             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["ThumbUpIcon"], null),
-                            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["RatingNumber"], null, likes),
+                            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["RatingNumber"], null, Number(likes).toLocaleString("pt-BR")),
                             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["ThumbDownIcon"], null),
-                            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["RatingNumber"], null, dislikes))),
+                            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["RatingNumber"], null, Number(dislikes).toLocaleString("pt-BR")))),
                     react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["Divider"], null),
                     react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["Description"], null, description),
                     react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["Divider"], null),
                     react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["Views"], null,
                         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["VisibilityIcon"], null),
-                        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["ViewCount"], null, views)))))));
+                        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VideoEntryDetailsSubComponents__WEBPACK_IMPORTED_MODULE_2__["ViewCount"], null, Number(views).toLocaleString("pt-BR"))))))));
 }
 
 
@@ -47074,6 +47157,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_icons_Visibility__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Visibility__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/IconButton */ "./node_modules/@material-ui/core/esm/IconButton/index.js");
 /* harmony import */ var _material_ui_core_Divider__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/Divider */ "./node_modules/@material-ui/core/esm/Divider/index.js");
+/* harmony import */ var _Theming_Theme__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../Theming/Theme */ "./src/Theming/Theme.ts");
 var __makeTemplateObject = (undefined && undefined.__makeTemplateObject) || function (cooked, raw) {
     if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
     return cooked;
@@ -47086,11 +47170,12 @@ var __makeTemplateObject = (undefined && undefined.__makeTemplateObject) || func
 
 
 
-var Container = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  position: absolute;\n  width: 100vw;\n  height: 100vh;\n  transform: translateX(100vw);\n  z-index: 2;\n  display: flex;\n  flex-direction: column;\n  /* padding: 0 20px; */\n  overflow-y: scroll;\n\n  background-color: ", ";\n"], ["\n  position: absolute;\n  width: 100vw;\n  height: 100vh;\n  transform: translateX(100vw);\n  z-index: 2;\n  display: flex;\n  flex-direction: column;\n  /* padding: 0 20px; */\n  overflow-y: scroll;\n\n  background-color: ", ";\n"])), function (props) { return props.theme.color.background; });
+
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  position: absolute;\n  width: 100vw;\n  height: 100vh;\n  transform: translateX(100vw);\n  z-index: 2;\n  display: flex;\n  flex-direction: column;\n  /* padding: 0 20px; */\n  overflow-y: scroll;\n\n  background-color: ", ";\n  box-shadow: ", ";\n"], ["\n  position: absolute;\n  width: 100vw;\n  height: 100vh;\n  transform: translateX(100vw);\n  z-index: 2;\n  display: flex;\n  flex-direction: column;\n  /* padding: 0 20px; */\n  overflow-y: scroll;\n\n  background-color: ", ";\n  box-shadow: ", ";\n"])), function (props) { return props.theme.type === "light" ? props.theme.color.surface : props.theme.elevation(4); }, function (props) { return props.theme.type === "light" ? props.theme.elevation(8) : Object(_Theming_Theme__WEBPACK_IMPORTED_MODULE_8__["lightShadow"])(5); });
 var Divider = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_material_ui_core_Divider__WEBPACK_IMPORTED_MODULE_7__["default"]).attrs(function () { return ({
     variant: "fullWidth"
 }); })(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  && {\n    margin-top: 10px;\n  } \n"], ["\n  && {\n    margin-top: 10px;\n  } \n"])));
-var Header = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  display: flex;\n  flex-direction: row;\n  padding: 25px 20px;\n  align-items: center;\n  margin-bottom: 25px;\n\n  background-color: ", ";\n  color: white;\n  "], ["\n  display: flex;\n  flex-direction: row;\n  padding: 25px 20px;\n  align-items: center;\n  margin-bottom: 25px;\n\n  background-color: ", ";\n  color: white;\n  "])), function (props) { return props.theme.color.secondary.darker; });
+var Header = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  display: flex;\n  flex-direction: row;\n  padding: 25px 20px;\n  align-items: center;\n  margin-bottom: 25px;\n\n  background-color: ", ";\n  color: white;\n  "], ["\n  display: flex;\n  flex-direction: row;\n  padding: 25px 20px;\n  align-items: center;\n  margin-bottom: 25px;\n\n  background-color: ", ";\n  color: white;\n  "])), function (props) { return props.theme.type === "light" ? props.theme.color.secondary.darker : props.theme.color.secondary.light; });
 var NavigateBeforeButton = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_6__["default"])(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  && {\n    margin-right: 20px;\n    padding: 0 20px;\n\n    font-size: 32px;\n\n    &:hover {\n      background-color: inherit;\n    }\n  }\n"], ["\n  && {\n    margin-right: 20px;\n    padding: 0 20px;\n\n    font-size: 32px;\n\n    &:hover {\n      background-color: inherit;\n    }\n  }\n"])));
 var NavigateBeforeIcon = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_material_ui_icons_ArrowBack__WEBPACK_IMPORTED_MODULE_1___default.a).attrs(function () { return ({
     fontSize: "inherit"
@@ -47106,18 +47191,18 @@ var VideoInfo = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(te
 var ChannelAndRatingsContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_10 || (templateObject_10 = __makeTemplateObject(["\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  margin-top: 20px;\n  align-items: center;\n  width: 100%;\n"], ["\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  margin-top: 20px;\n  align-items: center;\n  width: 100%;\n"])));
 var ThumbUpIcon = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_material_ui_icons_ThumbUp__WEBPACK_IMPORTED_MODULE_3___default.a).attrs(function () { return ({
     fontSize: "inherit"
-}); })(templateObject_11 || (templateObject_11 = __makeTemplateObject(["\n  && {\n    margin-right: 10px;\n    color: ", ";\n  }\n"], ["\n  && {\n    margin-right: 10px;\n    color: ", ";\n  }\n"])), function (props) { return props.theme.color.secondary.dark; });
+}); })(templateObject_11 || (templateObject_11 = __makeTemplateObject(["\n  && {\n    margin-right: 10px;\n    color: ", ";\n  }\n"], ["\n  && {\n    margin-right: 10px;\n    color: ", ";\n  }\n"])), function (props) { return props.theme.type === "light" ? props.theme.color.secondary.dark : props.theme.color.secondary.light; });
 var ThumbDownIcon = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_material_ui_icons_ThumbDown__WEBPACK_IMPORTED_MODULE_4___default.a).attrs(function () { return ({
     fontSize: "inherit"
-}); })(templateObject_12 || (templateObject_12 = __makeTemplateObject(["\n  && {\n    margin-right: 10px;\n    color: ", ";\n  }\n"], ["\n  && {\n    margin-right: 10px;\n    color: ", ";\n  }\n"])), function (props) { return props.theme.color.secondary.dark; });
-var Channel = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_13 || (templateObject_13 = __makeTemplateObject(["\n  font-size: 12px;\n  font-weight: bold;\n"], ["\n  font-size: 12px;\n  font-weight: bold;\n"])));
+}); })(templateObject_12 || (templateObject_12 = __makeTemplateObject(["\n  && {\n    margin-right: 10px;\n    color: ", ";\n  }\n"], ["\n  && {\n    margin-right: 10px;\n    color: ", ";\n  }\n"])), function (props) { return props.theme.type === "light" ? props.theme.color.secondary.dark : props.theme.color.secondary.light; });
+var Channel = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_13 || (templateObject_13 = __makeTemplateObject(["\n  font-size: 14px;\n  font-weight: bold;\n"], ["\n  font-size: 14px;\n  font-weight: bold;\n"])));
 var Ratings = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_14 || (templateObject_14 = __makeTemplateObject(["\n  flex-shrink: 0;\n  display: flex;\n  align-items: center;\n"], ["\n  flex-shrink: 0;\n  display: flex;\n  align-items: center;\n"])));
 var RatingNumber = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].span(templateObject_15 || (templateObject_15 = __makeTemplateObject(["\n  margin-right: 10px;\n"], ["\n  margin-right: 10px;\n"])));
-var Description = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p(templateObject_16 || (templateObject_16 = __makeTemplateObject(["\n  margin-top: 15px;\n  font-size: 14px;\n"], ["\n  margin-top: 15px;\n  font-size: 14px;\n"])));
+var Description = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p(templateObject_16 || (templateObject_16 = __makeTemplateObject(["\n  margin-top: 15px;\n  max-width: 600px;\n\n  font-size: 14px;\n"], ["\n  margin-top: 15px;\n  max-width: 600px;\n\n  font-size: 14px;\n"])));
 var Views = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_17 || (templateObject_17 = __makeTemplateObject(["\n  margin-top: 15px;\n  margin-bottom: 40px;\n  display: flex;\n  align-items: center;\n"], ["\n  margin-top: 15px;\n  margin-bottom: 40px;\n  display: flex;\n  align-items: center;\n"])));
 var VisibilityIcon = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_material_ui_icons_Visibility__WEBPACK_IMPORTED_MODULE_5___default.a).attrs(function () { return ({
     fontSize: "inherit"
-}); })(templateObject_18 || (templateObject_18 = __makeTemplateObject(["\n  && {\n    margin-right: 5px;\n    color: ", ";\n  }\n  \n"], ["\n  && {\n    margin-right: 5px;\n    color: ", ";\n  }\n  \n"])), function (props) { return props.theme.color.secondary.dark; });
+}); })(templateObject_18 || (templateObject_18 = __makeTemplateObject(["\n  && {\n    margin-right: 5px;\n    color: ", ";\n  }\n"], ["\n  && {\n    margin-right: 5px;\n    color: ", ";\n  }\n"])), function (props) { return props.theme.type === "light" ? props.theme.color.secondary.dark : props.theme.color.secondary.light; });
 var ViewCount = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].span(templateObject_19 || (templateObject_19 = __makeTemplateObject(["\n"], ["\n"])));
 var templateObject_1, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6, templateObject_7, templateObject_8, templateObject_9, templateObject_10, templateObject_11, templateObject_12, templateObject_13, templateObject_14, templateObject_15, templateObject_16, templateObject_17, templateObject_18, templateObject_19;
 
@@ -47206,7 +47291,7 @@ function VideoEntryList(props) {
                         listWrapper = listWrapperRef.current;
                         listWrapperYOffset = listWrapper.getBoundingClientRect().top;
                         listWrapperHeight = listWrapper.getBoundingClientRect().height;
-                        shouldLoadMoreEntries = window.innerHeight >= listWrapperYOffset + listWrapperHeight && !loadingMoreEntries;
+                        shouldLoadMoreEntries = window.innerHeight >= listWrapperYOffset + listWrapperHeight && !loadingMoreEntries && entries.length !== 0;
                         if (!shouldLoadMoreEntries) return [3 /*break*/, 2];
                         setLoadingMoreEntries(true);
                         return [4 /*yield*/, onMoreEntriesTriggered()];
@@ -47263,11 +47348,12 @@ var __makeTemplateObject = (undefined && undefined.__makeTemplateObject) || func
 
 
 var Container = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  height: 100%;\n  overflow-y: scroll;\n  "], ["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  height: 100%;\n  overflow-y: scroll;\n  "])));
-var ListWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].ul(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: center;\n  padding: 20px 20px 0 20px;\n  margin-top: 85px;\n  \n  list-style: none;\n  background-color: ", ";\n"], ["\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: center;\n  padding: 20px 20px 0 20px;\n  margin-top: 85px;\n  \n  list-style: none;\n  background-color: ", ";\n"])), function (props) { return props.theme.color.primary.lighter; });
+var ListWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].ul(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: center;\n  padding: 20px 20px 0 20px;\n  margin-top: 85px;\n  \n  list-style: none;\n  background-color: ", ";\n"], ["\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: center;\n  padding: 20px 20px 0 20px;\n  margin-top: 85px;\n  \n  list-style: none;\n  background-color: ", ";\n"])), function (props) { return props.theme.type === "light" ? props.theme.color.primary.lighter : props.theme.color.background; });
 var ErrorMessage = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  text-align: center;\n"], ["\n  text-align: center;\n"])));
 var MoreEntriesCircularProgress = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default"])(_material_ui_core_CircularProgress__WEBPACK_IMPORTED_MODULE_1__["default"]).attrs(function () { return ({
-    size: 70
-}); })(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n"], ["\n"])));
+    size: 70,
+    color: "inherit"
+}); })(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  color: ", ";\n"], ["\n  color: ", ";\n"])), function (props) { return props.theme.color.secondary.main; });
 var templateObject_1, templateObject_2, templateObject_3, templateObject_4;
 
 
@@ -47400,13 +47486,14 @@ var videoFrameDimensions = {
 /*!******************************!*\
   !*** ./src/Theming/Theme.ts ***!
   \******************************/
-/*! exports provided: LightTheme, DarkTheme */
+/*! exports provided: LightTheme, DarkTheme, lightShadow */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LightTheme", function() { return LightTheme; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DarkTheme", function() { return DarkTheme; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "lightShadow", function() { return lightShadow; });
 var __assign = (undefined && undefined.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -47427,27 +47514,246 @@ var Common = {
         xl: "(min-width: 1921px)"
     }
 };
-var LightTheme = __assign(__assign({}, Common), { color: {
+var LightTheme = __assign(__assign({}, Common), { type: "light", color: {
         primary: {
             lighter: "#98D2FE",
             light: "#6ABEFF",
             main: "#42ADFF",
             dark: "#1599FF",
-            darker: "#0590FB"
+            darker: "#0590FB",
+            textOverLighter: "#000",
+            textOverLight: "#000",
+            textOverMain: "#FFF",
+            textOverDark: "#FFF",
+            textOverDarker: "#FFF"
         },
         secondary: {
             lighter: "#FFB3B5",
             light: "#FF7D80",
             main: "#FF5156",
             dark: "#FF252B",
-            darker: "#FF0007"
+            darker: "#FF0007",
+            textOverLighter: "#000",
+            textOverLight: "#000",
+            textOverMain: "#FFF",
+            textOverDark: "#FFF",
+            textOverDarker: "#FFF"
         },
+        surface: "#FFF",
         background: "#FFF",
-        font: {
-            default: "#222"
-        }
+        textOverBackground: "#000"
+    }, elevation: function (depth) {
+        //Algorithm Credits To https://ethercreative.github.io/react-native-shadow-generator/
+        var boxShadowDimensions = {
+            umbra: [
+                "0px 2px 1px -1px",
+                "0px 3px 1px -2px",
+                "0px 3px 3px -2px",
+                "0px 2px 4px -1px",
+                "0px 3px 5px -1px",
+                "0px 3px 5px -1px",
+                "0px 4px 5px -2px",
+                "0px 5px 5px -3px",
+                "0px 5px 6px -3px",
+                "0px 6px 6px -3px",
+                "0px 6px 7px -4px",
+                "0px 7px 8px -4px",
+                "0px 7px 8px -4px",
+                "0px 7px 9px -4px",
+                "0px 8px 9px -5px",
+                "0px 8px 10px -5px",
+                "0px 8px 11px -5px",
+                "0px 9px 11px -5px",
+                "0px 9px 12px -6px",
+                "0px 10px 13px -6px",
+                "0px 10px 13px -6px",
+                "0px 10px 14px -6px",
+                "0px 11px 14px -7px",
+                "0px 11px 15px -7px"
+            ],
+            penumbra: [
+                "0px 1px 1px 0px",
+                "0px 2px 2px 0px",
+                "0px 3px 4px 0px",
+                "0px 4px 5px 0px",
+                "0px 5px 8px 0px",
+                "0px 6px 10px 0px",
+                "0px 7px 10px 1px",
+                "0px 8px 10px 1px",
+                "0px 9px 12px 1px",
+                "0px 10px 14px 1px",
+                "0px 11px 15px 1px",
+                "0px 12px 17px 2px",
+                "0px 13px 19px 2px",
+                "0px 14px 21px 2px",
+                "0px 15px 22px 2px",
+                "0px 16px 24px 2px",
+                "0px 17px 26px 2px",
+                "0px 18px 28px 2px",
+                "0px 19px 29px 2px",
+                "0px 20px 31px 3px",
+                "0px 21px 33px 3px",
+                "0px 22px 35px 3px",
+                "0px 23px 36px 3px",
+                "0px 24px 38px 3px"
+            ],
+            ambient: [
+                "0px 0px 0px 0px",
+                "0px 1px 3px 0px",
+                "0px 1px 5px 0px",
+                "0px 1px 8px 0px",
+                "0px 1px 10px 0px",
+                "0px 1px 14px 0px",
+                "0px 1px 18px 0px",
+                "0px 2px 16px 1px",
+                "0px 3px 14px 2px",
+                "0px 3px 16px 2px",
+                "0px 4px 18px 3px",
+                "0px 4px 20px 3px",
+                "0px 5px 22px 4px",
+                "0px 5px 24px 4px",
+                "0px 5px 26px 4px",
+                "0px 6px 28px 5px",
+                "0px 6px 30px 5px",
+                "0px 6px 32px 5px",
+                "0px 7px 34px 6px",
+                "0px 7px 36px 6px",
+                "0px 8px 38px 7px",
+                "0px 8px 40px 7px",
+                "0px 8px 42px 7px",
+                "0px 9px 44px 8px",
+                "0px 9px 46px 8px"
+            ]
+        };
+        var boxShadowColor = {
+            umbra: "rgba(0,0,0,0.2)",
+            penumbra: "rgba(0,0,0,0.14)",
+            ambient: "rgba(0,0,0,0.12)"
+        };
+        return "\n      " + boxShadowDimensions.umbra[depth] + " " + boxShadowColor.umbra + ",\n\t\t\t" + boxShadowDimensions.penumbra[depth] + " " + boxShadowColor.penumbra + ",\n\t\t\t" + boxShadowDimensions.ambient[depth] + " " + boxShadowColor.ambient;
     } });
-var DarkTheme = __assign({}, Common);
+var DarkTheme = __assign(__assign({}, Common), { type: "dark", color: {
+        primary: {
+            lighter: "#08277B",
+            light: "#041E64",
+            main: "#01154B",
+            dark: "#000C2D",
+            darker: "#000209",
+            textOverLighter: "#FFF",
+            textOverLight: "#FFF",
+            textOverMain: "#FFF",
+            textOverDark: "#FFF",
+            textOverDarker: "#FFF"
+        },
+        secondary: {
+            lighter: "#CA0018",
+            light: "#950011",
+            main: "#62000C",
+            dark: "#4C0009",
+            darker: "#3E0109",
+            textOverLighter: "#FFF",
+            textOverLight: "#FFF",
+            textOverMain: "#FFF",
+            textOverDark: "#FFF",
+            textOverDarker: "#FFF"
+        },
+        surface: "#121212",
+        background: "#121212",
+        textOverBackground: "#DDD"
+    }, elevation: function (depth) {
+        var value = (255 / 72) * (depth + 5);
+        return "rgb(" + value + ", " + value + ", " + value + ")";
+    } });
+function lightShadow(depth) {
+    //Algorithm Credits To https://ethercreative.github.io/react-native-shadow-generator/
+    var boxShadowDimensions = {
+        umbra: [
+            "0px 2px 1px -1px",
+            "0px 3px 1px -2px",
+            "0px 3px 3px -2px",
+            "0px 2px 4px -1px",
+            "0px 3px 5px -1px",
+            "0px 3px 5px -1px",
+            "0px 4px 5px -2px",
+            "0px 5px 5px -3px",
+            "0px 5px 6px -3px",
+            "0px 6px 6px -3px",
+            "0px 6px 7px -4px",
+            "0px 7px 8px -4px",
+            "0px 7px 8px -4px",
+            "0px 7px 9px -4px",
+            "0px 8px 9px -5px",
+            "0px 8px 10px -5px",
+            "0px 8px 11px -5px",
+            "0px 9px 11px -5px",
+            "0px 9px 12px -6px",
+            "0px 10px 13px -6px",
+            "0px 10px 13px -6px",
+            "0px 10px 14px -6px",
+            "0px 11px 14px -7px",
+            "0px 11px 15px -7px"
+        ],
+        penumbra: [
+            "0px 1px 1px 0px",
+            "0px 2px 2px 0px",
+            "0px 3px 4px 0px",
+            "0px 4px 5px 0px",
+            "0px 5px 8px 0px",
+            "0px 6px 10px 0px",
+            "0px 7px 10px 1px",
+            "0px 8px 10px 1px",
+            "0px 9px 12px 1px",
+            "0px 10px 14px 1px",
+            "0px 11px 15px 1px",
+            "0px 12px 17px 2px",
+            "0px 13px 19px 2px",
+            "0px 14px 21px 2px",
+            "0px 15px 22px 2px",
+            "0px 16px 24px 2px",
+            "0px 17px 26px 2px",
+            "0px 18px 28px 2px",
+            "0px 19px 29px 2px",
+            "0px 20px 31px 3px",
+            "0px 21px 33px 3px",
+            "0px 22px 35px 3px",
+            "0px 23px 36px 3px",
+            "0px 24px 38px 3px"
+        ],
+        ambient: [
+            "0px 0px 0px 0px",
+            "0px 1px 3px 0px",
+            "0px 1px 5px 0px",
+            "0px 1px 8px 0px",
+            "0px 1px 10px 0px",
+            "0px 1px 14px 0px",
+            "0px 1px 18px 0px",
+            "0px 2px 16px 1px",
+            "0px 3px 14px 2px",
+            "0px 3px 16px 2px",
+            "0px 4px 18px 3px",
+            "0px 4px 20px 3px",
+            "0px 5px 22px 4px",
+            "0px 5px 24px 4px",
+            "0px 5px 26px 4px",
+            "0px 6px 28px 5px",
+            "0px 6px 30px 5px",
+            "0px 6px 32px 5px",
+            "0px 7px 34px 6px",
+            "0px 7px 36px 6px",
+            "0px 8px 38px 7px",
+            "0px 8px 40px 7px",
+            "0px 8px 42px 7px",
+            "0px 9px 44px 8px",
+            "0px 9px 46px 8px"
+        ]
+    };
+    var boxShadowColor = {
+        umbra: "rgba(122,122,122,0.2)",
+        penumbra: "rgba(122,122,122,0.14)",
+        ambient: "rgba(122,122,122,0.12)"
+    };
+    return "\n    " + boxShadowDimensions.umbra[depth] + " " + boxShadowColor.umbra + ",\n    " + boxShadowDimensions.penumbra[depth] + " " + boxShadowColor.penumbra + ",\n    " + boxShadowDimensions.ambient[depth] + " " + boxShadowColor.ambient;
+}
 
 
 /***/ })

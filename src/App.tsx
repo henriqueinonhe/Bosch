@@ -7,9 +7,11 @@ import VideoEntryDetails from "./Components/VideoEntryDetails/VideoEntryDetails"
 import SearchBar from "./Components/SearchBox/SearchBar";
 import styled from "styled-components";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import MUISkeleton from "@material-ui/lab/Skeleton";
+import MUIButton from "@material-ui/core/IconButton";
+import Brightness5Icon from "@material-ui/icons/Brightness5";
+import Brightness3Icon from "@material-ui/icons/Brightness3";
 import { ThemeProvider } from "styled-components";
-import { LightTheme, ThemeInterface } from "./Theming/Theme";
+import { DarkTheme, LightTheme, ThemeInterface } from "./Theming/Theme";
 
 const Main = styled.main`
   display: flex;
@@ -18,18 +20,61 @@ const Main = styled.main`
   align-items: center;
   height: 100%;
   overflow-x: hidden;
-  background-color: ${props => props.theme.color.primary.lighter};
-
+  
+  background-color: ${props => props.theme.type === "light" ? props.theme.color.primary.lighter : props.theme.color.background};
   font-family: Roboto, sans-serif;
   letter-spacing: 0.2px;
+  color: ${props => props.theme.color.textOverBackground};
+  line-height: 18px;
+  white-space: pre-line;
 `;
 
 const ResultsCircularProgress = styled(CircularProgress).attrs(() => ({
-  size: 100
+  size: 100,
+  color: "inherit"
 }))`
 
   && {
     margin-top: 25vh;
+
+    color: ${props => props.theme.color.secondary.main};
+  }
+`;
+
+const ThemeSwitchButton = styled(MUIButton).attrs(() => ({
+
+}))`
+  && {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: ${props => props.theme.type === "light" ? "black" : "white"};
+    z-index: 4;
+
+    &:hover {
+      background-color: gray;
+    }
+  }
+`;
+
+const SunIcon = styled(Brightness5Icon).attrs(() => ({
+  fontSize: "inherit"
+}))`
+  && {
+    font-size: 36px;
+    color: black;
+  }
+`;
+
+const MoonIcon = styled(Brightness3Icon).attrs(() => ({
+  fontSize: "inherit"
+}))`
+  && {
+    font-size: 36px;
+    color: white;
   }
 `;
 
@@ -74,6 +119,11 @@ function App() : JSX.Element
     setVideoEntryDetailsVisible(false);
   }
 
+  function handleThemeSwitchButtonClick() : void
+  {
+    setCurrentTheme(theme => theme.type === "light" ? DarkTheme : LightTheme);
+  }
+
   return (
     <ThemeProvider theme={currentTheme}>
       <Main id="Main">
@@ -96,6 +146,12 @@ function App() : JSX.Element
           videoId={detailedVideoId} 
           onHideEntryDetailsTriggered={handleHideEntryDetailsTriggered}
         />
+        <ThemeSwitchButton onClick={handleThemeSwitchButtonClick}>
+          {currentTheme.type === "light" ? 
+            <MoonIcon /> :
+            <SunIcon /> 
+          }
+        </ThemeSwitchButton>
       </ Main>
     </ThemeProvider>
   );

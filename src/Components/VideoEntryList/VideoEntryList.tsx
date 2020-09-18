@@ -22,7 +22,7 @@ export default function VideoEntryList(props : VideoEntryListProps) : JSX.Elemen
     const listWrapper = listWrapperRef.current!;
     const listWrapperYOffset = listWrapper.getBoundingClientRect().top;
     const listWrapperHeight = listWrapper.getBoundingClientRect().height;
-    const shouldLoadMoreEntries = window.innerHeight >= listWrapperYOffset + listWrapperHeight && !loadingMoreEntries;
+    const shouldLoadMoreEntries = window.innerHeight >= listWrapperYOffset + listWrapperHeight && !loadingMoreEntries && entries.length !== 0;
     if(shouldLoadMoreEntries)
     {
       setLoadingMoreEntries(true);

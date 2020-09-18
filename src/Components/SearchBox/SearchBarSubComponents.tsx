@@ -1,22 +1,12 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { css } from "styled-components";
 import MUISearchIcon from "@material-ui/icons/Search";
 import MUIButton from "@material-ui/core/Button";
+import { lightShadow } from "../../Theming/Theme";
 
 interface SearchBoxContainerProps
 {
   searchTriggered : boolean;
 }
-
-const moveUp = keyframes`
-  to {
-    max-width: 100%;
-    width: 100%;
-    padding: 20px;
-    top: 0;
-    position: fixed;
-    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.4);
-  }
-`;
 
 export const SearchBoxContainer = styled.div<SearchBoxContainerProps>`
   --height: 85px;
@@ -31,19 +21,30 @@ export const SearchBoxContainer = styled.div<SearchBoxContainerProps>`
   width: calc(100% - 40px);
   top: calc(50% - var(--height) / 2);
   
-  background-color: ${props => props.theme.color.primary.dark};
+  background-color: ${props => props.theme.type === "light" ? props.theme.color.primary.dark : props.theme.color.primary.main};
   transition: box-shadow 400ms;
 
   &:hover, &:focus-within  {
-    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.4);
+    box-shadow: ${props => props.theme.type === "light" ? props.theme.elevation(3) : lightShadow(2)};
   }
 
   ${props => props.searchTriggered && css`
-    animation-name: ${moveUp};
+    animation-name: moveUp;
     animation-duration: 500ms;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
   ` };
+
+  @keyframes moveUp {
+    to {
+      max-width: 100%;
+      width: 100%;
+      padding: 20px;
+      top: 0;
+      position: fixed;
+      box-shadow: ${props => props.theme.type === "light" ? props.theme.elevation(3) : lightShadow(2)};
+    }
+  }
 `;
 
 export const SearchBoxWrapper = styled.div`
@@ -55,7 +56,7 @@ export const SearchBoxWrapper = styled.div`
   height: 45px;
   max-width: 800px;
 
-  background-color: white;
+  background-color: ${props => props.theme.color.background};
 `;
 
 export const SearchInput = styled.input.attrs(() => ({
@@ -68,7 +69,7 @@ export const SearchInput = styled.input.attrs(() => ({
 
   border: none;
   outline: none;
-  color: ${props => props.theme.color.font.default};
+  color: ${props => props.theme.color.textOverBackground};
   background-color: rgba(255, 255, 255, 0);
 `;
 
@@ -88,7 +89,11 @@ export const SearchButton = styled(MUIButton)`
     min-width: 0;
 
     border: none;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(0, 0, 0, 0);
     outline: none;
+
+    &:hover {
+      background-color: gray;
+    }
   }
 `;

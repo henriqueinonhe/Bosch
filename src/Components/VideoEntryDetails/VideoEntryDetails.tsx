@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { YoutubeVideoDetailsResponseData } from "../../Models/YoutubeVideoDetailsResponseData";
 import YoutubeAPIController from "../../Controllers/YoutubeAPIController";
 import { Header, NavigateBeforeButton, NavigateBeforeIcon, Video, VideoInfo, ChannelAndRatingsContainer, Ratings, ThumbUpIcon, RatingNumber, ThumbDownIcon, Views, VisibilityIcon, ViewCount, Container, Title, Channel, Description, Wrapper, Divider } from "./VideoEntryDetailsSubComponents";
+import MUISkeleton from "@material-ui/lab/Skeleton";
 
 interface ResultEntryDetailsProps
 {
@@ -79,37 +80,37 @@ export default function VideoEntryDetails(props : ResultEntryDetailsProps) : JSX
     <Container ref={containerRef} id="VideoEntryDetailsContainer">
       {
         displayingInfo &&
-        <>
-          <Header>
-            <NavigateBeforeButton  onClick={onHideEntryDetailsTriggered} >
-              <NavigateBeforeIcon/>
-            </NavigateBeforeButton>
-            <Title>{title}</Title>
-          </Header>
-          <Wrapper>
-            {
-              videoId !== "" && <Video src={videoURL} />
-            }
-            <VideoInfo>
-              <ChannelAndRatingsContainer>
-                <Channel>{channel}</Channel>
-                <Ratings>
-                  <ThumbUpIcon />
-                  <RatingNumber>{likes}</RatingNumber>
-                  <ThumbDownIcon />
-                  <RatingNumber>{dislikes}</RatingNumber>
-                </Ratings>
-              </ChannelAndRatingsContainer>
-              <Divider />
-              <Description>{description}</Description>
-              <Divider />
-              <Views>
-                <VisibilityIcon />
-                <ViewCount>{views}</ViewCount>
-              </Views>
-            </VideoInfo>
-          </Wrapper>
-        </>
+          <>
+            <Header>
+              <NavigateBeforeButton  onClick={onHideEntryDetailsTriggered} >
+                <NavigateBeforeIcon/>
+              </NavigateBeforeButton>
+              <Title>{title}</Title>
+            </Header>
+            <Wrapper>
+              {
+                videoId !== "" && <Video src={videoURL} />
+              }
+              <VideoInfo>
+                <ChannelAndRatingsContainer>
+                  <Channel>{channel}</Channel>
+                  <Ratings>
+                    <ThumbUpIcon />
+                    <RatingNumber>{Number(likes).toLocaleString("pt-BR")}</RatingNumber>
+                    <ThumbDownIcon />
+                    <RatingNumber>{Number(dislikes).toLocaleString("pt-BR")}</RatingNumber>
+                  </Ratings>
+                </ChannelAndRatingsContainer>
+                <Divider />
+                <Description>{description}</Description>
+                <Divider />
+                <Views>
+                  <VisibilityIcon />
+                  <ViewCount>{Number(views).toLocaleString("pt-BR")}</ViewCount>
+                </Views>
+              </VideoInfo>
+            </Wrapper>
+          </> 
       }
     </Container>
   );

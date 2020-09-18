@@ -6,6 +6,8 @@ import MUIThumbDownIcon from "@material-ui/icons/ThumbDown";
 import MUIVisibilityIcon from "@material-ui/icons/Visibility";
 import MUIButton from "@material-ui/core/IconButton";
 import MUIDivider from "@material-ui/core/Divider";
+import MUISkeleton from "@material-ui/lab/Skeleton";
+import { lightShadow } from "../../Theming/Theme";
 
 export const Container = styled.div`
   position: absolute;
@@ -18,7 +20,8 @@ export const Container = styled.div`
   /* padding: 0 20px; */
   overflow-y: scroll;
 
-  background-color: ${props => props.theme.color.background};
+  background-color: ${props => props.theme.type === "light" ? props.theme.color.surface : props.theme.elevation(4)};
+  box-shadow: ${props => props.theme.type === "light" ? props.theme.elevation(8) : lightShadow(5)};
 `;
 
 export const Divider = styled(MUIDivider).attrs(() => ({
@@ -29,7 +32,6 @@ export const Divider = styled(MUIDivider).attrs(() => ({
   } 
 `;
 
-
 export const Header = styled.div`
   display: flex;
   flex-direction: row;
@@ -37,7 +39,7 @@ export const Header = styled.div`
   align-items: center;
   margin-bottom: 25px;
 
-  background-color: ${props => props.theme.color.secondary.darker};
+  background-color: ${props => props.theme.type === "light" ? props.theme.color.secondary.darker : props.theme.color.secondary.light};
   color: white;
   `;
 
@@ -113,7 +115,7 @@ export const ThumbUpIcon = styled(MUIThumbUpIcon).attrs(() => ({
 }))`
   && {
     margin-right: 10px;
-    color: ${props => props.theme.color.secondary.dark};
+    color: ${props => props.theme.type === "light" ? props.theme.color.secondary.dark : props.theme.color.secondary.light};
   }
 `;
 
@@ -122,12 +124,12 @@ export const ThumbDownIcon = styled(MUIThumbDownIcon).attrs(() => ({
 }))`
   && {
     margin-right: 10px;
-    color: ${props => props.theme.color.secondary.dark};
+    color: ${props => props.theme.type === "light" ? props.theme.color.secondary.dark : props.theme.color.secondary.light};
   }
 `;
 
 export const Channel = styled.div`
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
 `;
 
@@ -143,6 +145,8 @@ export const RatingNumber = styled.span`
 
 export const Description = styled.p`
   margin-top: 15px;
+  max-width: 600px;
+
   font-size: 14px;
 `;
 
@@ -158,9 +162,8 @@ export const VisibilityIcon = styled(MUIVisibilityIcon).attrs(() => ({
 }))`
   && {
     margin-right: 5px;
-    color: ${props => props.theme.color.secondary.dark};
+    color: ${props => props.theme.type === "light" ? props.theme.color.secondary.dark : props.theme.color.secondary.light};
   }
-  
 `;
 
 export const ViewCount = styled.span`

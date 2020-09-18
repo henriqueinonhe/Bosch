@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { videoFrameDimensions } from "../../Theming/Globals";
 import MUIButton from "@material-ui/core/Button";
+import { lightShadow } from "../../Theming/Theme";
 
 export const Container = styled.li`
   width: ${videoFrameDimensions.xs.width};
@@ -9,8 +10,8 @@ export const Container = styled.li`
   display: flex;
   flex-direction: column;
 
-  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.4);
-  background-color: ${props => props.theme.color.background};
+  background-color: ${props => props.theme.type === "light" ? props.theme.color.surface : props.theme.elevation(2)};
+  box-shadow: ${props => props.theme.type === "light" ? props.theme.elevation(2) : "none"};
 
   @media (min-width: 600px) {
     margin-right: 20px;
@@ -53,7 +54,6 @@ export const Channel = styled.h3`
 export const Description = styled.p`
   margin-top: 10px;
   font-size: 12px;
-  line-height: 18px;
 `;
 
 export const DetailsButton = styled(MUIButton)`
@@ -70,8 +70,8 @@ export const DetailsButton = styled(MUIButton)`
     background-color: ${props => props.theme.color.secondary.main};
 
     &:hover {
-      background-color: ${props => props.theme.color.secondary.dark};
-      box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.4);
+      background-color: ${props => props.theme.type === "light" ? props.theme.color.secondary.dark : props.theme.color.secondary.light};
+      box-shadow: ${props => props.theme.type === "light" ? props.theme.elevation(3) : lightShadow(2)};
     }
   }
 `;

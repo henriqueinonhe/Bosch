@@ -17,7 +17,7 @@ export const ListWrapper = styled.ul`
   margin-top: 85px;
   
   list-style: none;
-  background-color: ${props => props.theme.color.primary.lighter};
+  background-color: ${props => props.theme.type === "light" ? props.theme.color.primary.lighter : props.theme.color.background};
 `;
 
 export const ErrorMessage = styled.p`
@@ -25,6 +25,8 @@ export const ErrorMessage = styled.p`
 `;
 
 export const MoreEntriesCircularProgress = styled(CircularProgress).attrs(() => ({
-  size: 70
+  size: 70,
+  color: "inherit"
 }))`
+  color: ${props => props.theme.color.secondary.main};
 `;
