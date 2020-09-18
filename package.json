@@ -12,8 +12,7 @@
         "collectCoverageFrom": [
             "./src/**/*.ts"
         ],
-        "testURL": "http://localhost:3000",
-        "preset": "jest-puppeteer"
+        "testURL": "http://localhost:3000"
     },
     "scripts": {
         "start": "node index.js",
@@ -21,7 +20,7 @@
         "dev-build": "webpack --env.NODE_ENV=development",
         "dev-watch": "webpack --env.NODE_ENV=development --watch",
         "prod-build": "webpack --env.NODE_ENV=production",
-        "prod-watch": "webpack --env.NODE_ENV=production --watch",
+        "prod-watch": "webpack --env.NODE_ENV=production --watch"
     },
     "devDependencies": {
         "@babel/core": "^7.11.4",
