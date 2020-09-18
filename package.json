@@ -17,6 +17,7 @@
     "scripts": {
         "start": "node index.js",
         "dev": "nodemon index.js",
+        "build" : "webpack --env.NODE_ENV=production",
         "dev-build": "webpack --env.NODE_ENV=development",
         "dev-watch": "webpack --env.NODE_ENV=development --watch",
         "prod-build": "webpack --env.NODE_ENV=production",
